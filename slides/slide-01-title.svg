@@ -1,163 +1,101 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
-  <style>
-    text { font-family: 'Inter', -apple-system, 'SF Pro Display', 'Segoe UI', sans-serif; }
-  </style>
   <defs>
+    <!-- Deep atmospheric background -->
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="50%" stop-color="#161b22"/>
-      <stop offset="100%" stop-color="#0d1117"/>
+      <stop offset="0%" stop-color="#08090a"/>
+      <stop offset="40%" stop-color="#0c0d0f"/>
+      <stop offset="100%" stop-color="#08090a"/>
     </linearGradient>
-    <radialGradient id="glow-blue" cx="25%" cy="35%" r="45%">
-      <stop offset="0%" stop-color="rgba(88,166,255,0.18)"/>
-      <stop offset="100%" stop-color="rgba(88,166,255,0)"/>
+    <!-- Subtle warm light from top-left -->
+    <radialGradient id="light-warm" cx="20%" cy="15%" r="60%">
+      <stop offset="0%" stop-color="rgba(255,245,230,0.03)"/>
+      <stop offset="100%" stop-color="rgba(255,245,230,0)"/>
     </radialGradient>
-    <radialGradient id="glow-purple" cx="75%" cy="65%" r="40%">
-      <stop offset="0%" stop-color="rgba(188,140,255,0.14)"/>
-      <stop offset="100%" stop-color="rgba(188,140,255,0)"/>
+    <!-- Cool ambient from bottom-right -->
+    <radialGradient id="light-cool" cx="80%" cy="85%" r="50%">
+      <stop offset="0%" stop-color="rgba(180,200,220,0.02)"/>
+      <stop offset="100%" stop-color="rgba(180,200,220,0)"/>
     </radialGradient>
-    <radialGradient id="glow-green" cx="50%" cy="90%" r="30%">
-      <stop offset="0%" stop-color="rgba(63,185,80,0.08)"/>
-      <stop offset="100%" stop-color="rgba(63,185,80,0)"/>
-    </radialGradient>
-    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#58a6ff"/>
-      <stop offset="50%" stop-color="#bc8cff"/>
-      <stop offset="100%" stop-color="#58a6ff"/>
+    <!-- Glass card gradient -->
+    <linearGradient id="glass-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.06)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.02)"/>
     </linearGradient>
-    <linearGradient id="subtitle-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3fb950"/>
-      <stop offset="100%" stop-color="#58a6ff"/>
+    <linearGradient id="glass-stroke" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.12)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.04)"/>
     </linearGradient>
-    <linearGradient id="line-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="rgba(88,166,255,0)"/>
-      <stop offset="20%" stop-color="rgba(88,166,255,0.6)"/>
-      <stop offset="50%" stop-color="rgba(188,140,255,0.6)"/>
-      <stop offset="80%" stop-color="rgba(63,185,80,0.6)"/>
-      <stop offset="100%" stop-color="rgba(63,185,80,0)"/>
-    </linearGradient>
-    <filter id="glow-filter">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
+    <!-- Subtle noise texture -->
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="mono"/>
+      <feBlend in="SourceGraphic" in2="mono" mode="overlay" result="blend"/>
+      <feComposite in="blend" in2="SourceGraphic" operator="in"/>
+    </filter>
+    <!-- Depth shadow -->
+    <filter id="shadow-deep" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="rgba(0,0,0,0.4)"/>
+    </filter>
+    <filter id="shadow-soft" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+    <!-- Text glow -->
+    <filter id="text-glow">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="soft-glow">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <!-- Grid pattern -->
-    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
-      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(88,166,255,0.04)" stroke-width="0.5"/>
-    </pattern>
-    <!-- Postgres icon cylinder -->
-    <linearGradient id="pg-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#4a90d9"/>
-      <stop offset="100%" stop-color="#336791"/>
-    </linearGradient>
   </defs>
 
   <!-- Background -->
   <rect width="1920" height="1080" fill="url(#bg)"/>
-  <rect width="1920" height="1080" fill="url(#grid)"/>
-  <rect width="1920" height="1080" fill="url(#glow-blue)"/>
-  <rect width="1920" height="1080" fill="url(#glow-purple)"/>
-  <rect width="1920" height="1080" fill="url(#glow-green)"/>
+  <rect width="1920" height="1080" fill="url(#light-warm)"/>
+  <rect width="1920" height="1080" fill="url(#light-cool)"/>
 
-  <!-- Decorative floating elements -->
-  <!-- Top-left data nodes -->
-  <g opacity="0.12">
-    <rect x="120" y="100" width="80" height="50" rx="6" fill="none" stroke="#58a6ff" stroke-width="1"/>
-    <rect x="60" y="180" width="100" height="40" rx="6" fill="none" stroke="#bc8cff" stroke-width="1"/>
-    <rect x="180" y="170" width="70" height="45" rx="6" fill="none" stroke="#3fb950" stroke-width="1"/>
-    <line x1="160" y1="150" x2="110" y2="180" stroke="#58a6ff" stroke-width="0.8"/>
-    <line x1="200" y1="150" x2="215" y2="170" stroke="#bc8cff" stroke-width="0.8"/>
-  </g>
+  <!-- Subtle horizontal line -->
+  <line x1="320" y1="540" x2="1600" y2="540" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
 
-  <!-- Top-right data nodes -->
-  <g opacity="0.12">
-    <rect x="1680" y="120" width="90" height="50" rx="6" fill="none" stroke="#58a6ff" stroke-width="1"/>
-    <rect x="1720" y="200" width="80" height="40" rx="6" fill="none" stroke="#f78166" stroke-width="1"/>
-    <rect x="1620" y="190" width="70" height="50" rx="6" fill="none" stroke="#3fb950" stroke-width="1"/>
-    <line x1="1725" y1="170" x2="1760" y2="200" stroke="#58a6ff" stroke-width="0.8"/>
-    <line x1="1690" y1="190" x2="1655" y2="190" stroke="#3fb950" stroke-width="0.8"/>
-  </g>
+  <!-- Main glass panel (hero card) -->
+  <rect x="460" y="300" width="1000" height="480" rx="24" fill="url(#glass-fill)" stroke="url(#glass-stroke)" stroke-width="1" filter="url(#shadow-deep)"/>
+  <!-- Top highlight -->
+  <rect x="461" y="301" width="998" height="1" rx="0" fill="rgba(255,255,255,0.08)"/>
 
-  <!-- Bottom decorative cylinders (databases) -->
-  <g opacity="0.08" transform="translate(200, 850)">
-    <ellipse cx="40" cy="0" rx="40" ry="12" fill="none" stroke="#336791" stroke-width="1.5"/>
-    <line x1="0" y1="0" x2="0" y2="50" stroke="#336791" stroke-width="1.5"/>
-    <line x1="80" y1="0" x2="80" y2="50" stroke="#336791" stroke-width="1.5"/>
-    <ellipse cx="40" cy="50" rx="40" ry="12" fill="none" stroke="#336791" stroke-width="1.5"/>
-  </g>
-  <g opacity="0.08" transform="translate(1650, 830)">
-    <ellipse cx="40" cy="0" rx="40" ry="12" fill="none" stroke="#336791" stroke-width="1.5"/>
-    <line x1="0" y1="0" x2="0" y2="50" stroke="#336791" stroke-width="1.5"/>
-    <line x1="80" y1="0" x2="80" y2="50" stroke="#336791" stroke-width="1.5"/>
-    <ellipse cx="40" cy="50" rx="40" ry="12" fill="none" stroke="#336791" stroke-width="1.5"/>
-  </g>
+  <!-- Typography hierarchy -->
+  <!-- Overline -->
+  <text x="960" y="380" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="400" letter-spacing="0.25em">SYSTEM ARCHITECTURE</text>
 
-  <!-- Central content area -->
   <!-- Main title -->
-  <text x="960" y="340" text-anchor="middle" fill="url(#title-grad)" font-size="96" font-weight="700" letter-spacing="-0.02em" filter="url(#glow-filter)">TickerLab</text>
-  <text x="960" y="430" text-anchor="middle" fill="url(#title-grad)" font-size="52" font-weight="600" letter-spacing="0.08em" opacity="0.9">STORAGE ARCHITECTURE</text>
-
-  <!-- Decorative line -->
-  <line x1="560" y1="470" x2="1360" y2="470" stroke="url(#line-grad)" stroke-width="2"/>
+  <text x="960" y="470" text-anchor="middle" fill="rgba(255,255,255,0.92)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="72" font-weight="200" letter-spacing="-0.02em">TickerLab</text>
 
   <!-- Subtitle -->
-  <text x="960" y="530" text-anchor="middle" fill="#8b949e" font-size="28" font-weight="400" letter-spacing="0.04em">Pragmatic Storage for Financial Intelligence</text>
+  <text x="960" y="540" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="24" font-weight="300" letter-spacing="0.06em">Storage Architecture</text>
 
-  <!-- Key stat cards -->
-  <!-- Card 1: 2 Storage -->
-  <g transform="translate(440, 600)">
-    <rect width="240" height="120" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(88,166,255,0.25)" stroke-width="1"/>
-    <rect width="240" height="1" y="0" rx="0" fill="rgba(255,255,255,0.1)"/>
-    <text x="120" y="55" text-anchor="middle" fill="#58a6ff" font-size="42" font-weight="700">2</text>
-    <text x="120" y="85" text-anchor="middle" fill="#8b949e" font-size="16" font-weight="500" letter-spacing="0.06em">PHYSICAL STORAGE</text>
+  <!-- Divider line -->
+  <line x1="860" y1="580" x2="1060" y2="580" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Descriptor -->
+  <text x="960" y="630" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="16" font-weight="400" letter-spacing="0.02em">Pragmatic infrastructure for financial intelligence</text>
+
+  <!-- Minimal stats row -->
+  <g transform="translate(610, 680)">
+    <text x="0" y="0" fill="rgba(255,255,255,0.7)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="36" font-weight="200">2</text>
+    <text x="0" y="22" fill="rgba(255,255,255,0.25)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="11" font-weight="400" letter-spacing="0.12em">STORAGE</text>
+  </g>
+  <line x1="730" y1="665" x2="730" y2="710" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <g transform="translate(790, 680)">
+    <text x="0" y="0" fill="rgba(255,255,255,0.7)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="36" font-weight="200">5</text>
+    <text x="0" y="22" fill="rgba(255,255,255,0.25)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="11" font-weight="400" letter-spacing="0.12em">LAYERS</text>
+  </g>
+  <line x1="900" y1="665" x2="900" y2="710" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <g transform="translate(960, 680)">
+    <text x="0" y="0" fill="rgba(255,255,255,0.7)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="36" font-weight="200">16</text>
+    <text x="0" y="22" fill="rgba(255,255,255,0.25)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="11" font-weight="400" letter-spacing="0.12em">TABLES</text>
+  </g>
+  <line x1="1090" y1="665" x2="1090" y2="710" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <g transform="translate(1150, 680)">
+    <text x="0" y="0" fill="rgba(255,255,255,0.7)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="36" font-weight="200">12</text>
+    <text x="0" y="22" fill="rgba(255,255,255,0.25)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="11" font-weight="400" letter-spacing="0.12em">SCHEMAS</text>
   </g>
 
-  <!-- Card 2: 5 Layers -->
-  <g transform="translate(740, 600)">
-    <rect width="240" height="120" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(188,140,255,0.25)" stroke-width="1"/>
-    <rect width="240" height="1" y="0" rx="0" fill="rgba(255,255,255,0.1)"/>
-    <text x="120" y="55" text-anchor="middle" fill="#bc8cff" font-size="42" font-weight="700">5</text>
-    <text x="120" y="85" text-anchor="middle" fill="#8b949e" font-size="16" font-weight="500" letter-spacing="0.06em">LOGICAL LAYERS</text>
-  </g>
-
-  <!-- Card 3: 16 Tables -->
-  <g transform="translate(1040, 600)">
-    <rect width="240" height="120" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(63,185,80,0.25)" stroke-width="1"/>
-    <rect width="240" height="1" y="0" rx="0" fill="rgba(255,255,255,0.1)"/>
-    <text x="120" y="55" text-anchor="middle" fill="#3fb950" font-size="42" font-weight="700">16</text>
-    <text x="120" y="85" text-anchor="middle" fill="#8b949e" font-size="16" font-weight="500" letter-spacing="0.06em">CORE TABLES</text>
-  </g>
-
-  <!-- Card 4: 12 Schemas -->
-  <g transform="translate(1240, 600)">
-    <rect width="240" height="120" rx="12" fill="rgba(255,255,255,0.04)" stroke="rgba(247,129,102,0.25)" stroke-width="1"/>
-    <rect width="240" height="1" y="0" rx="0" fill="rgba(255,255,255,0.1)"/>
-    <text x="120" y="55" text-anchor="middle" fill="#f78166" font-size="42" font-weight="700">12</text>
-    <text x="120" y="85" text-anchor="middle" fill="#8b949e" font-size="16" font-weight="500" letter-spacing="0.06em">PG SCHEMAS</text>
-  </g>
-
-  <!-- Bottom tagline -->
-  <text x="960" y="820" text-anchor="middle" fill="rgba(139,148,158,0.6)" font-size="18" font-weight="400" letter-spacing="0.1em">ANTI-OVERENGINEERING APPROACH</text>
-
-  <!-- Technology badges -->
-  <g transform="translate(770, 880)">
-    <!-- Postgres badge -->
-    <rect width="160" height="44" rx="22" fill="rgba(51,103,145,0.2)" stroke="rgba(51,103,145,0.5)" stroke-width="1"/>
-    <circle cx="28" cy="22" r="14" fill="#336791"/>
-    <text x="28" y="27" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">PG</text>
-    <text x="100" y="27" text-anchor="middle" fill="#f0f6fc" font-size="15" font-weight="500">PostgreSQL</text>
-  </g>
-  <g transform="translate(960, 880)">
-    <!-- Raw Archive badge -->
-    <rect width="180" height="44" rx="22" fill="rgba(63,185,80,0.15)" stroke="rgba(63,185,80,0.4)" stroke-width="1"/>
-    <circle cx="28" cy="22" r="14" fill="#3fb950"/>
-    <text x="28" y="27" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">RA</text>
-    <text x="110" y="27" text-anchor="middle" fill="#f0f6fc" font-size="15" font-weight="500">Raw Archive</text>
-  </g>
-
-  <!-- Slide number -->
-  <text x="1880" y="1050" text-anchor="end" fill="rgba(139,148,158,0.3)" font-size="14" font-weight="400">01 / 10</text>
+  <!-- Bottom badge -->
+  <text x="960" y="1030" text-anchor="middle" fill="rgba(255,255,255,0.12)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="11" font-weight="400" letter-spacing="0.15em">01</text>
 </svg>

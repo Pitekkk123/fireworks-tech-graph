@@ -1,242 +1,120 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
-  <style>
-    text { font-family: 'Inter', -apple-system, 'SF Pro Display', 'Segoe UI', sans-serif; }
-  </style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="50%" stop-color="#161b22"/>
-      <stop offset="100%" stop-color="#0d1117"/>
+    <linearGradient id="bg07" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08090a"/>
+      <stop offset="100%" stop-color="#0c0d0f"/>
     </linearGradient>
-    <radialGradient id="glow-purple" cx="50%" cy="45%" r="40%">
-      <stop offset="0%" stop-color="rgba(188,140,255,0.12)"/>
-      <stop offset="100%" stop-color="rgba(188,140,255,0)"/>
+    <radialGradient id="atmo07" cx="50%" cy="35%" r="50%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.02)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
     </radialGradient>
-    <radialGradient id="glow-blue" cx="30%" cy="70%" r="30%">
-      <stop offset="0%" stop-color="rgba(88,166,255,0.08)"/>
-      <stop offset="100%" stop-color="rgba(88,166,255,0)"/>
-    </radialGradient>
-    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#bc8cff"/>
-      <stop offset="100%" stop-color="#58a6ff"/>
+    <linearGradient id="glass07" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.04)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.012)"/>
     </linearGradient>
-    <linearGradient id="flow-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f78166"/>
-      <stop offset="25%" stop-color="#bc8cff"/>
-      <stop offset="50%" stop-color="#58a6ff"/>
-      <stop offset="75%" stop-color="#3fb950"/>
-      <stop offset="100%" stop-color="#eab308"/>
-    </linearGradient>
-    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
-      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(88,166,255,0.03)" stroke-width="0.5"/>
-    </pattern>
-    <filter id="glow-filter">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="shadow07">
+      <feDropShadow dx="0" dy="6" stdDeviation="16" flood-color="rgba(0,0,0,0.35)"/>
     </filter>
-    <marker id="arr-flow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#bc8cff"/>
-    </marker>
-    <marker id="arr-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#58a6ff"/>
-    </marker>
-    <marker id="arr-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#3fb950"/>
-    </marker>
   </defs>
 
-  <!-- Background -->
-  <rect width="1920" height="1080" fill="url(#bg)"/>
-  <rect width="1920" height="1080" fill="url(#grid)"/>
-  <rect width="1920" height="1080" fill="url(#glow-purple)"/>
-  <rect width="1920" height="1080" fill="url(#glow-blue)"/>
+  <rect width="1920" height="1080" fill="url(#bg07)"/>
+  <rect width="1920" height="1080" fill="url(#atmo07)"/>
 
   <!-- Title -->
-  <text x="960" y="55" text-anchor="middle" fill="rgba(188,140,255,0.5)" font-size="14" font-weight="600" letter-spacing="0.2em">ETL PIPELINE</text>
-  <text x="960" y="100" text-anchor="middle" fill="url(#title-grad)" font-size="44" font-weight="700" filter="url(#glow-filter)">Ingest &amp; Report Porter</text>
-  <text x="960" y="135" text-anchor="middle" fill="#8b949e" font-size="18">Deterministic ETL worker, not a magic memory agent</text>
+  <text x="960" y="70" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="400" fill="rgba(255,255,255,0.2)" letter-spacing="0.25em">PIPELINE</text>
+  <text x="960" y="120" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="44" font-weight="200" fill="rgba(255,255,255,0.85)">Ingest &amp; Report Porter</text>
+  <text x="960" y="160" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.25)">Deterministic ETL worker. Not a memory agent.</text>
 
-  <!-- Main flow line -->
-  <line x1="100" y1="400" x2="1820" y2="400" stroke="url(#flow-grad)" stroke-width="3" opacity="0.2"/>
+  <!-- Horizontal flow line -->
+  <line x1="140" y1="360" x2="1780" y2="360" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
 
-  <!-- Step 1: File Arrives -->
-  <g transform="translate(80, 230)">
-    <rect width="200" height="280" rx="14" fill="rgba(247,129,102,0.06)" stroke="rgba(247,129,102,0.3)" stroke-width="1.2"/>
-    <rect width="200" height="3" y="0" rx="1" fill="rgba(247,129,102,0.3)"/>
-    <circle cx="100" cy="45" r="24" fill="rgba(247,129,102,0.15)" stroke="#f78166" stroke-width="1.5"/>
-    <text x="100" y="51" text-anchor="middle" fill="#f78166" font-size="16" font-weight="700">1</text>
-    <text x="100" y="90" text-anchor="middle" fill="#f0f6fc" font-size="15" font-weight="600">File Arrives</text>
-    <text x="100" y="120" text-anchor="middle" fill="#8b949e" font-size="11">TradingEdge</text>
-    <text x="100" y="138" text-anchor="middle" fill="#8b949e" font-size="11">SEC Filing</text>
-    <text x="100" y="156" text-anchor="middle" fill="#8b949e" font-size="11">Market CSV</text>
-    <text x="100" y="174" text-anchor="middle" fill="#8b949e" font-size="11">News Payload</text>
-    <text x="100" y="192" text-anchor="middle" fill="#8b949e" font-size="11">Research Note</text>
-    <!-- File icon -->
-    <g transform="translate(75, 210)">
-      <path d="M 0,5 L 0,40 L 30,40 L 30,12 L 23,5 Z" fill="rgba(247,129,102,0.2)" stroke="#f78166" stroke-width="1"/>
-      <path d="M 23,5 L 23,12 L 30,12" fill="none" stroke="#f78166" stroke-width="0.8"/>
-    </g>
+  <!-- 7 Steps -->
+  <!-- Step 1 -->
+  <g transform="translate(140, 220)">
+    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(255,255,255,0.06)">01</text>
+    <text x="0" y="55" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="17" font-weight="400" fill="rgba(255,255,255,0.7)">File Arrives</text>
+    <text x="0" y="78" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.25)">TradingEdge, SEC,</text>
+    <text x="0" y="94" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.25)">CSV, news, notes</text>
   </g>
 
-  <!-- Arrow 1->2 -->
-  <line x1="280" y1="400" x2="320" y2="400" stroke="#f78166" stroke-width="2" marker-end="url(#arr-flow)" opacity="0.7"/>
-
-  <!-- Step 2: Save Raw -->
-  <g transform="translate(320, 230)">
-    <rect width="200" height="280" rx="14" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.3)" stroke-width="1.2"/>
-    <rect width="200" height="3" y="0" rx="1" fill="rgba(63,185,80,0.3)"/>
-    <circle cx="100" cy="45" r="24" fill="rgba(63,185,80,0.15)" stroke="#3fb950" stroke-width="1.5"/>
-    <text x="100" y="51" text-anchor="middle" fill="#3fb950" font-size="16" font-weight="700">2</text>
-    <text x="100" y="90" text-anchor="middle" fill="#f0f6fc" font-size="15" font-weight="600">Save to Raw</text>
-    <text x="100" y="120" text-anchor="middle" fill="#8b949e" font-size="11">Write full file to</text>
-    <text x="100" y="138" text-anchor="middle" fill="#8b949e" font-size="11">raw archive folder</text>
-    <text x="100" y="170" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="500">content_hash</text>
-    <text x="100" y="195" text-anchor="middle" fill="#8b949e" font-size="11">SHA-256 of content</text>
-    <text x="100" y="213" text-anchor="middle" fill="#8b949e" font-size="11">for deduplication</text>
-    <!-- Folder icon -->
-    <g transform="translate(72, 230)">
-      <path d="M 0,10 L 0,40 L 50,40 L 50,10 L 25,10 L 20,3 L 0,3 Z" fill="rgba(63,185,80,0.3)" stroke="#3fb950" stroke-width="1"/>
-    </g>
+  <!-- Step 2 -->
+  <g transform="translate(380, 220)">
+    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(255,255,255,0.06)">02</text>
+    <text x="0" y="55" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="17" font-weight="400" fill="rgba(255,255,255,0.7)">Save Raw</text>
+    <text x="0" y="78" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.25)">Write full file to</text>
+    <text x="0" y="94" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.25)">raw archive + SHA-256</text>
   </g>
 
-  <!-- Arrow 2->3 -->
-  <line x1="520" y1="400" x2="560" y2="400" stroke="#3fb950" stroke-width="2" marker-end="url(#arr-flow)" opacity="0.7"/>
-
-  <!-- Step 3: Register Source -->
-  <g transform="translate(560, 230)">
-    <rect width="200" height="280" rx="14" fill="rgba(88,166,255,0.06)" stroke="rgba(88,166,255,0.3)" stroke-width="1.2"/>
-    <rect width="200" height="3" y="0" rx="1" fill="rgba(88,166,255,0.3)"/>
-    <circle cx="100" cy="45" r="24" fill="rgba(88,166,255,0.15)" stroke="#58a6ff" stroke-width="1.5"/>
-    <text x="100" y="51" text-anchor="middle" fill="#58a6ff" font-size="16" font-weight="700">3</text>
-    <text x="100" y="90" text-anchor="middle" fill="#f0f6fc" font-size="15" font-weight="600">Register Source</text>
-    <text x="100" y="120" text-anchor="middle" fill="#8b949e" font-size="11">INSERT into</text>
-    <text x="100" y="138" text-anchor="middle" fill="#58a6ff" font-size="12" font-weight="500">source_documents</text>
-    <text x="100" y="165" text-anchor="middle" fill="#8b949e" font-size="11">module, provider</text>
-    <text x="100" y="183" text-anchor="middle" fill="#8b949e" font-size="11">raw_uri, hash</text>
-    <text x="100" y="201" text-anchor="middle" fill="#8b949e" font-size="11">parser_version</text>
-    <text x="100" y="219" text-anchor="middle" fill="#8b949e" font-size="11">metadata_json</text>
-    <!-- DB icon small -->
-    <g transform="translate(80, 240)">
-      <ellipse cx="20" cy="0" rx="20" ry="6" fill="rgba(88,166,255,0.3)" stroke="#58a6ff" stroke-width="1"/>
-      <rect x="0" y="0" width="40" height="22" fill="rgba(88,166,255,0.3)" stroke="none"/>
-      <line x1="0" y1="0" x2="0" y2="22" stroke="#58a6ff" stroke-width="1"/>
-      <line x1="40" y1="0" x2="40" y2="22" stroke="#58a6ff" stroke-width="1"/>
-      <ellipse cx="20" cy="22" rx="20" ry="6" fill="rgba(88,166,255,0.5)" stroke="#58a6ff" stroke-width="1"/>
-    </g>
+  <!-- Step 3 -->
+  <g transform="translate(620, 220)">
+    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(255,255,255,0.06)">03</text>
+    <text x="0" y="55" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="17" font-weight="400" fill="rgba(255,255,255,0.7)">Register Source</text>
+    <text x="0" y="78" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.25)">INSERT source_documents</text>
+    <text x="0" y="94" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.25)">URI, hash, metadata</text>
   </g>
 
-  <!-- Arrow 3->4 -->
-  <line x1="760" y1="400" x2="800" y2="400" stroke="#58a6ff" stroke-width="2" marker-end="url(#arr-flow)" opacity="0.7"/>
-
-  <!-- Step 4: Parse -->
-  <g transform="translate(800, 230)">
-    <rect width="200" height="280" rx="14" fill="rgba(188,140,255,0.06)" stroke="rgba(188,140,255,0.3)" stroke-width="1.2"/>
-    <rect width="200" height="3" y="0" rx="1" fill="rgba(188,140,255,0.3)"/>
-    <circle cx="100" cy="45" r="24" fill="rgba(188,140,255,0.15)" stroke="#bc8cff" stroke-width="1.5"/>
-    <text x="100" y="51" text-anchor="middle" fill="#bc8cff" font-size="16" font-weight="700">4</text>
-    <text x="100" y="90" text-anchor="middle" fill="#f0f6fc" font-size="15" font-weight="600">Parse &amp; Validate</text>
-    <text x="100" y="120" text-anchor="middle" fill="#8b949e" font-size="11">Identify module</text>
-    <text x="100" y="138" text-anchor="middle" fill="#8b949e" font-size="11">Extract structured</text>
-    <text x="100" y="156" text-anchor="middle" fill="#8b949e" font-size="11">data from raw</text>
-    <text x="100" y="185" text-anchor="middle" fill="#bc8cff" font-size="12" font-weight="500">Validate schema</text>
-    <text x="100" y="210" text-anchor="middle" fill="#8b949e" font-size="11">Check completeness</text>
-    <text x="100" y="228" text-anchor="middle" fill="#8b949e" font-size="11">Flag anomalies</text>
-    <!-- Gear icon -->
-    <text x="100" y="265" text-anchor="middle" fill="#bc8cff" font-size="28" opacity="0.4">&#9881;</text>
+  <!-- Step 4 -->
+  <g transform="translate(880, 220)">
+    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(255,255,255,0.06)">04</text>
+    <text x="0" y="55" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="17" font-weight="400" fill="rgba(255,255,255,0.7)">Parse &amp; Validate</text>
+    <text x="0" y="78" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.25)">Identify module, extract</text>
+    <text x="0" y="94" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.25)">structured data, check</text>
   </g>
 
-  <!-- Arrow 4->5 -->
-  <line x1="1000" y1="400" x2="1040" y2="400" stroke="#bc8cff" stroke-width="2" marker-end="url(#arr-flow)" opacity="0.7"/>
-
-  <!-- Step 5: Write Facts -->
-  <g transform="translate(1040, 230)">
-    <rect width="200" height="280" rx="14" fill="rgba(88,166,255,0.06)" stroke="rgba(88,166,255,0.3)" stroke-width="1.2"/>
-    <rect width="200" height="3" y="0" rx="1" fill="rgba(88,166,255,0.3)"/>
-    <circle cx="100" cy="45" r="24" fill="rgba(88,166,255,0.15)" stroke="#58a6ff" stroke-width="1.5"/>
-    <text x="100" y="51" text-anchor="middle" fill="#58a6ff" font-size="16" font-weight="700">5</text>
-    <text x="100" y="90" text-anchor="middle" fill="#f0f6fc" font-size="15" font-weight="600">Write Facts</text>
-    <text x="100" y="120" text-anchor="middle" fill="#8b949e" font-size="11">INSERT into target</text>
-    <text x="100" y="138" text-anchor="middle" fill="#8b949e" font-size="11">fact tables:</text>
-    <text x="100" y="163" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="500">sector_snapshots</text>
-    <text x="100" y="181" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="500">leader_snapshots</text>
-    <text x="100" y="199" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="500">options_contract_facts</text>
-    <text x="100" y="217" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="500">bottleneck_scores</text>
-    <text x="100" y="235" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="500">research_facts</text>
-    <text x="100" y="260" text-anchor="middle" fill="#8b949e" font-size="10">+ signal_fires</text>
+  <!-- Step 5 -->
+  <g transform="translate(1150, 220)">
+    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(255,255,255,0.06)">05</text>
+    <text x="0" y="55" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="17" font-weight="400" fill="rgba(255,255,255,0.7)">Write Facts</text>
+    <text x="0" y="78" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.25)">INSERT into canonical</text>
+    <text x="0" y="94" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.25)">fact tables by module</text>
   </g>
 
-  <!-- Arrow 5->6 -->
-  <line x1="1240" y1="400" x2="1280" y2="400" stroke="#58a6ff" stroke-width="2" marker-end="url(#arr-flow)" opacity="0.7"/>
-
-  <!-- Step 6: Generate Report -->
-  <g transform="translate(1280, 230)">
-    <rect width="200" height="280" rx="14" fill="rgba(234,179,8,0.06)" stroke="rgba(234,179,8,0.3)" stroke-width="1.2"/>
-    <rect width="200" height="3" y="0" rx="1" fill="rgba(234,179,8,0.3)"/>
-    <circle cx="100" cy="45" r="24" fill="rgba(234,179,8,0.15)" stroke="#eab308" stroke-width="1.5"/>
-    <text x="100" y="51" text-anchor="middle" fill="#eab308" font-size="16" font-weight="700">6</text>
-    <text x="100" y="90" text-anchor="middle" fill="#f0f6fc" font-size="15" font-weight="600">Report Snapshot</text>
-    <text x="100" y="120" text-anchor="middle" fill="#8b949e" font-size="11">Build daily_brief</text>
-    <text x="100" y="138" text-anchor="middle" fill="#8b949e" font-size="11">JSON + Markdown</text>
-    <text x="100" y="165" text-anchor="middle" fill="#eab308" font-size="12" font-weight="500">report_snapshots</text>
-    <text x="100" y="192" text-anchor="middle" fill="#8b949e" font-size="11">Save MD copy to</text>
-    <text x="100" y="210" text-anchor="middle" fill="#8b949e" font-size="11">raw archive</text>
-    <text x="100" y="240" text-anchor="middle" fill="#8b949e" font-size="11">Frontend reads</text>
-    <text x="100" y="258" text-anchor="middle" fill="#8b949e" font-size="11">this one row</text>
+  <!-- Step 6 -->
+  <g transform="translate(1400, 220)">
+    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(255,255,255,0.06)">06</text>
+    <text x="0" y="55" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="17" font-weight="400" fill="rgba(255,255,255,0.7)">Report Snapshot</text>
+    <text x="0" y="78" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.25)">Build daily_brief JSON</text>
+    <text x="0" y="94" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.25)">Frontend reads one row</text>
   </g>
 
-  <!-- Arrow 6->7 -->
-  <line x1="1480" y1="400" x2="1520" y2="400" stroke="#eab308" stroke-width="2" marker-end="url(#arr-flow)" opacity="0.7"/>
-
-  <!-- Step 7: Complete -->
-  <g transform="translate(1520, 230)">
-    <rect width="200" height="280" rx="14" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.3)" stroke-width="1.2"/>
-    <rect width="200" height="3" y="0" rx="1" fill="rgba(63,185,80,0.3)"/>
-    <circle cx="100" cy="45" r="24" fill="rgba(63,185,80,0.15)" stroke="#3fb950" stroke-width="1.5"/>
-    <text x="100" y="51" text-anchor="middle" fill="#3fb950" font-size="16" font-weight="700">7</text>
-    <text x="100" y="90" text-anchor="middle" fill="#f0f6fc" font-size="15" font-weight="600">Mark Complete</text>
-    <text x="100" y="120" text-anchor="middle" fill="#8b949e" font-size="11">Update job_runs</text>
-    <text x="100" y="138" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="500">status: completed</text>
-    <text x="100" y="168" text-anchor="middle" fill="#8b949e" font-size="11">Add pending</text>
-    <text x="100" y="186" text-anchor="middle" fill="#8b949e" font-size="11">outcomes for</text>
-    <text x="100" y="204" text-anchor="middle" fill="#8b949e" font-size="11">signal_fires</text>
-    <text x="100" y="234" text-anchor="middle" fill="#8b949e" font-size="11">Add pending OI</text>
-    <text x="100" y="252" text-anchor="middle" fill="#8b949e" font-size="11">checks if options</text>
-    <!-- Checkmark -->
-    <text x="100" y="275" text-anchor="middle" fill="#3fb950" font-size="20" opacity="0.5">&#10003;</text>
+  <!-- Step 7 -->
+  <g transform="translate(1660, 220)">
+    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(255,255,255,0.06)">07</text>
+    <text x="0" y="55" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="17" font-weight="400" fill="rgba(255,255,255,0.7)">Complete</text>
+    <text x="0" y="78" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.25)">Update job_runs,</text>
+    <text x="0" y="94" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.25)">add pending outcomes</text>
   </g>
 
-  <!-- Bottom: Two concrete examples -->
-  <g transform="translate(120, 580)">
-    <rect width="820" height="200" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-    <text x="30" y="30" fill="#f78166" font-size="14" font-weight="600" letter-spacing="0.06em">EXAMPLE: TradingEdge Options Flow</text>
-    <text x="30" y="58" fill="#8b949e" font-size="13">1. HTML file arrives from TradingEdge</text>
-    <text x="30" y="78" fill="#8b949e" font-size="13">2. Agent saves to raw/2026-05-25/tradingedge-options.html</text>
-    <text x="30" y="98" fill="#8b949e" font-size="13">3. Agent registers source_document with SHA-256 hash</text>
-    <text x="30" y="118" fill="#8b949e" font-size="13">4. Agent parses contracts: strike, volume, premium, OI</text>
-    <text x="30" y="138" fill="#8b949e" font-size="13">5. Agent writes options_contract_facts + options_daily_reads</text>
-    <text x="30" y="158" fill="#8b949e" font-size="13">6. Agent creates pending_oi_checks for next session</text>
-    <text x="30" y="178" fill="#8b949e" font-size="13">7. Agent refreshes report_snapshots daily_brief section</text>
+  <!-- Two example panels -->
+  <g filter="url(#shadow07)">
+    <rect x="140" y="430" width="780" height="300" rx="18" fill="url(#glass07)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    <line x1="158" y1="430" x2="902" y2="430" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
   </g>
+  <text x="180" y="470" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="14" font-weight="400" fill="rgba(255,255,255,0.45)" letter-spacing="0.08em">EXAMPLE: OPTIONS FLOW</text>
+  <text x="180" y="510" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.3)">1. TradingEdge HTML arrives</text>
+  <text x="180" y="535" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.3)">2. Save to raw/2026-05-25/tradingedge.html</text>
+  <text x="180" y="560" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.3)">3. Register source_document with SHA-256</text>
+  <text x="180" y="585" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.3)">4. Parse contracts: strike, volume, premium, OI</text>
+  <text x="180" y="610" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.3)">5. Write options_contract_facts + daily_reads</text>
+  <text x="180" y="635" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.3)">6. Create pending_oi_checks for next session</text>
+  <text x="180" y="660" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.3)">7. Refresh report_snapshots</text>
 
-  <g transform="translate(980, 580)">
-    <rect width="820" height="200" rx="12" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-    <text x="30" y="30" fill="#58a6ff" font-size="14" font-weight="600" letter-spacing="0.06em">EXAMPLE: SEC Filing / Bottleneck</text>
-    <text x="30" y="58" fill="#8b949e" font-size="13">1. SEC 10-K filing arrives for ticker MP</text>
-    <text x="30" y="78" fill="#8b949e" font-size="13">2. Agent saves to raw/2026-05-25/sec-mp-10k.html</text>
-    <text x="30" y="98" fill="#8b949e" font-size="13">3. Agent registers source_document, identifies CIK</text>
-    <text x="30" y="118" fill="#8b949e" font-size="13">4. Agent extracts material exposure claims</text>
-    <text x="30" y="138" fill="#8b949e" font-size="13">5. Agent writes bottleneck_evidence with confidence</text>
-    <text x="30" y="158" fill="#8b949e" font-size="13">6. Agent recalculates bottleneck_company_scores</text>
-    <text x="30" y="178" fill="#8b949e" font-size="13">7. Agent updates daily brief bottleneck section</text>
+  <g filter="url(#shadow07)">
+    <rect x="980" y="430" width="780" height="300" rx="18" fill="url(#glass07)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    <line x1="998" y1="430" x2="1742" y2="430" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
   </g>
+  <text x="1020" y="470" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="14" font-weight="400" fill="rgba(255,255,255,0.45)" letter-spacing="0.08em">EXAMPLE: SEC / BOTTLENECK</text>
+  <text x="1020" y="510" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.3)">1. SEC 10-K filing arrives for ticker MP</text>
+  <text x="1020" y="535" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.3)">2. Save to raw/2026-05-25/sec-mp-10k.html</text>
+  <text x="1020" y="560" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.3)">3. Register source_document, identify CIK</text>
+  <text x="1020" y="585" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.3)">4. Extract material exposure claims</text>
+  <text x="1020" y="610" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.3)">5. Write bottleneck_evidence with confidence</text>
+  <text x="1020" y="635" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.3)">6. Recalculate bottleneck_company_scores</text>
+  <text x="1020" y="660" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.3)">7. Update daily brief section</text>
 
-  <!-- Bottom tagline -->
-  <g transform="translate(510, 820)">
-    <rect width="900" height="50" rx="10" fill="rgba(188,140,255,0.04)" stroke="rgba(188,140,255,0.15)" stroke-width="1"/>
-    <text x="450" y="18" text-anchor="middle" fill="#bc8cff" font-size="14" font-weight="600">Extract  ->  Transform  ->  Load</text>
-    <text x="450" y="38" text-anchor="middle" fill="#8b949e" font-size="13">Not a magic memory agent. A controlled, deterministic pipeline.</text>
-  </g>
+  <!-- Bottom statement -->
+  <text x="960" y="820" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.35)">Extract. Transform. Load.</text>
+  <text x="960" y="850" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="14" font-weight="300" fill="rgba(255,255,255,0.2)">A controlled pipeline, not an autonomous brain.</text>
 
-  <!-- Slide number -->
-  <text x="1880" y="1050" text-anchor="end" fill="rgba(139,148,158,0.3)" font-size="14" font-weight="400">07 / 10</text>
+  <text x="960" y="1040" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="400" fill="rgba(255,255,255,0.12)" letter-spacing="0.15em">07</text>
 </svg>

@@ -1,287 +1,148 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
-  <style>
-    text { font-family: 'Inter', -apple-system, 'SF Pro Display', 'Segoe UI', sans-serif; }
-  </style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="50%" stop-color="#161b22"/>
-      <stop offset="100%" stop-color="#0d1117"/>
+    <linearGradient id="bg04" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08090a"/>
+      <stop offset="100%" stop-color="#0c0d0f"/>
     </linearGradient>
-    <radialGradient id="glow-center" cx="50%" cy="45%" r="40%">
-      <stop offset="0%" stop-color="rgba(51,103,145,0.18)"/>
-      <stop offset="100%" stop-color="rgba(51,103,145,0)"/>
+    <radialGradient id="atmo04a" cx="25%" cy="35%" r="45%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.025)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
     </radialGradient>
-    <radialGradient id="glow-purple" cx="80%" cy="30%" r="30%">
-      <stop offset="0%" stop-color="rgba(188,140,255,0.08)"/>
-      <stop offset="100%" stop-color="rgba(188,140,255,0)"/>
+    <radialGradient id="atmo04b" cx="75%" cy="65%" r="40%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.02)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
     </radialGradient>
-    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#58a6ff"/>
-      <stop offset="100%" stop-color="#bc8cff"/>
+    <linearGradient id="glass04" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.05)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.015)"/>
     </linearGradient>
-    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
-      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(88,166,255,0.03)" stroke-width="0.5"/>
-    </pattern>
-    <filter id="glow-filter">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <linearGradient id="glassBar04" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.04)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.01)"/>
+    </linearGradient>
+    <filter id="shadow04">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="rgba(0,0,0,0.4)"/>
     </filter>
-    <marker id="arr-blue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#58a6ff"/>
-    </marker>
-    <marker id="arr-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#3fb950"/>
-    </marker>
-    <marker id="arr-purple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#bc8cff"/>
-    </marker>
-    <marker id="arr-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#f78166"/>
-    </marker>
   </defs>
 
   <!-- Background -->
-  <rect width="1920" height="1080" fill="url(#bg)"/>
-  <rect width="1920" height="1080" fill="url(#grid)"/>
-  <rect width="1920" height="1080" fill="url(#glow-center)"/>
-  <rect width="1920" height="1080" fill="url(#glow-purple)"/>
+  <rect width="1920" height="1080" fill="url(#bg04)"/>
+  <rect width="1920" height="1080" fill="url(#atmo04a)"/>
+  <rect width="1920" height="1080" fill="url(#atmo04b)"/>
 
   <!-- Title -->
-  <text x="960" y="60" text-anchor="middle" fill="rgba(88,166,255,0.5)" font-size="14" font-weight="600" letter-spacing="0.2em">RECOMMENDED ARCHITECTURE</text>
-  <text x="960" y="110" text-anchor="middle" fill="url(#title-grad)" font-size="44" font-weight="700" filter="url(#glow-filter)">Core Architecture: MVP</text>
+  <text x="160" y="112" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="52" font-weight="200" fill="rgba(255,255,255,0.85)" letter-spacing="-0.03em">Core Architecture</text>
+  <text x="160" y="148" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="14" font-weight="300" fill="rgba(255,255,255,0.35)" letter-spacing="0.12em">TICKERLAB STORAGE LAYER</text>
 
-  <!-- === LAYER 1: External Sources (top) === -->
-  <g transform="translate(0, 150)">
-    <rect x="140" y="0" width="1640" height="80" rx="8" fill="rgba(247,129,102,0.03)" stroke="rgba(247,129,102,0.15)" stroke-width="1" stroke-dasharray="6,4"/>
-    <text x="170" y="22" fill="#f78166" font-size="11" font-weight="600" letter-spacing="0.08em">EXTERNAL SOURCES</text>
+  <!-- External Sources Bar -->
+  <rect x="160" y="200" width="1600" height="52" rx="14" fill="url(#glassBar04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="176" y1="200" x2="1744" y2="200" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="200" y="232" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.7)" letter-spacing="0.04em">External Sources</text>
+  <text x="440" y="232" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">TradingEdge</text>
+  <text x="620" y="232" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">SEC EDGAR</text>
+  <text x="790" y="232" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">Market Data</text>
+  <text x="970" y="232" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">Research Feeds</text>
+  <text x="1170" y="232" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">News APIs</text>
+  <text x="1340" y="232" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">Options Flow</text>
+  <text x="1520" y="232" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">Manual Notes</text>
 
-    <!-- Source boxes -->
-    <g transform="translate(180, 30)">
-      <rect width="170" height="40" rx="8" fill="rgba(247,129,102,0.08)" stroke="rgba(247,129,102,0.3)" stroke-width="1"/>
-      <text x="85" y="25" text-anchor="middle" fill="#f0f6fc" font-size="13" font-weight="500">TradingEdge</text>
-    </g>
-    <g transform="translate(380, 30)">
-      <rect width="170" height="40" rx="8" fill="rgba(247,129,102,0.08)" stroke="rgba(247,129,102,0.3)" stroke-width="1"/>
-      <text x="85" y="25" text-anchor="middle" fill="#f0f6fc" font-size="13" font-weight="500">SEC Filings</text>
-    </g>
-    <g transform="translate(580, 30)">
-      <rect width="170" height="40" rx="8" fill="rgba(247,129,102,0.08)" stroke="rgba(247,129,102,0.3)" stroke-width="1"/>
-      <text x="85" y="25" text-anchor="middle" fill="#f0f6fc" font-size="13" font-weight="500">Market Data CSV</text>
-    </g>
-    <g transform="translate(780, 30)">
-      <rect width="170" height="40" rx="8" fill="rgba(247,129,102,0.08)" stroke="rgba(247,129,102,0.3)" stroke-width="1"/>
-      <text x="85" y="25" text-anchor="middle" fill="#f0f6fc" font-size="13" font-weight="500">News / Research</text>
-    </g>
-    <g transform="translate(980, 30)">
-      <rect width="170" height="40" rx="8" fill="rgba(247,129,102,0.08)" stroke="rgba(247,129,102,0.3)" stroke-width="1"/>
-      <text x="85" y="25" text-anchor="middle" fill="#f0f6fc" font-size="13" font-weight="500">Options Flow</text>
-    </g>
-    <g transform="translate(1180, 30)">
-      <rect width="170" height="40" rx="8" fill="rgba(247,129,102,0.08)" stroke="rgba(247,129,102,0.3)" stroke-width="1"/>
-      <text x="85" y="25" text-anchor="middle" fill="#f0f6fc" font-size="13" font-weight="500">Bottleneck Intel</text>
-    </g>
-    <g transform="translate(1380, 30)">
-      <rect width="170" height="40" rx="8" fill="rgba(247,129,102,0.08)" stroke="rgba(247,129,102,0.3)" stroke-width="1"/>
-      <text x="85" y="25" text-anchor="middle" fill="#f0f6fc" font-size="13" font-weight="500">Manual Notes</text>
-    </g>
+  <!-- Flow line: Sources to ETL -->
+  <line x1="960" y1="252" x2="960" y2="290" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- ETL Agent Bar -->
+  <rect x="160" y="290" width="1600" height="52" rx="14" fill="url(#glassBar04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="176" y1="290" x2="1744" y2="290" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="200" y="322" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.7)" letter-spacing="0.04em">ETL Agent</text>
+  <text x="440" y="322" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">Parse</text>
+  <text x="560" y="322" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">Validate</text>
+  <text x="710" y="322" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">Transform</text>
+  <text x="890" y="322" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">Route</text>
+  <text x="1020" y="322" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">Hash</text>
+  <text x="1150" y="322" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">Write</text>
+
+  <!-- Flow lines: ETL to Panels -->
+  <line x1="600" y1="342" x2="600" y2="410" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="3,5"/>
+  <line x1="1400" y1="342" x2="1400" y2="410" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="3,5"/>
+
+  <!-- PostgreSQL Panel (Left, ~60%) -->
+  <g filter="url(#shadow04)">
+    <rect x="160" y="410" width="980" height="510" rx="20" fill="url(#glass04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
   </g>
+  <line x1="180" y1="410" x2="1120" y2="410" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
 
-  <!-- Arrows from sources down to ETL -->
-  <g opacity="0.5">
-    <line x1="960" y1="230" x2="960" y2="280" stroke="#f78166" stroke-width="1.5" marker-end="url(#arr-orange)"/>
+  <text x="200" y="462" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="28" font-weight="200" fill="rgba(255,255,255,0.85)" letter-spacing="-0.02em">PostgreSQL</text>
+  <text x="200" y="492" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">Primary structured storage  /  Single source of truth</text>
+
+  <!-- Schema list label -->
+  <text x="200" y="545" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)" letter-spacing="0.12em">SCHEMAS</text>
+
+  <!-- Schema list - Column 1 -->
+  <text x="200" y="585" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">sources</text>
+  <text x="200" y="620" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">market</text>
+  <text x="200" y="655" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">sector</text>
+  <text x="200" y="690" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">leader</text>
+  <text x="200" y="725" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">setup</text>
+  <text x="200" y="760" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">options</text>
+
+  <!-- Schema list - Column 2 -->
+  <text x="500" y="585" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">bottleneck</text>
+  <text x="500" y="620" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">research</text>
+  <text x="500" y="655" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">outcomes</text>
+  <text x="500" y="690" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">reports</text>
+  <text x="500" y="725" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">jobs</text>
+  <text x="500" y="760" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">memory</text>
+
+  <!-- Thin separator -->
+  <line x1="200" y1="800" x2="1100" y2="800" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+  <!-- Footer stats -->
+  <text x="200" y="840" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.2)">12 schemas</text>
+  <text x="340" y="840" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.2)">~80 tables</text>
+  <text x="480" y="840" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.2)">Full relational integrity</text>
+  <text x="720" y="840" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.2)">Partitioned by date</text>
+
+  <!-- Raw Archive Panel (Right, ~35%) -->
+  <g filter="url(#shadow04)">
+    <rect x="1180" y="410" width="580" height="510" rx="20" fill="url(#glass04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
   </g>
+  <line x1="1200" y1="410" x2="1740" y2="410" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
 
-  <!-- === LAYER 2: ETL Agent === -->
-  <g transform="translate(560, 280)">
-    <rect width="800" height="70" rx="12" fill="rgba(188,140,255,0.06)" stroke="rgba(188,140,255,0.35)" stroke-width="1.5"/>
-    <rect width="800" height="2" y="0" rx="1" fill="rgba(188,140,255,0.15)"/>
+  <text x="1220" y="462" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="28" font-weight="200" fill="rgba(255,255,255,0.85)" letter-spacing="-0.02em">Raw Archive</text>
+  <text x="1220" y="492" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">Immutable file storage  /  Append-only</text>
 
-    <!-- Hexagon icon -->
-    <polygon points="40,35 52,20 76,20 88,35 76,50 52,50" fill="rgba(188,140,255,0.2)" stroke="#bc8cff" stroke-width="1.5"/>
-    <text x="64" y="40" text-anchor="middle" fill="#bc8cff" font-size="11" font-weight="700">ETL</text>
+  <!-- File types label -->
+  <text x="1220" y="545" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)" letter-spacing="0.12em">FILE TYPES</text>
 
-    <text x="110" y="32" fill="#f0f6fc" font-size="20" font-weight="600">Ingest &amp; Report Porter</text>
-    <text x="110" y="52" fill="#8b949e" font-size="13">Extract  ->  Transform  ->  Load  ->  Hash  ->  Validate  ->  Write Facts  ->  Generate Reports</text>
-  </g>
+  <!-- File type list -->
+  <text x="1220" y="585" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">PDF documents</text>
+  <text x="1220" y="620" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">HTML snapshots</text>
+  <text x="1220" y="655" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">JSON payloads</text>
+  <text x="1220" y="690" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">CSV exports</text>
+  <text x="1220" y="725" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">Email archives (.eml)</text>
+  <text x="1220" y="760" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">API response logs</text>
 
-  <!-- Arrows from ETL down to both storages -->
-  <g opacity="0.5">
-    <!-- To Postgres -->
-    <path d="M 860,350 L 860,400" stroke="#58a6ff" stroke-width="2" marker-end="url(#arr-blue)"/>
-    <!-- To Raw Archive -->
-    <path d="M 1060,350 L 1450,400" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arr-green)" stroke-dasharray="6,3"/>
-  </g>
+  <!-- Thin separator -->
+  <line x1="1220" y1="800" x2="1720" y2="800" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
 
-  <!-- === LAYER 3: Storage (main area) === -->
-  <!-- Postgres (left, large) -->
-  <g transform="translate(140, 400)">
-    <rect width="1060" height="460" rx="16" fill="rgba(51,103,145,0.06)" stroke="rgba(51,103,145,0.35)" stroke-width="1.5"/>
-    <rect width="1060" height="2" y="0" rx="1" fill="rgba(88,166,255,0.1)"/>
+  <!-- Footer -->
+  <text x="1220" y="840" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.2)">Content-addressed</text>
+  <text x="1400" y="840" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.2)">Versioned</text>
+  <text x="1520" y="840" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300" fill="rgba(255,255,255,0.2)">SHA-256 hashed</text>
 
-    <!-- Header -->
-    <g transform="translate(30, 20)">
-      <ellipse cx="25" cy="0" rx="25" ry="8" fill="rgba(51,103,145,0.5)" stroke="#336791" stroke-width="1.2"/>
-      <rect x="0" y="0" width="50" height="30" fill="rgba(51,103,145,0.5)" stroke="none"/>
-      <line x1="0" y1="0" x2="0" y2="30" stroke="#336791" stroke-width="1.2"/>
-      <line x1="50" y1="0" x2="50" y2="30" stroke="#336791" stroke-width="1.2"/>
-      <ellipse cx="25" cy="30" rx="25" ry="8" fill="rgba(51,103,145,0.7)" stroke="#336791" stroke-width="1.2"/>
-    </g>
-    <text x="100" y="35" fill="#f0f6fc" font-size="24" font-weight="700">PostgreSQL</text>
-    <text x="100" y="55" fill="#58a6ff" font-size="12" font-weight="500" letter-spacing="0.08em">SINGLE SOURCE OF TRUTH  |  12 SCHEMAS  |  16+ TABLES</text>
+  <!-- Flow lines: Panels to Output -->
+  <line x1="600" y1="920" x2="600" y2="960" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="3,5"/>
+  <line x1="1400" y1="920" x2="1400" y2="960" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="3,5"/>
 
-    <!-- Schema groups inside Postgres -->
-    <!-- Row 1 -->
-    <g transform="translate(30, 80)">
-      <rect width="230" height="80" rx="8" fill="rgba(88,166,255,0.05)" stroke="rgba(88,166,255,0.2)" stroke-width="1"/>
-      <text x="15" y="22" fill="#58a6ff" font-size="11" font-weight="600" letter-spacing="0.06em">MARKET</text>
-      <text x="15" y="42" fill="#8b949e" font-size="12">sector_snapshots</text>
-      <text x="15" y="58" fill="#8b949e" font-size="12">leader_snapshots</text>
-    </g>
-    <g transform="translate(280, 80)">
-      <rect width="230" height="80" rx="8" fill="rgba(188,140,255,0.05)" stroke="rgba(188,140,255,0.2)" stroke-width="1"/>
-      <text x="15" y="22" fill="#bc8cff" font-size="11" font-weight="600" letter-spacing="0.06em">SETUP</text>
-      <text x="15" y="42" fill="#8b949e" font-size="12">setup_diagnostics</text>
-      <text x="15" y="58" fill="#8b949e" font-size="12">1B / 2A / 2B / 2C tiers</text>
-    </g>
-    <g transform="translate(530, 80)">
-      <rect width="230" height="80" rx="8" fill="rgba(63,185,80,0.05)" stroke="rgba(63,185,80,0.2)" stroke-width="1"/>
-      <text x="15" y="22" fill="#3fb950" font-size="11" font-weight="600" letter-spacing="0.06em">OPTIONS</text>
-      <text x="15" y="42" fill="#8b949e" font-size="12">options_contract_facts</text>
-      <text x="15" y="58" fill="#8b949e" font-size="12">options_daily_reads</text>
-    </g>
-    <g transform="translate(780, 80)">
-      <rect width="250" height="80" rx="8" fill="rgba(247,129,102,0.05)" stroke="rgba(247,129,102,0.2)" stroke-width="1"/>
-      <text x="15" y="22" fill="#f78166" font-size="11" font-weight="600" letter-spacing="0.06em">BOTTLENECK</text>
-      <text x="15" y="42" fill="#8b949e" font-size="12">bottleneck_company_scores</text>
-      <text x="15" y="58" fill="#8b949e" font-size="12">bottleneck_evidence</text>
-    </g>
-
-    <!-- Row 2 -->
-    <g transform="translate(30, 180)">
-      <rect width="230" height="80" rx="8" fill="rgba(234,179,8,0.05)" stroke="rgba(234,179,8,0.2)" stroke-width="1"/>
-      <text x="15" y="22" fill="#eab308" font-size="11" font-weight="600" letter-spacing="0.06em">RESEARCH</text>
-      <text x="15" y="42" fill="#8b949e" font-size="12">research_facts</text>
-      <text x="15" y="58" fill="#8b949e" font-size="12">document_chunks</text>
-    </g>
-    <g transform="translate(280, 180)">
-      <rect width="230" height="80" rx="8" fill="rgba(88,166,255,0.05)" stroke="rgba(88,166,255,0.2)" stroke-width="1"/>
-      <text x="15" y="22" fill="#58a6ff" font-size="11" font-weight="600" letter-spacing="0.06em">OUTCOMES</text>
-      <text x="15" y="42" fill="#8b949e" font-size="12">signal_fires</text>
-      <text x="15" y="58" fill="#8b949e" font-size="12">signal_outcomes</text>
-    </g>
-    <g transform="translate(530, 180)">
-      <rect width="230" height="80" rx="8" fill="rgba(188,140,255,0.05)" stroke="rgba(188,140,255,0.2)" stroke-width="1"/>
-      <text x="15" y="22" fill="#bc8cff" font-size="11" font-weight="600" letter-spacing="0.06em">REPORTS</text>
-      <text x="15" y="42" fill="#8b949e" font-size="12">report_snapshots</text>
-      <text x="15" y="58" fill="#8b949e" font-size="12">replaces Redis views</text>
-    </g>
-    <g transform="translate(780, 180)">
-      <rect width="250" height="80" rx="8" fill="rgba(63,185,80,0.05)" stroke="rgba(63,185,80,0.2)" stroke-width="1"/>
-      <text x="15" y="22" fill="#3fb950" font-size="11" font-weight="600" letter-spacing="0.06em">JOBS</text>
-      <text x="15" y="42" fill="#8b949e" font-size="12">job_runs</text>
-      <text x="15" y="58" fill="#8b949e" font-size="12">replaces Redis state</text>
-    </g>
-
-    <!-- Row 3 -->
-    <g transform="translate(30, 280)">
-      <rect width="490" height="60" rx="8" fill="rgba(247,129,102,0.04)" stroke="rgba(247,129,102,0.15)" stroke-width="1"/>
-      <text x="15" y="22" fill="#f78166" font-size="11" font-weight="600" letter-spacing="0.06em">SOURCES</text>
-      <text x="15" y="42" fill="#8b949e" font-size="12">source_documents  (URI + hash + metadata, not full content)</text>
-    </g>
-    <g transform="translate(540, 280)">
-      <rect width="490" height="60" rx="8" fill="rgba(124,58,237,0.04)" stroke="rgba(124,58,237,0.15)" stroke-width="1"/>
-      <text x="15" y="22" fill="#7c3aed" font-size="11" font-weight="600" letter-spacing="0.06em">MEMORY</text>
-      <text x="15" y="42" fill="#8b949e" font-size="12">document_chunks + optional pgvector embeddings (replaces Vector DB)</text>
-    </g>
-
-    <!-- Footer note -->
-    <text x="530" y="380" text-anchor="middle" fill="rgba(88,166,255,0.4)" font-size="12" font-weight="500" letter-spacing="0.06em">PARTITIONED BY DATE  |  INDEXED BY TICKER/DATE/MODULE  |  MATERIALIZED VIEWS FOR REPORTS</text>
-  </g>
-
-  <!-- Raw Archive (right, smaller) -->
-  <g transform="translate(1240, 400)">
-    <rect width="540" height="460" rx="16" fill="rgba(63,185,80,0.05)" stroke="rgba(63,185,80,0.3)" stroke-width="1.5"/>
-    <rect width="540" height="2" y="0" rx="1" fill="rgba(63,185,80,0.1)"/>
-
-    <!-- Folder icon -->
-    <g transform="translate(30, 15)">
-      <path d="M 0,12 L 0,42 L 50,42 L 50,12 L 25,12 L 20,4 L 0,4 Z" fill="rgba(63,185,80,0.3)" stroke="#3fb950" stroke-width="1.2"/>
-    </g>
-    <text x="100" y="35" fill="#f0f6fc" font-size="24" font-weight="700">Raw Archive</text>
-    <text x="100" y="55" fill="#3fb950" font-size="12" font-weight="500" letter-spacing="0.08em">FULL SOURCE PRESERVATION</text>
-
-    <!-- File type list -->
-    <g transform="translate(30, 85)">
-      <!-- File entries with folder icon -->
-      <g transform="translate(0, 0)">
-        <path d="M 0,3 L 0,20 L 18,20 L 18,7 L 14,3 Z" fill="rgba(247,129,102,0.2)" stroke="#f78166" stroke-width="0.8"/>
-        <text x="26" y="16" fill="#f0f6fc" font-size="14" font-weight="400">TradingEdge HTML reports</text>
-      </g>
-      <g transform="translate(0, 35)">
-        <path d="M 0,3 L 0,20 L 18,20 L 18,7 L 14,3 Z" fill="rgba(88,166,255,0.2)" stroke="#58a6ff" stroke-width="0.8"/>
-        <text x="26" y="16" fill="#f0f6fc" font-size="14" font-weight="400">SEC filing PDFs / HTML</text>
-      </g>
-      <g transform="translate(0, 70)">
-        <path d="M 0,3 L 0,20 L 18,20 L 18,7 L 14,3 Z" fill="rgba(63,185,80,0.2)" stroke="#3fb950" stroke-width="0.8"/>
-        <text x="26" y="16" fill="#f0f6fc" font-size="14" font-weight="400">Market data CSV files</text>
-      </g>
-      <g transform="translate(0, 105)">
-        <path d="M 0,3 L 0,20 L 18,20 L 18,7 L 14,3 Z" fill="rgba(188,140,255,0.2)" stroke="#bc8cff" stroke-width="0.8"/>
-        <text x="26" y="16" fill="#f0f6fc" font-size="14" font-weight="400">News / research payloads</text>
-      </g>
-      <g transform="translate(0, 140)">
-        <path d="M 0,3 L 0,20 L 18,20 L 18,7 L 14,3 Z" fill="rgba(234,179,8,0.2)" stroke="#eab308" stroke-width="0.8"/>
-        <text x="26" y="16" fill="#f0f6fc" font-size="14" font-weight="400">Provider JSON responses</text>
-      </g>
-      <g transform="translate(0, 175)">
-        <path d="M 0,3 L 0,20 L 18,20 L 18,7 L 14,3 Z" fill="rgba(247,129,102,0.2)" stroke="#f78166" stroke-width="0.8"/>
-        <text x="26" y="16" fill="#f0f6fc" font-size="14" font-weight="400">Daily report markdown</text>
-      </g>
-      <g transform="translate(0, 210)">
-        <path d="M 0,3 L 0,20 L 18,20 L 18,7 L 14,3 Z" fill="rgba(88,166,255,0.2)" stroke="#58a6ff" stroke-width="0.8"/>
-        <text x="26" y="16" fill="#f0f6fc" font-size="14" font-weight="400">Options flow raw data</text>
-      </g>
-    </g>
-
-    <!-- Connection note -->
-    <g transform="translate(30, 380)">
-      <rect width="480" height="50" rx="8" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.2)" stroke-width="1" stroke-dasharray="4,3"/>
-      <text x="240" y="22" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="500">DB stores URI + content_hash</text>
-      <text x="240" y="40" text-anchor="middle" fill="#8b949e" font-size="11">Full files live here, not in Postgres</text>
-    </g>
-  </g>
-
-  <!-- === LAYER 4: Output (bottom) === -->
-  <!-- Arrow from Postgres to output -->
-  <g opacity="0.5">
-    <line x1="670" y1="860" x2="670" y2="910" stroke="#58a6ff" stroke-width="1.5" marker-end="url(#arr-blue)"/>
-  </g>
-
-  <g transform="translate(300, 910)">
-    <rect width="1320" height="70" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-    <text x="60" y="30" fill="#8b949e" font-size="11" font-weight="600" letter-spacing="0.08em">OUTPUT LAYER</text>
-
-    <g transform="translate(60, 42)">
-      <rect width="160" height="22" rx="6" fill="rgba(88,166,255,0.1)" stroke="rgba(88,166,255,0.3)" stroke-width="0.8"/>
-      <text x="80" y="15" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="500">CLI Reports</text>
-    </g>
-    <g transform="translate(240, 42)">
-      <rect width="160" height="22" rx="6" fill="rgba(188,140,255,0.1)" stroke="rgba(188,140,255,0.3)" stroke-width="0.8"/>
-      <text x="80" y="15" text-anchor="middle" fill="#bc8cff" font-size="11" font-weight="500">REST API</text>
-    </g>
-    <g transform="translate(420, 42)">
-      <rect width="160" height="22" rx="6" fill="rgba(63,185,80,0.1)" stroke="rgba(63,185,80,0.3)" stroke-width="0.8"/>
-      <text x="80" y="15" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="500">Dashboard</text>
-    </g>
-    <g transform="translate(600, 42)">
-      <rect width="180" height="22" rx="6" fill="rgba(247,129,102,0.1)" stroke="rgba(247,129,102,0.3)" stroke-width="0.8"/>
-      <text x="90" y="15" text-anchor="middle" fill="#f78166" font-size="11" font-weight="500">Ticker Explain</text>
-    </g>
-
-    <text x="900" y="52" fill="#8b949e" font-size="13" font-weight="400">All read from report_snapshots</text>
-  </g>
+  <!-- Output Bar -->
+  <rect x="160" y="960" width="1600" height="52" rx="14" fill="url(#glassBar04)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="176" y1="960" x2="1744" y2="960" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="200" y="992" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.7)" letter-spacing="0.04em">Output</text>
+  <text x="440" y="992" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">Reports</text>
+  <text x="580" y="992" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">Signals</text>
+  <text x="720" y="992" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">Dashboards</text>
+  <text x="900" y="992" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">REST API</text>
+  <text x="1060" y="992" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">Ticker Explain</text>
 
   <!-- Slide number -->
-  <text x="1880" y="1050" text-anchor="end" fill="rgba(139,148,158,0.3)" font-size="14" font-weight="400">04 / 10</text>
+  <text x="960" y="1055" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="14" font-weight="300" fill="rgba(255,255,255,0.12)" letter-spacing="0.15em" text-anchor="middle">04</text>
 </svg>
