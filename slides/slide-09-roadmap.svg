@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <style>
+    text { font-family: 'Inter', -apple-system, 'SF Pro Display', 'Segoe UI', sans-serif; }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <radialGradient id="glow-blue" cx="25%" cy="50%" r="35%">
+      <stop offset="0%" stop-color="rgba(88,166,255,0.1)"/>
+      <stop offset="100%" stop-color="rgba(88,166,255,0)"/>
+    </radialGradient>
+    <radialGradient id="glow-purple" cx="75%" cy="50%" r="35%">
+      <stop offset="0%" stop-color="rgba(188,140,255,0.08)"/>
+      <stop offset="100%" stop-color="rgba(188,140,255,0)"/>
+    </radialGradient>
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3fb950"/>
+      <stop offset="100%" stop-color="#58a6ff"/>
+    </linearGradient>
+    <linearGradient id="timeline-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3fb950"/>
+      <stop offset="33%" stop-color="#58a6ff"/>
+      <stop offset="66%" stop-color="#bc8cff"/>
+      <stop offset="100%" stop-color="#f78166"/>
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(88,166,255,0.03)" stroke-width="0.5"/>
+    </pattern>
+    <filter id="glow-filter">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  <rect width="1920" height="1080" fill="url(#glow-blue)"/>
+  <rect width="1920" height="1080" fill="url(#glow-purple)"/>
+
+  <!-- Title -->
+  <text x="960" y="55" text-anchor="middle" fill="rgba(63,185,80,0.5)" font-size="14" font-weight="600" letter-spacing="0.2em">EVOLUTION PATH</text>
+  <text x="960" y="100" text-anchor="middle" fill="url(#title-grad)" font-size="44" font-weight="700" filter="url(#glow-filter)">From MVP to Scale</text>
+  <text x="960" y="135" text-anchor="middle" fill="#8b949e" font-size="18">Add complexity only when real problems emerge</text>
+
+  <!-- Timeline line -->
+  <line x1="200" y1="400" x2="1720" y2="400" stroke="url(#timeline-grad)" stroke-width="4" opacity="0.3"/>
+  <line x1="200" y1="400" x2="1720" y2="400" stroke="url(#timeline-grad)" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- Phase markers on timeline -->
+  <!-- Phase 1 dot -->
+  <circle cx="380" cy="400" r="14" fill="#0d1117" stroke="#3fb950" stroke-width="3"/>
+  <circle cx="380" cy="400" r="6" fill="#3fb950"/>
+  <!-- Phase 2 dot -->
+  <circle cx="760" cy="400" r="14" fill="#0d1117" stroke="#58a6ff" stroke-width="3"/>
+  <circle cx="760" cy="400" r="6" fill="#58a6ff"/>
+  <!-- Phase 3 dot -->
+  <circle cx="1140" cy="400" r="14" fill="#0d1117" stroke="#bc8cff" stroke-width="3"/>
+  <circle cx="1140" cy="400" r="6" fill="#bc8cff"/>
+  <!-- Phase 4 dot -->
+  <circle cx="1520" cy="400" r="14" fill="#0d1117" stroke="#f78166" stroke-width="3"/>
+  <circle cx="1520" cy="400" r="6" fill="#f78166"/>
+
+  <!-- "NOW" indicator -->
+  <g transform="translate(345, 350)">
+    <rect width="70" height="24" rx="12" fill="#3fb950" opacity="0.9"/>
+    <text x="35" y="16" text-anchor="middle" fill="#0d1117" font-size="11" font-weight="700">NOW</text>
+  </g>
+
+  <!-- Phase 1: MVP -->
+  <g transform="translate(200, 440)">
+    <rect width="360" height="420" rx="14" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.35)" stroke-width="1.5"/>
+    <rect width="360" height="3" y="0" rx="1" fill="rgba(63,185,80,0.3)"/>
+
+    <text x="180" y="35" text-anchor="middle" fill="#3fb950" font-size="20" font-weight="700">Phase 1</text>
+    <text x="180" y="58" text-anchor="middle" fill="#f0f6fc" font-size="16" font-weight="600">Postgres + Raw Archive</text>
+    <text x="180" y="78" text-anchor="middle" fill="#8b949e" font-size="12">Minimal, but fully functional</text>
+
+    <!-- Features list -->
+    <g transform="translate(25, 100)">
+      <circle cx="8" cy="8" r="4" fill="#3fb950" opacity="0.6"/>
+      <text x="22" y="13" fill="#f0f6fc" font-size="13">PostgreSQL as single source</text>
+
+      <circle cx="8" cy="33" r="4" fill="#3fb950" opacity="0.6"/>
+      <text x="22" y="38" fill="#f0f6fc" font-size="13">12 logical schemas</text>
+
+      <circle cx="8" cy="58" r="4" fill="#3fb950" opacity="0.6"/>
+      <text x="22" y="63" fill="#f0f6fc" font-size="13">16 core tables</text>
+
+      <circle cx="8" cy="83" r="4" fill="#3fb950" opacity="0.6"/>
+      <text x="22" y="88" fill="#f0f6fc" font-size="13">Raw archive for heavy files</text>
+
+      <circle cx="8" cy="108" r="4" fill="#3fb950" opacity="0.6"/>
+      <text x="22" y="113" fill="#f0f6fc" font-size="13">report_snapshots for views</text>
+
+      <circle cx="8" cy="133" r="4" fill="#3fb950" opacity="0.6"/>
+      <text x="22" y="138" fill="#f0f6fc" font-size="13">job_runs for state</text>
+
+      <circle cx="8" cy="158" r="4" fill="#3fb950" opacity="0.6"/>
+      <text x="22" y="163" fill="#f0f6fc" font-size="13">pending_outcomes in SQL</text>
+
+      <circle cx="8" cy="183" r="4" fill="#3fb950" opacity="0.6"/>
+      <text x="22" y="188" fill="#f0f6fc" font-size="13">document_chunks for retrieval</text>
+
+      <circle cx="8" cy="208" r="4" fill="#3fb950" opacity="0.6"/>
+      <text x="22" y="213" fill="#f0f6fc" font-size="13">ETL Agent pipeline</text>
+
+      <circle cx="8" cy="233" r="4" fill="#3fb950" opacity="0.6"/>
+      <text x="22" y="238" fill="#f0f6fc" font-size="13">CLI + API output</text>
+    </g>
+
+    <!-- Tech stack badge -->
+    <g transform="translate(80, 370)">
+      <rect width="200" height="30" rx="15" fill="rgba(63,185,80,0.15)" stroke="rgba(63,185,80,0.4)" stroke-width="1"/>
+      <text x="100" y="20" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="600">0 Redis  |  0 Vector DB</text>
+    </g>
+  </g>
+
+  <!-- Phase 2: + pgvector -->
+  <g transform="translate(590, 440)">
+    <rect width="340" height="420" rx="14" fill="rgba(88,166,255,0.05)" stroke="rgba(88,166,255,0.25)" stroke-width="1.2"/>
+    <rect width="340" height="3" y="0" rx="1" fill="rgba(88,166,255,0.2)"/>
+
+    <text x="170" y="35" text-anchor="middle" fill="#58a6ff" font-size="20" font-weight="700">Phase 2</text>
+    <text x="170" y="58" text-anchor="middle" fill="#f0f6fc" font-size="16" font-weight="600">+ pgvector</text>
+    <text x="170" y="78" text-anchor="middle" fill="#8b949e" font-size="12">When retrieval becomes important</text>
+
+    <g transform="translate(25, 100)">
+      <text x="0" y="0" fill="#58a6ff" font-size="12" font-weight="600">TRIGGER:</text>
+      <text x="0" y="20" fill="#8b949e" font-size="12">Need semantic search</text>
+      <text x="0" y="38" fill="#8b949e" font-size="12">across research notes</text>
+
+      <text x="0" y="72" fill="#58a6ff" font-size="12" font-weight="600">ADD:</text>
+      <circle cx="8" cy="95" r="3" fill="#58a6ff" opacity="0.6"/>
+      <text x="20" y="100" fill="#f0f6fc" font-size="12">pgvector extension</text>
+      <circle cx="8" cy="118" r="3" fill="#58a6ff" opacity="0.6"/>
+      <text x="20" y="123" fill="#f0f6fc" font-size="12">Embedding column on</text>
+      <text x="20" y="140" fill="#f0f6fc" font-size="12">document_chunks</text>
+      <circle cx="8" cy="158" r="3" fill="#58a6ff" opacity="0.6"/>
+      <text x="20" y="163" fill="#f0f6fc" font-size="12">Vector similarity search</text>
+      <circle cx="8" cy="181" r="3" fill="#58a6ff" opacity="0.6"/>
+      <text x="20" y="186" fill="#f0f6fc" font-size="12">Hybrid text+vector</text>
+
+      <text x="0" y="220" fill="#58a6ff" font-size="12" font-weight="600">STILL IN POSTGRES:</text>
+      <text x="0" y="240" fill="#8b949e" font-size="12">No separate vector DB</text>
+      <text x="0" y="258" fill="#8b949e" font-size="12">Same backup strategy</text>
+      <text x="0" y="276" fill="#8b949e" font-size="12">Same connection pool</text>
+    </g>
+  </g>
+
+  <!-- Phase 3: + Redis -->
+  <g transform="translate(960, 440)">
+    <rect width="340" height="420" rx="14" fill="rgba(188,140,255,0.05)" stroke="rgba(188,140,255,0.25)" stroke-width="1.2"/>
+    <rect width="340" height="3" y="0" rx="1" fill="rgba(188,140,255,0.2)"/>
+
+    <text x="170" y="35" text-anchor="middle" fill="#bc8cff" font-size="20" font-weight="700">Phase 3</text>
+    <text x="170" y="58" text-anchor="middle" fill="#f0f6fc" font-size="16" font-weight="600">+ Redis / Upstash</text>
+    <text x="170" y="78" text-anchor="middle" fill="#8b949e" font-size="12">Only if performance demands it</text>
+
+    <g transform="translate(25, 100)">
+      <text x="0" y="0" fill="#bc8cff" font-size="12" font-weight="600">TRIGGER:</text>
+      <text x="0" y="20" fill="#8b949e" font-size="12">Dashboard too slow</text>
+      <text x="0" y="38" fill="#8b949e" font-size="12">Many concurrent reads</text>
+      <text x="0" y="56" fill="#8b949e" font-size="12">Need distributed locks</text>
+
+      <text x="0" y="90" fill="#bc8cff" font-size="12" font-weight="600">ADD (only these keys):</text>
+      <circle cx="8" cy="113" r="3" fill="#bc8cff" opacity="0.6"/>
+      <text x="20" y="118" fill="#f0f6fc" font-size="11">tl:view:daily-brief:latest</text>
+      <circle cx="8" cy="136" r="3" fill="#bc8cff" opacity="0.6"/>
+      <text x="20" y="141" fill="#f0f6fc" font-size="11">tl:view:sector-top5:latest</text>
+      <circle cx="8" cy="159" r="3" fill="#bc8cff" opacity="0.6"/>
+      <text x="20" y="164" fill="#f0f6fc" font-size="11">tl:view:leaders:latest</text>
+      <circle cx="8" cy="182" r="3" fill="#bc8cff" opacity="0.6"/>
+      <text x="20" y="187" fill="#f0f6fc" font-size="11">tl:job:daily-refresh:status</text>
+      <circle cx="8" cy="205" r="3" fill="#bc8cff" opacity="0.6"/>
+      <text x="20" y="210" fill="#f0f6fc" font-size="11">tl:lock:daily-refresh</text>
+
+      <text x="0" y="245" fill="#bc8cff" font-size="12" font-weight="600">REDIS IS:</text>
+      <text x="0" y="265" fill="#8b949e" font-size="12">Cache accelerator only</text>
+      <text x="0" y="283" fill="#8b949e" font-size="12">NOT the source of truth</text>
+      <text x="0" y="301" fill="#8b949e" font-size="12">Postgres stays canonical</text>
+    </g>
+  </g>
+
+  <!-- Phase 4: + External Vector DB -->
+  <g transform="translate(1330, 440)">
+    <rect width="340" height="420" rx="14" fill="rgba(247,129,102,0.05)" stroke="rgba(247,129,102,0.2)" stroke-width="1.2"/>
+    <rect width="340" height="3" y="0" rx="1" fill="rgba(247,129,102,0.15)"/>
+
+    <text x="170" y="35" text-anchor="middle" fill="#f78166" font-size="20" font-weight="700">Phase 4</text>
+    <text x="170" y="58" text-anchor="middle" fill="#f0f6fc" font-size="16" font-weight="600">+ Vector DB</text>
+    <text x="170" y="78" text-anchor="middle" fill="#8b949e" font-size="12">Only if pgvector outgrown</text>
+
+    <g transform="translate(25, 100)">
+      <text x="0" y="0" fill="#f78166" font-size="12" font-weight="600">TRIGGER:</text>
+      <text x="0" y="20" fill="#8b949e" font-size="12">Documents scale too large</text>
+      <text x="0" y="38" fill="#8b949e" font-size="12">Need advanced RRF/hybrid</text>
+      <text x="0" y="56" fill="#8b949e" font-size="12">Multiple agents need shared</text>
+      <text x="0" y="74" fill="#8b949e" font-size="12">memory independently</text>
+
+      <text x="0" y="108" fill="#f78166" font-size="12" font-weight="600">OPTIONS:</text>
+      <circle cx="8" cy="131" r="3" fill="#f78166" opacity="0.6"/>
+      <text x="20" y="136" fill="#f0f6fc" font-size="12">Pinecone</text>
+      <circle cx="8" cy="154" r="3" fill="#f78166" opacity="0.6"/>
+      <text x="20" y="159" fill="#f0f6fc" font-size="12">Qdrant</text>
+      <circle cx="8" cy="177" r="3" fill="#f78166" opacity="0.6"/>
+      <text x="20" y="182" fill="#f0f6fc" font-size="12">Weaviate</text>
+      <circle cx="8" cy="200" r="3" fill="#f78166" opacity="0.6"/>
+      <text x="20" y="205" fill="#f0f6fc" font-size="12">Milvus</text>
+
+      <text x="0" y="245" fill="#f78166" font-size="12" font-weight="600">POSTGRES STILL:</text>
+      <text x="0" y="265" fill="#8b949e" font-size="12">Keeps all facts + outcomes</text>
+      <text x="0" y="283" fill="#8b949e" font-size="12">Vector DB is retrieval only</text>
+      <text x="0" y="301" fill="#8b949e" font-size="12">SQL facts = operational truth</text>
+    </g>
+  </g>
+
+  <!-- Timeline labels -->
+  <text x="380" y="180" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="600">START HERE</text>
+  <text x="760" y="180" text-anchor="middle" fill="#58a6ff" font-size="14" font-weight="600">WHEN NEEDED</text>
+  <text x="1140" y="180" text-anchor="middle" fill="#bc8cff" font-size="14" font-weight="600">IF SLOW</text>
+  <text x="1520" y="180" text-anchor="middle" fill="#f78166" font-size="14" font-weight="600">IF OUTGROWN</text>
+
+  <!-- Slide number -->
+  <text x="1880" y="1050" text-anchor="end" fill="rgba(139,148,158,0.3)" font-size="14" font-weight="400">09 / 10</text>
+</svg>

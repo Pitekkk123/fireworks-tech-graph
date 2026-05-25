@@ -1,0 +1,223 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <style>
+    text { font-family: 'Inter', -apple-system, 'SF Pro Display', 'Segoe UI', sans-serif; }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <radialGradient id="glow-blue" cx="40%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="rgba(88,166,255,0.1)"/>
+      <stop offset="100%" stop-color="rgba(88,166,255,0)"/>
+    </radialGradient>
+    <radialGradient id="glow-green" cx="70%" cy="70%" r="35%">
+      <stop offset="0%" stop-color="rgba(63,185,80,0.08)"/>
+      <stop offset="100%" stop-color="rgba(63,185,80,0)"/>
+    </radialGradient>
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="100%" stop-color="#3fb950"/>
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(88,166,255,0.03)" stroke-width="0.5"/>
+    </pattern>
+    <filter id="glow-filter">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arr-down" markerWidth="8" markerHeight="10" refX="4" refY="9" orient="auto">
+      <polygon points="0 0, 8 0, 4 10" fill="#58a6ff"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  <rect width="1920" height="1080" fill="url(#glow-blue)"/>
+  <rect width="1920" height="1080" fill="url(#glow-green)"/>
+
+  <!-- Title -->
+  <text x="960" y="55" text-anchor="middle" fill="rgba(88,166,255,0.5)" font-size="14" font-weight="600" letter-spacing="0.2em">DAILY OPERATIONS</text>
+  <text x="960" y="100" text-anchor="middle" fill="url(#title-grad)" font-size="44" font-weight="700" filter="url(#glow-filter)">Daily Refresh Flow</text>
+
+  <!-- Command display -->
+  <g transform="translate(560, 130)">
+    <rect width="800" height="44" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    <text x="20" y="17" fill="#3fb950" font-size="13" font-weight="500">$</text>
+    <text x="40" y="17" fill="#f0f6fc" font-size="13" font-weight="500" font-style="normal">tickerlab refresh daily --date 2026-05-25</text>
+    <text x="400" y="37" fill="#8b949e" font-size="11">Runs after market session  |  Single command  |  All modules</text>
+  </g>
+
+  <!-- Module cascade - vertical flow -->
+  <!-- Row 1: Market + Sector + Leader -->
+  <g transform="translate(120, 200)">
+    <!-- Module 1: Market Regime -->
+    <rect width="260" height="100" rx="10" fill="rgba(88,166,255,0.06)" stroke="rgba(88,166,255,0.3)" stroke-width="1"/>
+    <circle cx="22" cy="22" r="12" fill="rgba(88,166,255,0.2)"/>
+    <text x="22" y="27" text-anchor="middle" fill="#58a6ff" font-size="9" font-weight="700">1</text>
+    <text x="45" y="26" fill="#f0f6fc" font-size="14" font-weight="600">Market Regime</text>
+    <text x="20" y="50" fill="#8b949e" font-size="11">VIX, SKEW, market breadth</text>
+    <text x="20" y="67" fill="#8b949e" font-size="11">Macro caution labels</text>
+    <text x="20" y="84" fill="#58a6ff" font-size="10" font-weight="500">-> market_regime_snapshots</text>
+  </g>
+
+  <g transform="translate(420, 200)">
+    <!-- Module 2: Sector Delta -->
+    <rect width="260" height="100" rx="10" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.3)" stroke-width="1"/>
+    <circle cx="22" cy="22" r="12" fill="rgba(63,185,80,0.2)"/>
+    <text x="22" y="27" text-anchor="middle" fill="#3fb950" font-size="9" font-weight="700">2</text>
+    <text x="45" y="26" fill="#f0f6fc" font-size="14" font-weight="600">Sector Delta</text>
+    <text x="20" y="50" fill="#8b949e" font-size="11">RS vs SPY, breadth deltas</text>
+    <text x="20" y="67" fill="#8b949e" font-size="11">Trend maturation score</text>
+    <text x="20" y="84" fill="#3fb950" font-size="10" font-weight="500">-> sector_snapshots</text>
+  </g>
+
+  <g transform="translate(720, 200)">
+    <!-- Module 3: Leaders -->
+    <rect width="260" height="100" rx="10" fill="rgba(188,140,255,0.06)" stroke="rgba(188,140,255,0.3)" stroke-width="1"/>
+    <circle cx="22" cy="22" r="12" fill="rgba(188,140,255,0.2)"/>
+    <text x="22" y="27" text-anchor="middle" fill="#bc8cff" font-size="9" font-weight="700">3</text>
+    <text x="45" y="26" fill="#f0f6fc" font-size="14" font-weight="600">Leader Matrix</text>
+    <text x="20" y="50" fill="#8b949e" font-size="11">Top 10 per sector, scores</text>
+    <text x="20" y="67" fill="#8b949e" font-size="11">RS vs sector/SPY</text>
+    <text x="20" y="84" fill="#bc8cff" font-size="10" font-weight="500">-> leader_snapshots</text>
+  </g>
+
+  <g transform="translate(1020, 200)">
+    <!-- Module 4: Setup -->
+    <rect width="260" height="100" rx="10" fill="rgba(234,179,8,0.06)" stroke="rgba(234,179,8,0.3)" stroke-width="1"/>
+    <circle cx="22" cy="22" r="12" fill="rgba(234,179,8,0.2)"/>
+    <text x="22" y="27" text-anchor="middle" fill="#eab308" font-size="9" font-weight="700">4</text>
+    <text x="45" y="26" fill="#f0f6fc" font-size="14" font-weight="600">Setup Diagnostics</text>
+    <text x="20" y="50" fill="#8b949e" font-size="11">1B/2A/2B/2C staging</text>
+    <text x="20" y="67" fill="#8b949e" font-size="11">Base quality, pivot distance</text>
+    <text x="20" y="84" fill="#eab308" font-size="10" font-weight="500">-> setup_diagnostics</text>
+  </g>
+
+  <g transform="translate(1320, 200)">
+    <!-- Module 5: Options -->
+    <rect width="260" height="100" rx="10" fill="rgba(247,129,102,0.06)" stroke="rgba(247,129,102,0.3)" stroke-width="1"/>
+    <circle cx="22" cy="22" r="12" fill="rgba(247,129,102,0.2)"/>
+    <text x="22" y="27" text-anchor="middle" fill="#f78166" font-size="9" font-weight="700">5</text>
+    <text x="45" y="26" fill="#f0f6fc" font-size="14" font-weight="600">Options Reads</text>
+    <text x="20" y="50" fill="#8b949e" font-size="11">Contract facts, daily read</text>
+    <text x="20" y="67" fill="#8b949e" font-size="11">OI confirmation pending</text>
+    <text x="20" y="84" fill="#f78166" font-size="10" font-weight="500">-> options_*</text>
+  </g>
+
+  <g transform="translate(1620, 200)">
+    <!-- Module 6: Bottleneck -->
+    <rect width="260" height="100" rx="10" fill="rgba(124,58,237,0.06)" stroke="rgba(124,58,237,0.3)" stroke-width="1"/>
+    <circle cx="22" cy="22" r="12" fill="rgba(124,58,237,0.2)"/>
+    <text x="22" y="27" text-anchor="middle" fill="#7c3aed" font-size="9" font-weight="700">6</text>
+    <text x="45" y="26" fill="#f0f6fc" font-size="14" font-weight="600">Bottleneck</text>
+    <text x="20" y="50" fill="#8b949e" font-size="11">Scores, evidence, grades</text>
+    <text x="20" y="67" fill="#8b949e" font-size="11">Material exposure</text>
+    <text x="20" y="84" fill="#7c3aed" font-size="10" font-weight="500">-> bottleneck_*</text>
+  </g>
+
+  <!-- Row 2: Research + Outcomes + Signal -->
+  <g transform="translate(320, 340)">
+    <rect width="260" height="100" rx="10" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.3)" stroke-width="1"/>
+    <circle cx="22" cy="22" r="12" fill="rgba(63,185,80,0.2)"/>
+    <text x="22" y="27" text-anchor="middle" fill="#3fb950" font-size="9" font-weight="700">7</text>
+    <text x="45" y="26" fill="#f0f6fc" font-size="14" font-weight="600">Research Facts</text>
+    <text x="20" y="50" fill="#8b949e" font-size="11">New claims from sources</text>
+    <text x="20" y="67" fill="#8b949e" font-size="11">Evidence + confidence</text>
+    <text x="20" y="84" fill="#3fb950" font-size="10" font-weight="500">-> research_facts</text>
+  </g>
+
+  <g transform="translate(620, 340)">
+    <rect width="280" height="100" rx="10" fill="rgba(88,166,255,0.06)" stroke="rgba(88,166,255,0.3)" stroke-width="1"/>
+    <circle cx="22" cy="22" r="12" fill="rgba(88,166,255,0.2)"/>
+    <text x="22" y="27" text-anchor="middle" fill="#58a6ff" font-size="9" font-weight="700">8</text>
+    <text x="45" y="26" fill="#f0f6fc" font-size="14" font-weight="600">Outcomes Resolve</text>
+    <text x="20" y="50" fill="#8b949e" font-size="11">Check pending_outcomes</text>
+    <text x="20" y="67" fill="#8b949e" font-size="11">WHERE due_date &lt;= TODAY</text>
+    <text x="20" y="84" fill="#58a6ff" font-size="10" font-weight="500">-> signal_outcomes</text>
+  </g>
+
+  <g transform="translate(940, 340)">
+    <rect width="280" height="100" rx="10" fill="rgba(188,140,255,0.06)" stroke="rgba(188,140,255,0.3)" stroke-width="1"/>
+    <circle cx="22" cy="22" r="12" fill="rgba(188,140,255,0.2)"/>
+    <text x="22" y="27" text-anchor="middle" fill="#bc8cff" font-size="9" font-weight="700">9</text>
+    <text x="45" y="26" fill="#f0f6fc" font-size="14" font-weight="600">OI Confirmation</text>
+    <text x="20" y="50" fill="#8b949e" font-size="11">Check pending_oi_checks</text>
+    <text x="20" y="67" fill="#8b949e" font-size="11">Compare next-session OI</text>
+    <text x="20" y="84" fill="#bc8cff" font-size="10" font-weight="500">-> options_contract_facts</text>
+  </g>
+
+  <!-- Big down arrow -->
+  <g opacity="0.4">
+    <line x1="960" y1="460" x2="960" y2="520" stroke="#58a6ff" stroke-width="3"/>
+    <polygon points="945,515 975,515 960,535" fill="#58a6ff"/>
+  </g>
+
+  <!-- Report Snapshot Generation (central highlight) -->
+  <g transform="translate(410, 540)">
+    <rect width="1100" height="120" rx="16" fill="rgba(234,179,8,0.06)" stroke="rgba(234,179,8,0.4)" stroke-width="2"/>
+    <rect width="1100" height="3" y="0" rx="1" fill="rgba(234,179,8,0.2)"/>
+
+    <circle cx="60" cy="60" r="30" fill="rgba(234,179,8,0.15)" stroke="#eab308" stroke-width="1.5"/>
+    <text x="60" y="55" text-anchor="middle" fill="#eab308" font-size="11" font-weight="700">FINAL</text>
+    <text x="60" y="72" text-anchor="middle" fill="#eab308" font-size="11" font-weight="700">STEP</text>
+
+    <text x="120" y="35" fill="#f0f6fc" font-size="22" font-weight="700">Daily Report Snapshot</text>
+    <text x="120" y="60" fill="#8b949e" font-size="14">Aggregates all modules into one pre-computed JSON payload</text>
+    <text x="120" y="82" fill="#eab308" font-size="13" font-weight="500">INSERT INTO report_snapshots (report_type='daily_brief', report_json=...)</text>
+    <text x="120" y="105" fill="#8b949e" font-size="12">Frontend never recalculates. Reads one row. Fast without Redis.</text>
+  </g>
+
+  <!-- Down arrow to output -->
+  <g opacity="0.4">
+    <line x1="960" y1="660" x2="960" y2="710" stroke="#eab308" stroke-width="3"/>
+    <polygon points="945,705 975,705 960,725" fill="#eab308"/>
+  </g>
+
+  <!-- Output layer -->
+  <g transform="translate(260, 720)">
+    <rect width="1400" height="160" rx="14" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="30" y="28" fill="#8b949e" font-size="12" font-weight="600" letter-spacing="0.08em">OUTPUT COMMANDS</text>
+
+    <!-- CLI report -->
+    <g transform="translate(30, 45)">
+      <rect width="400" height="95" rx="10" fill="rgba(88,166,255,0.04)" stroke="rgba(88,166,255,0.2)" stroke-width="1"/>
+      <text x="15" y="22" fill="#3fb950" font-size="12">$</text>
+      <text x="30" y="22" fill="#f0f6fc" font-size="12" font-weight="500">tickerlab report daily --date 2026-05-25</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">SELECT report_json FROM report_snapshots</text>
+      <text x="15" y="65" fill="#8b949e" font-size="11">WHERE report_type = 'daily_brief'</text>
+      <text x="15" y="82" fill="#8b949e" font-size="11">AND asof_date = '2026-05-25'</text>
+    </g>
+
+    <!-- Ticker explain -->
+    <g transform="translate(460, 45)">
+      <rect width="440" height="95" rx="10" fill="rgba(188,140,255,0.04)" stroke="rgba(188,140,255,0.2)" stroke-width="1"/>
+      <text x="15" y="22" fill="#3fb950" font-size="12">$</text>
+      <text x="30" y="22" fill="#f0f6fc" font-size="12" font-weight="500">tickerlab explain ticker NVDA --date 2026-05-25</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">Assembles: sector + leader + setup + options</text>
+      <text x="15" y="65" fill="#8b949e" font-size="11">+ bottleneck + research_facts + document_chunks</text>
+      <text x="15" y="82" fill="#8b949e" font-size="11">Full ticker context in one command</text>
+    </g>
+
+    <!-- API -->
+    <g transform="translate(930, 45)">
+      <rect width="440" height="95" rx="10" fill="rgba(63,185,80,0.04)" stroke="rgba(63,185,80,0.2)" stroke-width="1"/>
+      <text x="15" y="22" fill="#3fb950" font-size="12" font-weight="500">GET /api/report/daily-brief/2026-05-25</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">Returns pre-computed report_json</text>
+      <text x="15" y="65" fill="#8b949e" font-size="11">No computation at request time</text>
+      <text x="15" y="82" fill="#8b949e" font-size="11">Dashboard renders directly</text>
+    </g>
+  </g>
+
+  <!-- Performance note -->
+  <g transform="translate(560, 920)">
+    <rect width="800" height="55" rx="10" fill="rgba(63,185,80,0.04)" stroke="rgba(63,185,80,0.2)" stroke-width="1"/>
+    <text x="400" y="22" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="600">No Redis needed.</text>
+    <text x="400" y="42" text-anchor="middle" fill="#8b949e" font-size="13">report_snapshots is pre-computed once after session. Frontend reads one row.</text>
+  </g>
+
+  <!-- Slide number -->
+  <text x="1880" y="1050" text-anchor="end" fill="rgba(139,148,158,0.3)" font-size="14" font-weight="400">08 / 10</text>
+</svg>

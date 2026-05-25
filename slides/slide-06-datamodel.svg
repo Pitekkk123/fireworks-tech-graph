@@ -1,0 +1,255 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <style>
+    text { font-family: 'Inter', -apple-system, 'SF Pro Display', 'Segoe UI', sans-serif; }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <radialGradient id="glow-blue" cx="30%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="rgba(88,166,255,0.1)"/>
+      <stop offset="100%" stop-color="rgba(88,166,255,0)"/>
+    </radialGradient>
+    <radialGradient id="glow-purple" cx="70%" cy="60%" r="35%">
+      <stop offset="0%" stop-color="rgba(188,140,255,0.08)"/>
+      <stop offset="100%" stop-color="rgba(188,140,255,0)"/>
+    </radialGradient>
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="100%" stop-color="#3fb950"/>
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(88,166,255,0.03)" stroke-width="0.5"/>
+    </pattern>
+    <filter id="glow-filter">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  <rect width="1920" height="1080" fill="url(#glow-blue)"/>
+  <rect width="1920" height="1080" fill="url(#glow-purple)"/>
+
+  <!-- Title -->
+  <text x="960" y="55" text-anchor="middle" fill="rgba(88,166,255,0.5)" font-size="14" font-weight="600" letter-spacing="0.2em">DATA MODEL</text>
+  <text x="960" y="100" text-anchor="middle" fill="url(#title-grad)" font-size="44" font-weight="700" filter="url(#glow-filter)">16 Core Tables</text>
+
+  <!-- === ROW 1: INGEST LAYER === -->
+  <g transform="translate(60, 130)">
+    <rect width="1800" height="170" rx="10" fill="rgba(247,129,102,0.02)" stroke="rgba(247,129,102,0.12)" stroke-width="1" stroke-dasharray="6,4"/>
+    <text x="25" y="25" fill="#f78166" font-size="12" font-weight="600" letter-spacing="0.1em">INGEST LAYER</text>
+
+    <!-- source_documents -->
+    <g transform="translate(25, 40)">
+      <rect width="340" height="115" rx="10" fill="rgba(247,129,102,0.06)" stroke="rgba(247,129,102,0.3)" stroke-width="1"/>
+      <rect width="340" height="2" y="0" rx="1" fill="rgba(247,129,102,0.2)"/>
+      <text x="15" y="25" fill="#f0f6fc" font-size="16" font-weight="600">source_documents</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">source_id, asof_date, module</text>
+      <text x="15" y="64" fill="#8b949e" font-size="11">provider, source_type, raw_uri</text>
+      <text x="15" y="80" fill="#8b949e" font-size="11">content_hash, parser_version</text>
+      <text x="15" y="96" fill="rgba(247,129,102,0.6)" font-size="10" font-weight="500">URI + hash only, no full content</text>
+    </g>
+
+    <!-- job_runs -->
+    <g transform="translate(395, 40)">
+      <rect width="300" height="115" rx="10" fill="rgba(247,129,102,0.06)" stroke="rgba(247,129,102,0.3)" stroke-width="1"/>
+      <rect width="300" height="2" y="0" rx="1" fill="rgba(247,129,102,0.2)"/>
+      <text x="15" y="25" fill="#f0f6fc" font-size="16" font-weight="600">job_runs</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">job_id, job_name, asof_date</text>
+      <text x="15" y="64" fill="#8b949e" font-size="11">status, started_at, finished_at</text>
+      <text x="15" y="80" fill="#8b949e" font-size="11">error_message</text>
+      <text x="15" y="96" fill="rgba(247,129,102,0.6)" font-size="10" font-weight="500">Replaces Redis job state</text>
+    </g>
+
+    <!-- document_chunks -->
+    <g transform="translate(725, 40)">
+      <rect width="340" height="115" rx="10" fill="rgba(124,58,237,0.06)" stroke="rgba(124,58,237,0.3)" stroke-width="1"/>
+      <rect width="340" height="2" y="0" rx="1" fill="rgba(124,58,237,0.2)"/>
+      <text x="15" y="25" fill="#f0f6fc" font-size="16" font-weight="600">document_chunks</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">chunk_id, source_id, module</text>
+      <text x="15" y="64" fill="#8b949e" font-size="11">ticker, topic, chunk_text</text>
+      <text x="15" y="80" fill="#8b949e" font-size="11">embedding, metadata_json</text>
+      <text x="15" y="96" fill="rgba(124,58,237,0.6)" font-size="10" font-weight="500">Replaces separate Vector DB</text>
+    </g>
+
+    <!-- research_facts -->
+    <g transform="translate(1095, 40)">
+      <rect width="340" height="115" rx="10" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.3)" stroke-width="1"/>
+      <rect width="340" height="2" y="0" rx="1" fill="rgba(63,185,80,0.2)"/>
+      <text x="15" y="25" fill="#f0f6fc" font-size="16" font-weight="600">research_facts</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">fact_id, asof_date, ticker, topic</text>
+      <text x="15" y="64" fill="#8b949e" font-size="11">source_tier, claim</text>
+      <text x="15" y="80" fill="#8b949e" font-size="11">evidence_summary, confidence</text>
+      <text x="15" y="96" fill="rgba(63,185,80,0.6)" font-size="10" font-weight="500">Short claims with provenance</text>
+    </g>
+
+    <!-- report_snapshots -->
+    <g transform="translate(1465, 40)">
+      <rect width="310" height="115" rx="10" fill="rgba(234,179,8,0.06)" stroke="rgba(234,179,8,0.3)" stroke-width="1"/>
+      <rect width="310" height="2" y="0" rx="1" fill="rgba(234,179,8,0.2)"/>
+      <text x="15" y="25" fill="#f0f6fc" font-size="16" font-weight="600">report_snapshots</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">report_id, asof_date, report_type</text>
+      <text x="15" y="64" fill="#8b949e" font-size="11">report_json, markdown_uri</text>
+      <text x="15" y="80" fill="#8b949e" font-size="11">source_bundle_hash</text>
+      <text x="15" y="96" fill="rgba(234,179,8,0.6)" font-size="10" font-weight="500">Replaces Redis materialized views</text>
+    </g>
+  </g>
+
+  <!-- === ROW 2: FACT LAYER === -->
+  <g transform="translate(60, 320)">
+    <rect width="1800" height="170" rx="10" fill="rgba(88,166,255,0.02)" stroke="rgba(88,166,255,0.12)" stroke-width="1" stroke-dasharray="6,4"/>
+    <text x="25" y="25" fill="#58a6ff" font-size="12" font-weight="600" letter-spacing="0.1em">FACT LAYER  (Canonical Market Data)</text>
+
+    <!-- sector_snapshots -->
+    <g transform="translate(25, 40)">
+      <rect width="420" height="115" rx="10" fill="rgba(88,166,255,0.06)" stroke="rgba(88,166,255,0.3)" stroke-width="1"/>
+      <rect width="420" height="2" y="0" rx="1" fill="rgba(88,166,255,0.2)"/>
+      <text x="15" y="25" fill="#f0f6fc" font-size="16" font-weight="600">sector_snapshots</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">asof_date, sector_etf, sector_name</text>
+      <text x="15" y="64" fill="#8b949e" font-size="11">close, return_1d/3d/5d/14d/28d</text>
+      <text x="15" y="80" fill="#8b949e" font-size="11">rs_vs_spy_*, breadth20/50/200, delta_breadth_*</text>
+      <text x="15" y="96" fill="rgba(88,166,255,0.6)" font-size="10" font-weight="500">early_trend_maturation_score, sector_tier</text>
+    </g>
+
+    <!-- leader_snapshots -->
+    <g transform="translate(475, 40)">
+      <rect width="420" height="115" rx="10" fill="rgba(188,140,255,0.06)" stroke="rgba(188,140,255,0.3)" stroke-width="1"/>
+      <rect width="420" height="2" y="0" rx="1" fill="rgba(188,140,255,0.2)"/>
+      <text x="15" y="25" fill="#f0f6fc" font-size="16" font-weight="600">leader_snapshots</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">asof_date, ticker, company, sector_etf</text>
+      <text x="15" y="64" fill="#8b949e" font-size="11">market_cap, leader_score, leader_tier</text>
+      <text x="15" y="80" fill="#8b949e" font-size="11">return_*, rs_vs_sector_*, rs_vs_spy_*</text>
+      <text x="15" y="96" fill="rgba(188,140,255,0.6)" font-size="10" font-weight="500">stock_rs_rank, adv20_dollar_volume</text>
+    </g>
+
+    <!-- setup_diagnostics -->
+    <g transform="translate(925, 40)">
+      <rect width="420" height="115" rx="10" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.3)" stroke-width="1"/>
+      <rect width="420" height="2" y="0" rx="1" fill="rgba(63,185,80,0.2)"/>
+      <text x="15" y="25" fill="#f0f6fc" font-size="16" font-weight="600">setup_diagnostics</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">asof_date, ticker, stage, setup_tier</text>
+      <text x="15" y="64" fill="#8b949e" font-size="11">base_duration_weeks, base_quality_score</text>
+      <text x="15" y="80" fill="#8b949e" font-size="11">distance_from_pivot_pct, rvol_1d/5d</text>
+      <text x="15" y="96" fill="rgba(63,185,80,0.6)" font-size="10" font-weight="500">sma_stack_pass, rs_line_new_high</text>
+    </g>
+
+    <!-- bottleneck pair -->
+    <g transform="translate(1375, 40)">
+      <rect width="400" height="115" rx="10" fill="rgba(247,129,102,0.06)" stroke="rgba(247,129,102,0.3)" stroke-width="1"/>
+      <rect width="400" height="2" y="0" rx="1" fill="rgba(247,129,102,0.2)"/>
+      <text x="15" y="25" fill="#f0f6fc" font-size="16" font-weight="600">bottleneck_*</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">company_scores: ticker, material, grade</text>
+      <text x="15" y="64" fill="#8b949e" font-size="11">evidence: extracted_fact, evidence_tier</text>
+      <text x="15" y="80" fill="#8b949e" font-size="11">exposure_type, severity, confidence</text>
+      <text x="15" y="96" fill="rgba(247,129,102,0.6)" font-size="10" font-weight="500">Scores + separate evidence chain</text>
+    </g>
+  </g>
+
+  <!-- === ROW 3: OPTIONS LAYER === -->
+  <g transform="translate(60, 510)">
+    <rect width="1800" height="170" rx="10" fill="rgba(63,185,80,0.02)" stroke="rgba(63,185,80,0.12)" stroke-width="1" stroke-dasharray="6,4"/>
+    <text x="25" y="25" fill="#3fb950" font-size="12" font-weight="600" letter-spacing="0.1em">OPTIONS LAYER  (Flow Analysis)</text>
+
+    <!-- options_contract_facts -->
+    <g transform="translate(25, 40)">
+      <rect width="580" height="115" rx="10" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.3)" stroke-width="1"/>
+      <rect width="580" height="2" y="0" rx="1" fill="rgba(63,185,80,0.2)"/>
+      <text x="15" y="25" fill="#f0f6fc" font-size="16" font-weight="600">options_contract_facts</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">asof_date, ticker, expiration, strike, right, dte, moneyness_pct</text>
+      <text x="15" y="64" fill="#8b949e" font-size="11">volume_on_flow_day, premium_usd, oi_reported, oi_change_after_flow</text>
+      <text x="15" y="80" fill="#8b949e" font-size="11">share_of_expiry_volume_pct, bid_ask_spread_pct, trade_direction_source</text>
+      <text x="15" y="96" fill="rgba(63,185,80,0.6)" font-size="10" font-weight="500">Facts and comparative metrics, no arbitrary thresholds</text>
+    </g>
+
+    <!-- options_daily_reads -->
+    <g transform="translate(635, 40)">
+      <rect width="560" height="115" rx="10" fill="rgba(88,166,255,0.06)" stroke="rgba(88,166,255,0.3)" stroke-width="1"/>
+      <rect width="560" height="2" y="0" rx="1" fill="rgba(88,166,255,0.2)"/>
+      <text x="15" y="25" fill="#f0f6fc" font-size="16" font-weight="600">options_daily_reads</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">asof_date, ticker, overall_options_read, options_direction</text>
+      <text x="15" y="64" fill="#8b949e" font-size="11">top_contract_key, call/put_cluster_detected, interpretation</text>
+      <text x="15" y="80" fill="#8b949e" font-size="11">Labels: NONE | UNCONFIRMED | SUPPORTIVE | STRONG | MIXED | WARNING</text>
+      <text x="15" y="96" fill="rgba(88,166,255,0.6)" font-size="10" font-weight="500">Interpretive daily label per ticker</text>
+    </g>
+
+    <!-- options_pending_oi_checks -->
+    <g transform="translate(1225, 40)">
+      <rect width="550" height="115" rx="10" fill="rgba(188,140,255,0.06)" stroke="rgba(188,140,255,0.3)" stroke-width="1"/>
+      <rect width="550" height="2" y="0" rx="1" fill="rgba(188,140,255,0.2)"/>
+      <text x="15" y="25" fill="#f0f6fc" font-size="16" font-weight="600">options_pending_oi_checks</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">check_id, ticker, expiration, strike, right</text>
+      <text x="15" y="64" fill="#8b949e" font-size="11">flow_date, confirmation_date, status</text>
+      <text x="15" y="80" fill="#8b949e" font-size="11">Agent checks OI next session and updates</text>
+      <text x="15" y="96" fill="rgba(188,140,255,0.6)" font-size="10" font-weight="500">Replaces Redis pending queue</text>
+    </g>
+  </g>
+
+  <!-- === ROW 4: SIGNAL LAYER === -->
+  <g transform="translate(60, 700)">
+    <rect width="1800" height="170" rx="10" fill="rgba(188,140,255,0.02)" stroke="rgba(188,140,255,0.12)" stroke-width="1" stroke-dasharray="6,4"/>
+    <text x="25" y="25" fill="#bc8cff" font-size="12" font-weight="600" letter-spacing="0.1em">SIGNAL LAYER  (Empirical Feedback Loop)</text>
+
+    <!-- signal_fires -->
+    <g transform="translate(25, 40)">
+      <rect width="580" height="115" rx="10" fill="rgba(188,140,255,0.06)" stroke="rgba(188,140,255,0.3)" stroke-width="1"/>
+      <rect width="580" height="2" y="0" rx="1" fill="rgba(188,140,255,0.2)"/>
+      <text x="15" y="25" fill="#f0f6fc" font-size="16" font-weight="600">signal_fires</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">fire_id, asof_date, ticker, signal_family, signal_version</text>
+      <text x="15" y="64" fill="#8b949e" font-size="11">sector_tier, leader_tier, setup_tier, options_read</text>
+      <text x="15" y="80" fill="#8b949e" font-size="11">final_decision, source_bundle_hash, created_at</text>
+      <text x="15" y="96" fill="rgba(188,140,255,0.6)" font-size="10" font-weight="500">Every generated signal or quality label</text>
+    </g>
+
+    <!-- signal_outcomes -->
+    <g transform="translate(635, 40)">
+      <rect width="560" height="115" rx="10" fill="rgba(88,166,255,0.06)" stroke="rgba(88,166,255,0.3)" stroke-width="1"/>
+      <rect width="560" height="2" y="0" rx="1" fill="rgba(88,166,255,0.2)"/>
+      <text x="15" y="25" fill="#f0f6fc" font-size="16" font-weight="600">signal_outcomes</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">fire_id, horizon, horizon_date</text>
+      <text x="15" y="64" fill="#8b949e" font-size="11">return_abs, return_vs_spy, return_vs_sector</text>
+      <text x="15" y="80" fill="#8b949e" font-size="11">max_favorable/adverse_excursion, resolved_at</text>
+      <text x="15" y="96" fill="rgba(88,166,255,0.6)" font-size="10" font-weight="500">Closes the empirical feedback loop</text>
+    </g>
+
+    <!-- pending_outcomes -->
+    <g transform="translate(1225, 40)">
+      <rect width="550" height="115" rx="10" fill="rgba(234,179,8,0.06)" stroke="rgba(234,179,8,0.3)" stroke-width="1"/>
+      <rect width="550" height="2" y="0" rx="1" fill="rgba(234,179,8,0.2)"/>
+      <text x="15" y="25" fill="#f0f6fc" font-size="16" font-weight="600">pending_outcomes</text>
+      <text x="15" y="48" fill="#8b949e" font-size="11">fire_id, ticker, horizon, due_date, status</text>
+      <text x="15" y="64" fill="#8b949e" font-size="11">Cron daily: SELECT WHERE due_date &lt;= TODAY AND status = 'pending'</text>
+      <text x="15" y="80" fill="#8b949e" font-size="11">Resolves against actual market data</text>
+      <text x="15" y="96" fill="rgba(234,179,8,0.6)" font-size="10" font-weight="500">Replaces Redis pending index</text>
+    </g>
+  </g>
+
+  <!-- Bottom legend -->
+  <g transform="translate(460, 910)">
+    <rect width="1000" height="100" rx="10" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <text x="500" y="28" text-anchor="middle" fill="#f0f6fc" font-size="15" font-weight="600">What Each Layer Replaces</text>
+    <g transform="translate(80, 48)">
+      <circle cx="0" cy="8" r="5" fill="rgba(247,129,102,0.4)"/>
+      <text x="14" y="13" fill="#8b949e" font-size="12">report_snapshots > Redis views</text>
+    </g>
+    <g transform="translate(310, 48)">
+      <circle cx="0" cy="8" r="5" fill="rgba(247,129,102,0.4)"/>
+      <text x="14" y="13" fill="#8b949e" font-size="12">job_runs > Redis state</text>
+    </g>
+    <g transform="translate(500, 48)">
+      <circle cx="0" cy="8" r="5" fill="rgba(124,58,237,0.4)"/>
+      <text x="14" y="13" fill="#8b949e" font-size="12">document_chunks > Vector DB</text>
+    </g>
+    <g transform="translate(720, 48)">
+      <circle cx="0" cy="8" r="5" fill="rgba(234,179,8,0.4)"/>
+      <text x="14" y="13" fill="#8b949e" font-size="12">pending_outcomes > Redis queue</text>
+    </g>
+  </g>
+
+  <!-- Slide number -->
+  <text x="1880" y="1050" text-anchor="end" fill="rgba(139,148,158,0.3)" font-size="14" font-weight="400">06 / 10</text>
+</svg>

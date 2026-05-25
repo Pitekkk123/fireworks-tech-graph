@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <style>
+    text { font-family: 'Inter', -apple-system, 'SF Pro Display', 'Segoe UI', sans-serif; }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <radialGradient id="glow-blue" cx="25%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="rgba(88,166,255,0.12)"/>
+      <stop offset="100%" stop-color="rgba(88,166,255,0)"/>
+    </radialGradient>
+    <radialGradient id="glow-green" cx="75%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="rgba(63,185,80,0.12)"/>
+      <stop offset="100%" stop-color="rgba(63,185,80,0)"/>
+    </radialGradient>
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="100%" stop-color="#3fb950"/>
+    </linearGradient>
+    <linearGradient id="arrow-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="50%" stop-color="#bc8cff"/>
+      <stop offset="100%" stop-color="#3fb950"/>
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(88,166,255,0.03)" stroke-width="0.5"/>
+    </pattern>
+    <filter id="glow-filter">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow-right" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <polygon points="0 0, 12 4, 0 8" fill="#bc8cff"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  <rect width="1920" height="1080" fill="url(#glow-blue)"/>
+  <rect width="1920" height="1080" fill="url(#glow-green)"/>
+
+  <!-- Section label -->
+  <text x="960" y="70" text-anchor="middle" fill="rgba(88,166,255,0.5)" font-size="14" font-weight="600" letter-spacing="0.2em">THE KEY INSIGHT</text>
+
+  <!-- Title -->
+  <text x="960" y="135" text-anchor="middle" fill="url(#title-grad)" font-size="48" font-weight="700" filter="url(#glow-filter)">5 Logical Layers  =  2 Physical Storage</text>
+
+  <!-- Center arrow -->
+  <path d="M 920,180 L 920,220 L 960,250 L 1000,220 L 1000,180" fill="none" stroke="url(#arrow-grad)" stroke-width="2" opacity="0.5"/>
+
+  <!-- LEFT SIDE: 5 Logical Layers -->
+  <text x="400" y="230" text-anchor="middle" fill="#58a6ff" font-size="20" font-weight="600" letter-spacing="0.08em">5 LOGICAL LAYERS</text>
+
+  <!-- Layer 1: RAW -->
+  <g transform="translate(120, 270)">
+    <rect width="560" height="85" rx="12" fill="rgba(247,129,102,0.06)" stroke="rgba(247,129,102,0.3)" stroke-width="1"/>
+    <rect width="6" height="85" rx="3" fill="#f78166" opacity="0.6"/>
+    <circle cx="46" cy="42" r="18" fill="rgba(247,129,102,0.2)" stroke="#f78166" stroke-width="1"/>
+    <text x="46" y="47" text-anchor="middle" fill="#f78166" font-size="11" font-weight="700">1</text>
+    <text x="82" y="38" fill="#f0f6fc" font-size="20" font-weight="600">RAW</text>
+    <text x="82" y="60" fill="#8b949e" font-size="14">Full source files, HTML, CSV, TradingEdge payloads</text>
+  </g>
+
+  <!-- Layer 2: CANONICAL FACTS -->
+  <g transform="translate(120, 370)">
+    <rect width="560" height="85" rx="12" fill="rgba(88,166,255,0.06)" stroke="rgba(88,166,255,0.3)" stroke-width="1"/>
+    <rect width="6" height="85" rx="3" fill="#58a6ff" opacity="0.6"/>
+    <circle cx="46" cy="42" r="18" fill="rgba(88,166,255,0.2)" stroke="#58a6ff" stroke-width="1"/>
+    <text x="46" y="47" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="700">2</text>
+    <text x="82" y="38" fill="#f0f6fc" font-size="20" font-weight="600">CANONICAL FACTS</text>
+    <text x="82" y="60" fill="#8b949e" font-size="14">Snapshots, scores, labels, options OI, outcomes</text>
+  </g>
+
+  <!-- Layer 3: HOT VIEWS -->
+  <g transform="translate(120, 470)">
+    <rect width="560" height="85" rx="12" fill="rgba(188,140,255,0.06)" stroke="rgba(188,140,255,0.3)" stroke-width="1"/>
+    <rect width="6" height="85" rx="3" fill="#bc8cff" opacity="0.6"/>
+    <circle cx="46" cy="42" r="18" fill="rgba(188,140,255,0.2)" stroke="#bc8cff" stroke-width="1"/>
+    <text x="46" y="47" text-anchor="middle" fill="#bc8cff" font-size="11" font-weight="700">3</text>
+    <text x="82" y="38" fill="#f0f6fc" font-size="20" font-weight="600">HOT VIEWS</text>
+    <text x="82" y="60" fill="#8b949e" font-size="14">Materialized report views, pre-computed daily briefs</text>
+  </g>
+
+  <!-- Layer 4: MEMORY / RETRIEVAL -->
+  <g transform="translate(120, 570)">
+    <rect width="560" height="85" rx="12" fill="rgba(124,58,237,0.06)" stroke="rgba(124,58,237,0.3)" stroke-width="1"/>
+    <rect width="6" height="85" rx="3" fill="#7c3aed" opacity="0.6"/>
+    <circle cx="46" cy="42" r="18" fill="rgba(124,58,237,0.2)" stroke="#7c3aed" stroke-width="1"/>
+    <text x="46" y="47" text-anchor="middle" fill="#7c3aed" font-size="11" font-weight="700">4</text>
+    <text x="82" y="38" fill="#f0f6fc" font-size="20" font-weight="600">MEMORY / RETRIEVAL</text>
+    <text x="82" y="60" fill="#8b949e" font-size="14">Document chunks, embeddings, research facts</text>
+  </g>
+
+  <!-- Layer 5: REPORT / EXPLAIN -->
+  <g transform="translate(120, 670)">
+    <rect width="560" height="85" rx="12" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.3)" stroke-width="1"/>
+    <rect width="6" height="85" rx="3" fill="#3fb950" opacity="0.6"/>
+    <circle cx="46" cy="42" r="18" fill="rgba(63,185,80,0.2)" stroke="#3fb950" stroke-width="1"/>
+    <text x="46" y="47" text-anchor="middle" fill="#3fb950" font-size="11" font-weight="700">5</text>
+    <text x="82" y="38" fill="#f0f6fc" font-size="20" font-weight="600">REPORT / EXPLAIN</text>
+    <text x="82" y="60" fill="#8b949e" font-size="14">Daily briefs, ticker explanations, signal outcomes</text>
+  </g>
+
+  <!-- CENTRAL ARROWS: connecting left to right -->
+  <g opacity="0.6">
+    <!-- From Layer 1 to Raw Archive -->
+    <path d="M 680,312 C 820,312 820,460 960,460" fill="none" stroke="#f78166" stroke-width="1.5" stroke-dasharray="6,3"/>
+    <!-- From Layers 2-5 to Postgres -->
+    <path d="M 680,412 C 800,412 800,340 960,340" fill="none" stroke="#58a6ff" stroke-width="1.5"/>
+    <path d="M 680,512 C 810,512 810,350 960,350" fill="none" stroke="#bc8cff" stroke-width="1.5"/>
+    <path d="M 680,612 C 820,612 820,360 960,360" fill="none" stroke="#7c3aed" stroke-width="1.5"/>
+    <path d="M 680,712 C 830,712 830,370 960,370" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+  </g>
+
+  <!-- RIGHT SIDE: 2 Physical Storage -->
+  <text x="1350" y="230" text-anchor="middle" fill="#3fb950" font-size="20" font-weight="600" letter-spacing="0.08em">2 PHYSICAL STORAGE</text>
+
+  <!-- Postgres card -->
+  <g transform="translate(1020, 270)">
+    <rect width="660" height="250" rx="16" fill="rgba(51,103,145,0.08)" stroke="rgba(51,103,145,0.4)" stroke-width="1.5"/>
+    <rect width="660" height="2" y="0" rx="1" fill="rgba(88,166,255,0.15)"/>
+
+    <!-- Postgres cylinder icon -->
+    <g transform="translate(50, 40)">
+      <ellipse cx="35" cy="0" rx="35" ry="10" fill="rgba(51,103,145,0.4)" stroke="#336791" stroke-width="1.5"/>
+      <rect x="0" y="0" width="70" height="45" fill="rgba(51,103,145,0.4)" stroke="none"/>
+      <line x1="0" y1="0" x2="0" y2="45" stroke="#336791" stroke-width="1.5"/>
+      <line x1="70" y1="0" x2="70" y2="45" stroke="#336791" stroke-width="1.5"/>
+      <ellipse cx="35" cy="15" rx="35" ry="10" fill="none" stroke="#336791" stroke-width="0.7" opacity="0.4"/>
+      <ellipse cx="35" cy="30" rx="35" ry="10" fill="none" stroke="#336791" stroke-width="0.7" opacity="0.4"/>
+      <ellipse cx="35" cy="45" rx="35" ry="10" fill="rgba(51,103,145,0.6)" stroke="#336791" stroke-width="1.5"/>
+    </g>
+
+    <text x="150" y="55" fill="#f0f6fc" font-size="28" font-weight="700">PostgreSQL</text>
+    <text x="150" y="80" fill="#58a6ff" font-size="14" font-weight="500" letter-spacing="0.06em">SINGLE SOURCE OF TRUTH</text>
+
+    <!-- What Postgres holds -->
+    <g transform="translate(50, 110)">
+      <text x="0" y="0" fill="#8b949e" font-size="13">Canonical facts</text>
+      <text x="0" y="22" fill="#8b949e" font-size="13">Snapshots &amp; scoring</text>
+      <text x="0" y="44" fill="#8b949e" font-size="13">Final labels &amp; outcomes</text>
+      <text x="0" y="66" fill="#8b949e" font-size="13">Job state &amp; locks</text>
+
+      <text x="220" y="0" fill="#8b949e" font-size="13">Materialized views</text>
+      <text x="220" y="22" fill="#8b949e" font-size="13">Report snapshots</text>
+      <text x="220" y="44" fill="#8b949e" font-size="13">Document chunks</text>
+      <text x="220" y="66" fill="#8b949e" font-size="13">Optional embeddings</text>
+
+      <text x="440" y="0" fill="#8b949e" font-size="13">Research facts</text>
+      <text x="440" y="22" fill="#8b949e" font-size="13">Source metadata</text>
+      <text x="440" y="44" fill="#8b949e" font-size="13">Pending outcomes</text>
+      <text x="440" y="66" fill="#8b949e" font-size="13">JSONB payloads</text>
+    </g>
+  </g>
+
+  <!-- Raw Archive card -->
+  <g transform="translate(1020, 560)">
+    <rect width="660" height="200" rx="16" fill="rgba(63,185,80,0.06)" stroke="rgba(63,185,80,0.35)" stroke-width="1.5"/>
+    <rect width="660" height="2" y="0" rx="1" fill="rgba(63,185,80,0.15)"/>
+
+    <!-- Folder icon -->
+    <g transform="translate(50, 35)">
+      <path d="M 0,15 L 0,55 L 70,55 L 70,15 L 35,15 L 28,5 L 0,5 Z" fill="rgba(63,185,80,0.3)" stroke="#3fb950" stroke-width="1.5"/>
+      <line x1="0" y1="20" x2="70" y2="20" stroke="#3fb950" stroke-width="1" opacity="0.5"/>
+    </g>
+
+    <text x="150" y="55" fill="#f0f6fc" font-size="28" font-weight="700">Raw Archive</text>
+    <text x="150" y="80" fill="#3fb950" font-size="14" font-weight="500" letter-spacing="0.06em">FULL SOURCE PRESERVATION</text>
+
+    <!-- What Raw Archive holds -->
+    <g transform="translate(50, 110)">
+      <text x="0" y="0" fill="#8b949e" font-size="13">Full input files (HTML, CSV, PDF)</text>
+      <text x="0" y="22" fill="#8b949e" font-size="13">TradingEdge reports</text>
+      <text x="0" y="44" fill="#8b949e" font-size="13">SEC/news raw payloads</text>
+
+      <text x="300" y="0" fill="#8b949e" font-size="13">Daily report markdown/JSON</text>
+      <text x="300" y="22" fill="#8b949e" font-size="13">Provider full responses</text>
+      <text x="300" y="44" fill="#8b949e" font-size="13">Complete source copies</text>
+    </g>
+  </g>
+
+  <!-- Bottom insight bar -->
+  <g transform="translate(260, 830)">
+    <rect width="1400" height="80" rx="12" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="700" y="35" text-anchor="middle" fill="#f0f6fc" font-size="20" font-weight="600">Logical order stays intact. Physical system stays simple.</text>
+    <text x="700" y="60" text-anchor="middle" fill="#8b949e" font-size="15">You don't pay the price of 5 technologies for 5 conceptual layers.</text>
+  </g>
+
+  <!-- Slide number -->
+  <text x="1880" y="1050" text-anchor="end" fill="rgba(139,148,158,0.3)" font-size="14" font-weight="400">03 / 10</text>
+</svg>
