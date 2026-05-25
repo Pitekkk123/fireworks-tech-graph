@@ -1,106 +1,121 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
   <defs>
-    <linearGradient id="bg06" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="bg06" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#08090a"/>
       <stop offset="100%" stop-color="#0c0d0f"/>
     </linearGradient>
-    <radialGradient id="atmo06" cx="50%" cy="40%" r="50%">
+    <radialGradient id="atmo06a" cx="40%" cy="30%" r="50%">
       <stop offset="0%" stop-color="rgba(255,255,255,0.02)"/>
       <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
     </radialGradient>
+    <radialGradient id="atmo06b" cx="70%" cy="70%" r="40%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.025)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <linearGradient id="glass06" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.05)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.015)"/>
+    </linearGradient>
+    <filter id="shadow06">
+      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="rgba(0,0,0,0.4)"/>
+    </filter>
   </defs>
 
+  <!-- Background -->
   <rect width="1920" height="1080" fill="url(#bg06)"/>
-  <rect width="1920" height="1080" fill="url(#atmo06)"/>
+  <rect width="1920" height="1080" fill="url(#atmo06a)"/>
+  <rect width="1920" height="1080" fill="url(#atmo06b)"/>
 
   <!-- Title -->
-  <text x="960" y="70" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="400" fill="rgba(255,255,255,0.2)" letter-spacing="0.25em">DATA MODEL</text>
-  <text x="960" y="120" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="44" font-weight="200" fill="rgba(255,255,255,0.85)">Sixteen Tables</text>
+  <text x="160" y="100" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="52" font-weight="200" fill="rgba(255,255,255,0.85)" letter-spacing="-0.03em">Data Model</text>
+  <text x="160" y="136" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="14" font-weight="300" fill="rgba(255,255,255,0.35)" letter-spacing="0.12em">FOUR LAYERS  /  16 CORE TABLES</text>
 
-  <!-- ROW 1: INGEST -->
-  <text x="160" y="210" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)" letter-spacing="0.15em">INGEST</text>
-  <line x1="160" y1="225" x2="1760" y2="225" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <!-- === ROW 1: INGEST === -->
+  <text x="160" y="205" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)" letter-spacing="0.12em">INGEST</text>
 
-  <g transform="translate(160, 245)">
-    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)">source_documents</text>
-    <text x="0" y="20" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">URI + hash + metadata for every external input</text>
+  <g filter="url(#shadow06)">
+    <rect x="160" y="220" width="1600" height="158" rx="16" fill="url(#glass06)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
   </g>
-  <g transform="translate(480, 245)">
-    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)">job_runs</text>
-    <text x="0" y="20" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">Pipeline execution state, replaces Redis</text>
-  </g>
-  <g transform="translate(780, 245)">
-    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)">document_chunks</text>
-    <text x="0" y="20" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">Text retrieval, replaces Vector DB</text>
-  </g>
-  <g transform="translate(1110, 245)">
-    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)">research_facts</text>
-    <text x="0" y="20" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">Short claims with provenance chain</text>
-  </g>
-  <g transform="translate(1430, 245)">
-    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)">report_snapshots</text>
-    <text x="0" y="20" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">Pre-computed views, replaces Redis cache</text>
-  </g>
+  <line x1="176" y1="220" x2="1744" y2="220" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
 
-  <!-- ROW 2: FACT -->
-  <text x="160" y="380" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)" letter-spacing="0.15em">CANONICAL FACTS</text>
-  <line x1="160" y1="395" x2="1760" y2="395" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <text x="200" y="262" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.7)">source_documents</text>
+  <text x="200" y="282" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Registry of every ingested file with URI and content hash</text>
 
-  <g transform="translate(160, 415)">
-    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)">sector_snapshots</text>
-    <text x="0" y="20" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">Daily sector metrics, breadth, relative strength</text>
-  </g>
-  <g transform="translate(530, 415)">
-    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)">leader_snapshots</text>
-    <text x="0" y="20" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">Top movers per sector, scores, tiers</text>
-  </g>
-  <g transform="translate(900, 415)">
-    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)">setup_diagnostics</text>
-    <text x="0" y="20" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">Base patterns, quality scores, stage classification</text>
-  </g>
-  <g transform="translate(1300, 415)">
-    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)">bottleneck_*</text>
-    <text x="0" y="20" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">Company scores + separate evidence chain</text>
-  </g>
+  <text x="200" y="322" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.7)">job_runs</text>
+  <text x="200" y="342" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Pipeline execution state and error tracking</text>
 
-  <!-- ROW 3: OPTIONS -->
-  <text x="160" y="550" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)" letter-spacing="0.15em">OPTIONS FLOW</text>
-  <line x1="160" y1="565" x2="1760" y2="565" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <text x="600" y="262" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.7)">document_chunks</text>
+  <text x="600" y="282" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Parsed text segments for retrieval and embedding</text>
 
-  <g transform="translate(160, 585)">
-    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)">options_contract_facts</text>
-    <text x="0" y="20" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">Normalized contract data, no arbitrary thresholds</text>
-  </g>
-  <g transform="translate(620, 585)">
-    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)">options_daily_reads</text>
-    <text x="0" y="20" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">Interpretive daily label per ticker</text>
-  </g>
-  <g transform="translate(1060, 585)">
-    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)">options_pending_oi_checks</text>
-    <text x="0" y="20" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">Next-session confirmation queue, replaces Redis</text>
-  </g>
+  <text x="600" y="322" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.7)">research_facts</text>
+  <text x="600" y="342" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Extracted claims with confidence and provenance</text>
 
-  <!-- ROW 4: SIGNAL -->
-  <text x="160" y="720" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)" letter-spacing="0.15em">EMPIRICAL LOOP</text>
-  <line x1="160" y1="735" x2="1760" y2="735" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <text x="1060" y="262" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.7)">report_snapshots</text>
+  <text x="1060" y="282" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Materialized daily brief as JSON and markdown</text>
 
-  <g transform="translate(160, 755)">
-    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)">signal_fires</text>
-    <text x="0" y="20" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">Every generated signal or quality label</text>
-  </g>
-  <g transform="translate(530, 755)">
-    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)">signal_outcomes</text>
-    <text x="0" y="20" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">Actual market results against predictions</text>
-  </g>
-  <g transform="translate(930, 755)">
-    <text x="0" y="0" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="300" fill="rgba(255,255,255,0.7)">pending_outcomes</text>
-    <text x="0" y="20" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">Awaiting resolution, replaces Redis queue</text>
-  </g>
+  <!-- Separator -->
+  <line x1="160" y1="408" x2="1760" y2="408" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
 
-  <!-- Bottom summary -->
-  <line x1="160" y1="870" x2="1760" y2="870" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-  <text x="960" y="920" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.25)">Each table replaces a separate system: Redis views, Redis state, Redis queues, Vector DB.</text>
-  <text x="960" y="945" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.25)">All in one PostgreSQL instance with proper indexing.</text>
+  <!-- === ROW 2: FACT === -->
+  <text x="160" y="445" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)" letter-spacing="0.12em">FACT</text>
 
-  <text x="960" y="1040" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="400" fill="rgba(255,255,255,0.12)" letter-spacing="0.15em">06</text>
+  <g filter="url(#shadow06)">
+    <rect x="160" y="460" width="1600" height="158" rx="16" fill="url(#glass06)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  </g>
+  <line x1="176" y1="460" x2="1744" y2="460" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <text x="200" y="502" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.7)">sector_snapshots</text>
+  <text x="200" y="522" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Daily sector ETF metrics, breadth, and relative strength</text>
+
+  <text x="200" y="562" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.7)">leader_snapshots</text>
+  <text x="200" y="582" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Per-ticker leadership scores, tiers, and RS rankings</text>
+
+  <text x="700" y="502" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.7)">setup_diagnostics</text>
+  <text x="700" y="522" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Base pattern quality, stage, and pivot distance</text>
+
+  <text x="700" y="562" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.7)">bottleneck_*</text>
+  <text x="700" y="582" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Company scores and evidence chain for supply constraints</text>
+
+  <!-- Separator -->
+  <line x1="160" y1="648" x2="1760" y2="648" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+  <!-- === ROW 3: OPTIONS === -->
+  <text x="160" y="685" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)" letter-spacing="0.12em">OPTIONS</text>
+
+  <g filter="url(#shadow06)">
+    <rect x="160" y="700" width="1600" height="118" rx="16" fill="url(#glass06)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  </g>
+  <line x1="176" y1="700" x2="1744" y2="700" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <text x="200" y="742" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.7)">options_contract_facts</text>
+  <text x="200" y="762" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Individual contract volume, premium, and OI change</text>
+
+  <text x="600" y="742" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.7)">options_daily_reads</text>
+  <text x="600" y="762" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Interpretive daily label per ticker (NONE to STRONG)</text>
+
+  <text x="1060" y="742" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.7)">options_pending_oi_checks</text>
+  <text x="1060" y="762" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Queued confirmations for next-session OI verification</text>
+
+  <!-- Separator -->
+  <line x1="160" y1="848" x2="1760" y2="848" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+
+  <!-- === ROW 4: SIGNAL === -->
+  <text x="160" y="885" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)" letter-spacing="0.12em">SIGNAL</text>
+
+  <g filter="url(#shadow06)">
+    <rect x="160" y="900" width="1600" height="118" rx="16" fill="url(#glass06)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  </g>
+  <line x1="176" y1="900" x2="1744" y2="900" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <text x="200" y="942" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.7)">signal_fires</text>
+  <text x="200" y="962" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Every generated signal with tier context and decision</text>
+
+  <text x="600" y="942" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.7)">signal_outcomes</text>
+  <text x="600" y="962" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Resolved returns at multiple horizons for empirical feedback</text>
+
+  <text x="1060" y="942" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300" fill="rgba(255,255,255,0.7)">pending_outcomes</text>
+  <text x="1060" y="962" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Scheduled future checks awaiting market data resolution</text>
+
+  <!-- Slide number -->
+  <text x="960" y="1055" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="14" font-weight="300" fill="rgba(255,255,255,0.12)" letter-spacing="0.15em" text-anchor="middle">06</text>
 </svg>

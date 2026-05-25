@@ -4,7 +4,11 @@
       <stop offset="0%" stop-color="#08090a"/>
       <stop offset="100%" stop-color="#0c0d0f"/>
     </linearGradient>
-    <radialGradient id="atmo05" cx="50%" cy="50%" r="45%">
+    <radialGradient id="atmo05a" cx="50%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.025)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </radialGradient>
+    <radialGradient id="atmo05b" cx="20%" cy="30%" r="35%">
       <stop offset="0%" stop-color="rgba(255,255,255,0.02)"/>
       <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
     </radialGradient>
@@ -13,81 +17,89 @@
     </filter>
   </defs>
 
+  <!-- Background -->
   <rect width="1920" height="1080" fill="url(#bg05)"/>
-  <rect width="1920" height="1080" fill="url(#atmo05)"/>
+  <rect width="1920" height="1080" fill="url(#atmo05a)"/>
+  <rect width="1920" height="1080" fill="url(#atmo05b)"/>
 
   <!-- Title -->
-  <text x="960" y="80" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="400" fill="rgba(255,255,255,0.2)" letter-spacing="0.25em">INTERNAL ORGANIZATION</text>
-  <text x="960" y="135" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="48" font-weight="200" fill="rgba(255,255,255,0.85)" letter-spacing="-0.01em">Schema Universe</text>
-  <text x="960" y="175" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.3)">Twelve logical namespaces inside one PostgreSQL instance</text>
+  <text x="160" y="112" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="52" font-weight="200" fill="rgba(255,255,255,0.85)" letter-spacing="-0.03em">Schema Universe</text>
+  <text x="160" y="148" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="14" font-weight="300" fill="rgba(255,255,255,0.35)" letter-spacing="0.12em">12 LOGICAL NAMESPACES  /  ONE POSTGRESQL INSTANCE</text>
 
-  <!-- Central ring -->
-  <circle cx="960" cy="560" r="80" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
-  <circle cx="960" cy="560" r="40" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-  <text x="960" y="565" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="14" font-weight="300" fill="rgba(255,255,255,0.5)">PG</text>
+  <!-- Decorative outer orbit -->
+  <circle cx="960" cy="560" r="340" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1" stroke-dasharray="4,8"/>
 
-  <!-- 12 schema nodes arranged radially -->
+  <!-- Central ring representing Postgres -->
+  <circle cx="960" cy="560" r="120" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <circle cx="960" cy="560" r="80" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="960" y="553" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="200" fill="rgba(255,255,255,0.7)" text-anchor="middle">PostgreSQL</text>
+  <text x="960" y="576" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)" text-anchor="middle">single instance</text>
+
+  <!-- 12 schema labels arranged radially with connecting lines -->
+
   <!-- 12 o'clock: sources -->
-  <line x1="960" y1="480" x2="960" y2="310" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-  <text x="960" y="290" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.7)">sources</text>
-  <text x="960" y="312" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">source_documents</text>
+  <line x1="960" y1="440" x2="960" y2="290" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="960" y="270" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="200" fill="rgba(255,255,255,0.7)" text-anchor="middle">sources</text>
+  <text x="960" y="292" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)" text-anchor="middle">document registry</text>
 
   <!-- 1 o'clock: market -->
-  <line x1="1000" y1="490" x2="1220" y2="330" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-  <text x="1240" y="320" text-anchor="start" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.7)">market</text>
-  <text x="1240" y="342" text-anchor="start" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">regime snapshots</text>
+  <line x1="1020" y1="450" x2="1260" y2="310" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="1290" y="300" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="200" fill="rgba(255,255,255,0.7)" text-anchor="start">market</text>
+  <text x="1290" y="322" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)" text-anchor="start">regime snapshots</text>
 
   <!-- 2 o'clock: sector -->
-  <line x1="1030" y1="530" x2="1300" y2="440" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-  <text x="1320" y="435" text-anchor="start" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.7)">sector</text>
-  <text x="1320" y="457" text-anchor="start" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">sector_snapshots, breadth, RS</text>
+  <line x1="1060" y1="490" x2="1380" y2="420" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="1410" y="415" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="200" fill="rgba(255,255,255,0.7)" text-anchor="start">sector</text>
+  <text x="1410" y="437" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)" text-anchor="start">breadth &amp; relative strength</text>
 
   <!-- 3 o'clock: leader -->
-  <line x1="1040" y1="560" x2="1320" y2="560" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-  <text x="1340" y="555" text-anchor="start" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.7)">leader</text>
-  <text x="1340" y="577" text-anchor="start" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">leader_snapshots, scores, tiers</text>
+  <line x1="1080" y1="560" x2="1400" y2="560" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="1430" y="555" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="200" fill="rgba(255,255,255,0.7)" text-anchor="start">leader</text>
+  <text x="1430" y="577" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)" text-anchor="start">stock leader tiers &amp; scores</text>
 
   <!-- 4 o'clock: setup -->
-  <line x1="1030" y1="590" x2="1300" y2="680" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-  <text x="1320" y="675" text-anchor="start" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.7)">setup</text>
-  <text x="1320" y="697" text-anchor="start" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">setup_diagnostics, 1B/2A/2B/2C</text>
+  <line x1="1060" y1="630" x2="1380" y2="700" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="1410" y="695" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="200" fill="rgba(255,255,255,0.7)" text-anchor="start">setup</text>
+  <text x="1410" y="717" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)" text-anchor="start">chart base diagnostics</text>
 
   <!-- 5 o'clock: options -->
-  <line x1="1000" y1="630" x2="1220" y2="790" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-  <text x="1240" y="785" text-anchor="start" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.7)">options</text>
-  <text x="1240" y="807" text-anchor="start" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">contract_facts, daily_reads, pending</text>
+  <line x1="1020" y1="670" x2="1260" y2="810" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="1290" y="805" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="200" fill="rgba(255,255,255,0.7)" text-anchor="start">options</text>
+  <text x="1290" y="827" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)" text-anchor="start">contract facts &amp; daily reads</text>
 
   <!-- 6 o'clock: bottleneck -->
-  <line x1="960" y1="640" x2="960" y2="860" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-  <text x="960" y="890" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.7)">bottleneck</text>
-  <text x="960" y="912" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">scores, evidence, material exposure</text>
+  <line x1="960" y1="680" x2="960" y2="870" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="960" y="900" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="200" fill="rgba(255,255,255,0.7)" text-anchor="middle">bottleneck</text>
+  <text x="960" y="922" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)" text-anchor="middle">supply constraint scores</text>
 
   <!-- 7 o'clock: research -->
-  <line x1="920" y1="630" x2="700" y2="790" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-  <text x="680" y="785" text-anchor="end" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.7)">research</text>
-  <text x="680" y="807" text-anchor="end" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">research_facts, claims, evidence</text>
+  <line x1="900" y1="670" x2="660" y2="810" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="630" y="805" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="200" fill="rgba(255,255,255,0.7)" text-anchor="end">research</text>
+  <text x="630" y="827" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)" text-anchor="end">facts &amp; claims</text>
 
   <!-- 8 o'clock: outcomes -->
-  <line x1="890" y1="590" x2="620" y2="680" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-  <text x="600" y="675" text-anchor="end" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.7)">outcomes</text>
-  <text x="600" y="697" text-anchor="end" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">signal_fires, signal_outcomes, pending</text>
+  <line x1="860" y1="630" x2="540" y2="700" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="510" y="695" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="200" fill="rgba(255,255,255,0.7)" text-anchor="end">outcomes</text>
+  <text x="510" y="717" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)" text-anchor="end">signal results &amp; feedback</text>
 
   <!-- 9 o'clock: reports -->
-  <line x1="880" y1="560" x2="600" y2="560" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-  <text x="580" y="555" text-anchor="end" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.7)">reports</text>
-  <text x="580" y="577" text-anchor="end" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">report_snapshots, daily_brief</text>
+  <line x1="840" y1="560" x2="520" y2="560" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="490" y="555" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="200" fill="rgba(255,255,255,0.7)" text-anchor="end">reports</text>
+  <text x="490" y="577" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)" text-anchor="end">daily brief snapshots</text>
 
   <!-- 10 o'clock: jobs -->
-  <line x1="890" y1="530" x2="620" y2="440" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-  <text x="600" y="435" text-anchor="end" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.7)">jobs</text>
-  <text x="600" y="457" text-anchor="end" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">job_runs, status, errors</text>
+  <line x1="860" y1="490" x2="540" y2="420" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="510" y="415" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="200" fill="rgba(255,255,255,0.7)" text-anchor="end">jobs</text>
+  <text x="510" y="437" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)" text-anchor="end">pipeline run state</text>
 
   <!-- 11 o'clock: memory -->
-  <line x1="920" y1="490" x2="700" y2="330" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-  <text x="680" y="320" text-anchor="end" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="300" fill="rgba(255,255,255,0.7)">memory</text>
-  <text x="680" y="342" text-anchor="end" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">document_chunks, embeddings</text>
+  <line x1="900" y1="450" x2="660" y2="310" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="630" y="300" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="20" font-weight="200" fill="rgba(255,255,255,0.7)" text-anchor="end">memory</text>
+  <text x="630" y="322" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)" text-anchor="end">agent context &amp; chunks</text>
 
-  <!-- Bottom -->
-  <text x="960" y="1000" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="14" font-weight="300" fill="rgba(255,255,255,0.2)">Order without complexity. One database, twelve concerns.</text>
-  <text x="960" y="1040" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="400" fill="rgba(255,255,255,0.12)" letter-spacing="0.15em">05</text>
+  <!-- Bottom note -->
+  <text x="960" y="1000" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.2)" text-anchor="middle">One database  /  Twelve namespaces  /  Zero cross-schema joins required</text>
+
+  <!-- Slide number -->
+  <text x="960" y="1055" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="14" font-weight="300" fill="rgba(255,255,255,0.12)" letter-spacing="0.15em" text-anchor="middle">05</text>
 </svg>
