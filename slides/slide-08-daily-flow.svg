@@ -1,28 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
   <defs>
     <linearGradient id="bg08" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#08090a"/>
-      <stop offset="100%" stop-color="#0c0d0f"/>
+      <stop offset="0%" stop-color="#1a1410"/>
+      <stop offset="50%" stop-color="#14110e"/>
+      <stop offset="100%" stop-color="#110f0c"/>
     </linearGradient>
     <radialGradient id="glow08a" cx="50%" cy="30%" r="50%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.025)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="0%" stop-color="rgba(217,119,87,0.05)"/>
+      <stop offset="100%" stop-color="rgba(217,119,87,0)"/>
     </radialGradient>
     <radialGradient id="glow08b" cx="50%" cy="75%" r="40%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.02)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="0%" stop-color="rgba(217,119,87,0.04)"/>
+      <stop offset="100%" stop-color="rgba(217,119,87,0)"/>
     </radialGradient>
     <linearGradient id="cardGrad08" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.05)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0.015)"/>
+      <stop offset="0%" stop-color="rgba(245,240,235,0.05)"/>
+      <stop offset="100%" stop-color="rgba(245,240,235,0.015)"/>
     </linearGradient>
     <filter id="cardShadow08">
-      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="rgba(0,0,0,0.4)"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="22" flood-color="rgba(10,8,6,0.5)"/>
     </filter>
     <linearGradient id="flowLine08" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.08)"/>
-      <stop offset="50%" stop-color="rgba(255,255,255,0.04)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0.01)"/>
+      <stop offset="0%" stop-color="rgba(217,119,87,0.12)"/>
+      <stop offset="50%" stop-color="rgba(217,119,87,0.06)"/>
+      <stop offset="100%" stop-color="rgba(217,119,87,0.02)"/>
     </linearGradient>
   </defs>
 
@@ -32,114 +33,114 @@
   <rect width="1920" height="1080" fill="url(#glow08b)"/>
 
   <!-- Title -->
-  <text x="960" y="68" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="38" fill="rgba(255,255,255,0.85)" letter-spacing="0.02em">Daily Operational Flow</text>
+  <text x="960" y="68" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="38" fill="rgba(245,240,235,0.9)" letter-spacing="0.02em">Daily Operational Flow</text>
 
   <!-- Terminal command bar -->
-  <rect x="560" y="100" width="800" height="46" rx="10" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
-  <text x="592" y="128" font-family="'SF Mono','JetBrains Mono','Fira Code',monospace" font-weight="300" font-size="14" fill="rgba(255,255,255,0.3)">$</text>
-  <text x="616" y="128" font-family="'SF Mono','JetBrains Mono','Fira Code',monospace" font-weight="300" font-size="14" fill="rgba(255,255,255,0.55)">tickerlab refresh daily --date 2026-05-25</text>
+  <rect x="560" y="100" width="800" height="46" rx="10" fill="rgba(245,240,235,0.05)" stroke="rgba(217,119,87,0.08)" stroke-width="0.5"/>
+  <text x="592" y="128" font-family="'SF Mono','JetBrains Mono','Fira Code',monospace" font-weight="300" font-size="14" fill="rgba(245,240,235,0.3)">$</text>
+  <text x="616" y="128" font-family="'SF Mono','JetBrains Mono','Fira Code',monospace" font-weight="300" font-size="14" fill="rgba(245,240,235,0.7)">tickerlab refresh daily --date 2026-05-25</text>
 
   <!-- Pipeline modules label -->
-  <text x="360" y="192" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="11" fill="rgba(255,255,255,0.35)" letter-spacing="0.15em">PIPELINE MODULES</text>
+  <text x="360" y="192" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="500" font-size="11" fill="#D97757" letter-spacing="0.2em">PIPELINE MODULES</text>
 
   <!-- Vertical flow line left side -->
-  <line x1="345" y1="208" x2="345" y2="680" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+  <line x1="345" y1="208" x2="345" y2="680" stroke="rgba(217,119,87,0.06)" stroke-width="0.5"/>
 
   <!-- Module 1 -->
-  <circle cx="345" cy="235" r="2.5" fill="rgba(255,255,255,0.12)"/>
-  <text x="370" y="232" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(255,255,255,0.2)">01</text>
-  <text x="400" y="232" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(255,255,255,0.7)">Market Regime</text>
-  <text x="400" y="250" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(255,255,255,0.3)">Classify broad market conditions</text>
+  <circle cx="345" cy="235" r="2.5" fill="rgba(217,119,87,0.25)"/>
+  <text x="370" y="232" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(217,119,87,0.2)">01</text>
+  <text x="400" y="232" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(245,240,235,0.7)">Market Regime</text>
+  <text x="400" y="250" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(245,240,235,0.3)">Classify broad market conditions</text>
 
   <!-- Module 2 -->
-  <circle cx="345" cy="285" r="2.5" fill="rgba(255,255,255,0.12)"/>
-  <text x="370" y="282" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(255,255,255,0.2)">02</text>
-  <text x="400" y="282" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(255,255,255,0.7)">Sector Delta</text>
-  <text x="400" y="300" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(255,255,255,0.3)">Sector rotation and relative strength</text>
+  <circle cx="345" cy="285" r="2.5" fill="rgba(217,119,87,0.25)"/>
+  <text x="370" y="282" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(217,119,87,0.2)">02</text>
+  <text x="400" y="282" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(245,240,235,0.7)">Sector Delta</text>
+  <text x="400" y="300" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(245,240,235,0.3)">Sector rotation and relative strength</text>
 
   <!-- Module 3 -->
-  <circle cx="345" cy="335" r="2.5" fill="rgba(255,255,255,0.12)"/>
-  <text x="370" y="332" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(255,255,255,0.2)">03</text>
-  <text x="400" y="332" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(255,255,255,0.7)">Leader Matrix</text>
-  <text x="400" y="350" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(255,255,255,0.3)">Top movers and momentum leaders</text>
+  <circle cx="345" cy="335" r="2.5" fill="rgba(217,119,87,0.25)"/>
+  <text x="370" y="332" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(217,119,87,0.2)">03</text>
+  <text x="400" y="332" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(245,240,235,0.7)">Leader Matrix</text>
+  <text x="400" y="350" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(245,240,235,0.3)">Top movers and momentum leaders</text>
 
   <!-- Module 4 -->
-  <circle cx="345" cy="385" r="2.5" fill="rgba(255,255,255,0.12)"/>
-  <text x="370" y="382" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(255,255,255,0.2)">04</text>
-  <text x="400" y="382" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(255,255,255,0.7)">Setup Diagnostics</text>
-  <text x="400" y="400" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(255,255,255,0.3)">Technical pattern scoring</text>
+  <circle cx="345" cy="385" r="2.5" fill="rgba(217,119,87,0.25)"/>
+  <text x="370" y="382" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(217,119,87,0.2)">04</text>
+  <text x="400" y="382" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(245,240,235,0.7)">Setup Diagnostics</text>
+  <text x="400" y="400" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(245,240,235,0.3)">Technical pattern scoring</text>
 
   <!-- Module 5 -->
-  <circle cx="345" cy="435" r="2.5" fill="rgba(255,255,255,0.12)"/>
-  <text x="370" y="432" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(255,255,255,0.2)">05</text>
-  <text x="400" y="432" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(255,255,255,0.7)">Options Reads</text>
-  <text x="400" y="450" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(255,255,255,0.3)">Unusual activity detection</text>
+  <circle cx="345" cy="435" r="2.5" fill="rgba(217,119,87,0.25)"/>
+  <text x="370" y="432" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(217,119,87,0.2)">05</text>
+  <text x="400" y="432" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(245,240,235,0.7)">Options Reads</text>
+  <text x="400" y="450" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(245,240,235,0.3)">Unusual activity detection</text>
 
   <!-- Module 6 -->
-  <circle cx="345" cy="485" r="2.5" fill="rgba(255,255,255,0.12)"/>
-  <text x="370" y="482" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(255,255,255,0.2)">06</text>
-  <text x="400" y="482" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(255,255,255,0.7)">Bottleneck</text>
-  <text x="400" y="500" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(255,255,255,0.3)">Risk concentration analysis</text>
+  <circle cx="345" cy="485" r="2.5" fill="rgba(217,119,87,0.25)"/>
+  <text x="370" y="482" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(217,119,87,0.2)">06</text>
+  <text x="400" y="482" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(245,240,235,0.7)">Bottleneck</text>
+  <text x="400" y="500" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(245,240,235,0.3)">Risk concentration analysis</text>
 
   <!-- Module 7 -->
-  <circle cx="345" cy="535" r="2.5" fill="rgba(255,255,255,0.12)"/>
-  <text x="370" y="532" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(255,255,255,0.2)">07</text>
-  <text x="400" y="532" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(255,255,255,0.7)">Research Facts</text>
-  <text x="400" y="550" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(255,255,255,0.3)">Document chunk retrieval</text>
+  <circle cx="345" cy="535" r="2.5" fill="rgba(217,119,87,0.25)"/>
+  <text x="370" y="532" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(217,119,87,0.2)">07</text>
+  <text x="400" y="532" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(245,240,235,0.7)">Research Facts</text>
+  <text x="400" y="550" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(245,240,235,0.3)">Document chunk retrieval</text>
 
   <!-- Module 8 -->
-  <circle cx="345" cy="585" r="2.5" fill="rgba(255,255,255,0.12)"/>
-  <text x="370" y="582" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(255,255,255,0.2)">08</text>
-  <text x="400" y="582" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(255,255,255,0.7)">Outcomes Resolve</text>
-  <text x="400" y="600" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(255,255,255,0.3)">Pending prediction resolution</text>
+  <circle cx="345" cy="585" r="2.5" fill="rgba(217,119,87,0.25)"/>
+  <text x="370" y="582" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(217,119,87,0.2)">08</text>
+  <text x="400" y="582" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(245,240,235,0.7)">Outcomes Resolve</text>
+  <text x="400" y="600" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(245,240,235,0.3)">Pending prediction resolution</text>
 
   <!-- Module 9 -->
-  <circle cx="345" cy="635" r="2.5" fill="rgba(255,255,255,0.12)"/>
-  <text x="370" y="632" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(255,255,255,0.2)">09</text>
-  <text x="400" y="632" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(255,255,255,0.7)">OI Confirmation</text>
-  <text x="400" y="650" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(255,255,255,0.3)">Open interest validation</text>
+  <circle cx="345" cy="635" r="2.5" fill="rgba(217,119,87,0.25)"/>
+  <text x="370" y="632" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="12" fill="rgba(217,119,87,0.2)">09</text>
+  <text x="400" y="632" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="15" fill="rgba(245,240,235,0.7)">OI Confirmation</text>
+  <text x="400" y="650" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="11" fill="rgba(245,240,235,0.3)">Open interest validation</text>
 
   <!-- Horizontal connector lines from modules to central card -->
-  <line x1="620" y1="280" x2="780" y2="430" stroke="rgba(255,255,255,0.025)" stroke-width="0.5"/>
-  <line x1="620" y1="380" x2="780" y2="430" stroke="rgba(255,255,255,0.035)" stroke-width="0.5"/>
-  <line x1="620" y1="435" x2="780" y2="440" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
-  <line x1="620" y1="535" x2="780" y2="450" stroke="rgba(255,255,255,0.035)" stroke-width="0.5"/>
-  <line x1="620" y1="635" x2="780" y2="460" stroke="rgba(255,255,255,0.025)" stroke-width="0.5"/>
+  <line x1="620" y1="280" x2="780" y2="430" stroke="rgba(217,119,87,0.04)" stroke-width="0.5"/>
+  <line x1="620" y1="380" x2="780" y2="430" stroke="rgba(217,119,87,0.06)" stroke-width="0.5"/>
+  <line x1="620" y1="435" x2="780" y2="440" stroke="rgba(217,119,87,0.08)" stroke-width="0.5"/>
+  <line x1="620" y1="535" x2="780" y2="450" stroke="rgba(217,119,87,0.06)" stroke-width="0.5"/>
+  <line x1="620" y1="635" x2="780" y2="460" stroke="rgba(217,119,87,0.04)" stroke-width="0.5"/>
 
   <!-- Central glass card - report_snapshots -->
-  <rect x="790" y="360" width="380" height="170" rx="18" fill="url(#cardGrad08)" stroke="rgba(255,255,255,0.06)" stroke-width="0.5" filter="url(#cardShadow08)"/>
+  <rect x="790" y="360" width="380" height="170" rx="18" fill="url(#cardGrad08)" stroke="rgba(217,119,87,0.08)" stroke-width="0.5" filter="url(#cardShadow08)"/>
   <!-- Top highlight -->
-  <line x1="808" y1="360.5" x2="1152" y2="360.5" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <line x1="808" y1="360.5" x2="1152" y2="360.5" stroke="rgba(245,240,235,0.04)" stroke-width="1"/>
 
-  <text x="980" y="410" text-anchor="middle" font-family="'SF Mono','JetBrains Mono','Fira Code',monospace" font-weight="300" font-size="20" fill="rgba(255,255,255,0.8)">report_snapshots</text>
-  <line x1="860" y1="428" x2="1100" y2="428" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
-  <text x="980" y="458" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.45)">Pre-computed once per day</text>
-  <text x="980" y="484" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="13" fill="rgba(255,255,255,0.3)">All 9 modules write JSONB results</text>
-  <text x="980" y="504" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="13" fill="rgba(255,255,255,0.3)">keyed by (module, date)</text>
+  <text x="980" y="410" text-anchor="middle" font-family="'SF Mono','JetBrains Mono','Fira Code',monospace" font-weight="300" font-size="20" fill="rgba(245,240,235,0.88)">report_snapshots</text>
+  <line x1="860" y1="428" x2="1100" y2="428" stroke="rgba(217,119,87,0.05)" stroke-width="0.5"/>
+  <text x="980" y="458" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.7)">Pre-computed once per day</text>
+  <text x="980" y="484" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="13" fill="rgba(245,240,235,0.3)">All 9 modules write JSONB results</text>
+  <text x="980" y="504" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="13" fill="rgba(245,240,235,0.3)">keyed by (module, date)</text>
 
   <!-- Vertical flow line from card down -->
   <line x1="980" y1="530" x2="980" y2="640" stroke="url(#flowLine08)" stroke-width="0.5"/>
 
   <!-- Branching dot -->
-  <circle cx="980" cy="650" r="2.5" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="980" cy="650" r="2.5" fill="rgba(217,119,87,0.25)"/>
 
   <!-- Output branch lines -->
-  <line x1="980" y1="652" x2="800" y2="730" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
-  <line x1="980" y1="652" x2="980" y2="730" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
-  <line x1="980" y1="652" x2="1160" y2="730" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+  <line x1="980" y1="652" x2="800" y2="730" stroke="rgba(217,119,87,0.06)" stroke-width="0.5"/>
+  <line x1="980" y1="652" x2="980" y2="730" stroke="rgba(217,119,87,0.06)" stroke-width="0.5"/>
+  <line x1="980" y1="652" x2="1160" y2="730" stroke="rgba(217,119,87,0.06)" stroke-width="0.5"/>
 
   <!-- Output: CLI -->
-  <text x="800" y="760" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="16" fill="rgba(255,255,255,0.6)">CLI</text>
-  <text x="800" y="782" text-anchor="middle" font-family="'SF Mono','JetBrains Mono',monospace" font-weight="200" font-size="11" fill="rgba(255,255,255,0.25)">tickerlab report</text>
+  <text x="800" y="760" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="16" fill="rgba(245,240,235,0.7)">CLI</text>
+  <text x="800" y="782" text-anchor="middle" font-family="'SF Mono','JetBrains Mono',monospace" font-weight="200" font-size="11" fill="rgba(245,240,235,0.3)">tickerlab report</text>
 
   <!-- Output: API -->
-  <text x="980" y="760" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="16" fill="rgba(255,255,255,0.6)">API</text>
-  <text x="980" y="782" text-anchor="middle" font-family="'SF Mono','JetBrains Mono',monospace" font-weight="200" font-size="11" fill="rgba(255,255,255,0.25)">GET /snapshot/:date</text>
+  <text x="980" y="760" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="16" fill="rgba(245,240,235,0.7)">API</text>
+  <text x="980" y="782" text-anchor="middle" font-family="'SF Mono','JetBrains Mono',monospace" font-weight="200" font-size="11" fill="rgba(245,240,235,0.3)">GET /snapshot/:date</text>
 
   <!-- Output: Dashboard -->
-  <text x="1160" y="760" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="16" fill="rgba(255,255,255,0.6)">Dashboard</text>
-  <text x="1160" y="782" text-anchor="middle" font-family="'SF Mono','JetBrains Mono',monospace" font-weight="200" font-size="11" fill="rgba(255,255,255,0.25)">real-time render</text>
+  <text x="1160" y="760" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="300" font-size="16" fill="rgba(245,240,235,0.7)">Dashboard</text>
+  <text x="1160" y="782" text-anchor="middle" font-family="'SF Mono','JetBrains Mono',monospace" font-weight="200" font-size="11" fill="rgba(245,240,235,0.3)">real-time render</text>
 
   <!-- Slide number -->
-  <text x="960" y="1050" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.12)" letter-spacing="0.15em">08</text>
+  <text x="960" y="1050" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(217,119,87,0.25)" letter-spacing="0.15em">08 / 10</text>
 </svg>

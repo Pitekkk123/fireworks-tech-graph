@@ -1,23 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
   <defs>
     <linearGradient id="bg10" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#08090a"/>
-      <stop offset="100%" stop-color="#0c0d0f"/>
+      <stop offset="0%" stop-color="#1a1410"/>
+      <stop offset="50%" stop-color="#14110e"/>
+      <stop offset="100%" stop-color="#110f0c"/>
     </linearGradient>
     <radialGradient id="glow10a" cx="50%" cy="20%" r="50%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.03)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="0%" stop-color="rgba(217,119,87,0.05)"/>
+      <stop offset="100%" stop-color="rgba(217,119,87,0)"/>
     </radialGradient>
     <radialGradient id="glow10b" cx="40%" cy="80%" r="40%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.02)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="0%" stop-color="rgba(217,119,87,0.04)"/>
+      <stop offset="100%" stop-color="rgba(217,119,87,0)"/>
     </radialGradient>
     <linearGradient id="cardGrad10" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.05)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0.015)"/>
+      <stop offset="0%" stop-color="rgba(245,240,235,0.05)"/>
+      <stop offset="100%" stop-color="rgba(245,240,235,0.015)"/>
     </linearGradient>
     <filter id="cardShadow10">
-      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="rgba(0,0,0,0.4)"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="22" flood-color="rgba(10,8,6,0.5)"/>
     </filter>
   </defs>
 
@@ -27,82 +28,82 @@
   <rect width="1920" height="1080" fill="url(#glow10b)"/>
 
   <!-- Title -->
-  <text x="960" y="105" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="100" font-size="48" fill="rgba(255,255,255,0.85)" letter-spacing="0.01em">Design Principles</text>
+  <text x="960" y="105" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="100" font-size="48" fill="rgba(245,240,235,0.9)" letter-spacing="0.01em">Design Principles</text>
 
   <!-- 2x3 Grid of principle cards -->
 
   <!-- Row 1, Col 1 - Principle 1 -->
-  <rect x="260" y="170" width="640" height="210" rx="18" fill="url(#cardGrad10)" stroke="rgba(255,255,255,0.06)" stroke-width="0.5" filter="url(#cardShadow10)"/>
-  <line x1="278" y1="170.5" x2="882" y2="170.5" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <rect x="260" y="170" width="640" height="210" rx="18" fill="url(#cardGrad10)" stroke="rgba(217,119,87,0.08)" stroke-width="0.5" filter="url(#cardShadow10)"/>
+  <line x1="278" y1="170.5" x2="882" y2="170.5" stroke="rgba(245,240,235,0.04)" stroke-width="1"/>
 
-  <text x="300" y="212" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="13" fill="rgba(255,255,255,0.2)">01</text>
-  <text x="330" y="212" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="17" fill="rgba(255,255,255,0.75)">report_snapshots replaces Redis</text>
-  <line x1="300" y1="228" x2="520" y2="228" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/>
-  <text x="300" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">Pre-compute once, read many. The daily pipeline</text>
-  <text x="300" y="282" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">writes a single JSONB snapshot per module per day.</text>
-  <text x="300" y="304" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">Every consumer reads from this immutable record.</text>
+  <text x="300" y="212" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="13" fill="rgba(217,119,87,0.2)">01</text>
+  <text x="330" y="212" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="17" fill="rgba(245,240,235,0.88)">report_snapshots replaces Redis</text>
+  <line x1="300" y1="228" x2="520" y2="228" stroke="rgba(217,119,87,0.05)" stroke-width="0.5"/>
+  <text x="300" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">Pre-compute once, read many. The daily pipeline</text>
+  <text x="300" y="282" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">writes a single JSONB snapshot per module per day.</text>
+  <text x="300" y="304" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">Every consumer reads from this immutable record.</text>
 
   <!-- Row 1, Col 2 - Principle 2 -->
-  <rect x="1020" y="170" width="640" height="210" rx="18" fill="url(#cardGrad10)" stroke="rgba(255,255,255,0.06)" stroke-width="0.5" filter="url(#cardShadow10)"/>
-  <line x1="1038" y1="170.5" x2="1642" y2="170.5" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <rect x="1020" y="170" width="640" height="210" rx="18" fill="url(#cardGrad10)" stroke="rgba(217,119,87,0.08)" stroke-width="0.5" filter="url(#cardShadow10)"/>
+  <line x1="1038" y1="170.5" x2="1642" y2="170.5" stroke="rgba(245,240,235,0.04)" stroke-width="1"/>
 
-  <text x="1060" y="212" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="13" fill="rgba(255,255,255,0.2)">02</text>
-  <text x="1090" y="212" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="17" fill="rgba(255,255,255,0.75)">job_runs replaces Redis state</text>
-  <line x1="1060" y1="228" x2="1280" y2="228" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/>
-  <text x="1060" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">SQL with unique constraint on (job_name, run_date).</text>
-  <text x="1060" y="282" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">Idempotent by design. No distributed lock needed.</text>
-  <text x="1060" y="304" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">State is queryable and auditable.</text>
+  <text x="1060" y="212" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="13" fill="rgba(217,119,87,0.2)">02</text>
+  <text x="1090" y="212" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="17" fill="rgba(245,240,235,0.88)">job_runs replaces Redis state</text>
+  <line x1="1060" y1="228" x2="1280" y2="228" stroke="rgba(217,119,87,0.05)" stroke-width="0.5"/>
+  <text x="1060" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">SQL with unique constraint on (job_name, run_date).</text>
+  <text x="1060" y="282" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">Idempotent by design. No distributed lock needed.</text>
+  <text x="1060" y="304" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">State is queryable and auditable.</text>
 
   <!-- Row 2, Col 1 - Principle 3 -->
-  <rect x="260" y="420" width="640" height="210" rx="18" fill="url(#cardGrad10)" stroke="rgba(255,255,255,0.06)" stroke-width="0.5" filter="url(#cardShadow10)"/>
-  <line x1="278" y1="420.5" x2="882" y2="420.5" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <rect x="260" y="420" width="640" height="210" rx="18" fill="url(#cardGrad10)" stroke="rgba(217,119,87,0.08)" stroke-width="0.5" filter="url(#cardShadow10)"/>
+  <line x1="278" y1="420.5" x2="882" y2="420.5" stroke="rgba(245,240,235,0.04)" stroke-width="1"/>
 
-  <text x="300" y="462" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="13" fill="rgba(255,255,255,0.2)">03</text>
-  <text x="330" y="462" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="17" fill="rgba(255,255,255,0.75)">document_chunks replaces Vector DB</text>
-  <line x1="300" y1="478" x2="560" y2="478" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/>
-  <text x="300" y="510" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">Text retrieval first, embeddings later. Start with</text>
-  <text x="300" y="532" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">pg_trgm full-text search. Add pgvector column only</text>
-  <text x="300" y="554" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">when recall degrades on measured queries.</text>
+  <text x="300" y="462" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="13" fill="rgba(217,119,87,0.2)">03</text>
+  <text x="330" y="462" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="17" fill="rgba(245,240,235,0.88)">document_chunks replaces Vector DB</text>
+  <line x1="300" y1="478" x2="560" y2="478" stroke="rgba(217,119,87,0.05)" stroke-width="0.5"/>
+  <text x="300" y="510" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">Text retrieval first, embeddings later. Start with</text>
+  <text x="300" y="532" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">pg_trgm full-text search. Add pgvector column only</text>
+  <text x="300" y="554" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">when recall degrades on measured queries.</text>
 
   <!-- Row 2, Col 2 - Principle 4 -->
-  <rect x="1020" y="420" width="640" height="210" rx="18" fill="url(#cardGrad10)" stroke="rgba(255,255,255,0.06)" stroke-width="0.5" filter="url(#cardShadow10)"/>
-  <line x1="1038" y1="420.5" x2="1642" y2="420.5" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <rect x="1020" y="420" width="640" height="210" rx="18" fill="url(#cardGrad10)" stroke="rgba(217,119,87,0.08)" stroke-width="0.5" filter="url(#cardShadow10)"/>
+  <line x1="1038" y1="420.5" x2="1642" y2="420.5" stroke="rgba(245,240,235,0.04)" stroke-width="1"/>
 
-  <text x="1060" y="462" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="13" fill="rgba(255,255,255,0.2)">04</text>
-  <text x="1090" y="462" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="17" fill="rgba(255,255,255,0.75)">pending_outcomes replaces Redis queue</text>
-  <line x1="1060" y1="478" x2="1340" y2="478" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/>
-  <text x="1060" y="510" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">SQL cron, not message broker. Predictions stored</text>
-  <text x="1060" y="532" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">with expiry dates. A scheduled job resolves them.</text>
-  <text x="1060" y="554" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">No pub/sub complexity.</text>
+  <text x="1060" y="462" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="13" fill="rgba(217,119,87,0.2)">04</text>
+  <text x="1090" y="462" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="17" fill="rgba(245,240,235,0.88)">pending_outcomes replaces Redis queue</text>
+  <line x1="1060" y1="478" x2="1340" y2="478" stroke="rgba(217,119,87,0.05)" stroke-width="0.5"/>
+  <text x="1060" y="510" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">SQL cron, not message broker. Predictions stored</text>
+  <text x="1060" y="532" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">with expiry dates. A scheduled job resolves them.</text>
+  <text x="1060" y="554" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">No pub/sub complexity.</text>
 
   <!-- Row 3, Col 1 - Principle 5 -->
-  <rect x="260" y="670" width="640" height="210" rx="18" fill="url(#cardGrad10)" stroke="rgba(255,255,255,0.06)" stroke-width="0.5" filter="url(#cardShadow10)"/>
-  <line x1="278" y1="670.5" x2="882" y2="670.5" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <rect x="260" y="670" width="640" height="210" rx="18" fill="url(#cardGrad10)" stroke="rgba(217,119,87,0.08)" stroke-width="0.5" filter="url(#cardShadow10)"/>
+  <line x1="278" y1="670.5" x2="882" y2="670.5" stroke="rgba(245,240,235,0.04)" stroke-width="1"/>
 
-  <text x="300" y="712" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="13" fill="rgba(255,255,255,0.2)">05</text>
-  <text x="330" y="712" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="17" fill="rgba(255,255,255,0.75)">Logical Layer &#x2260; Technology</text>
-  <line x1="300" y1="728" x2="500" y2="728" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/>
-  <text x="300" y="760" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">Schemas, not services. Separation is achieved through</text>
-  <text x="300" y="782" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">logical schemas within one database. Migrate to</text>
-  <text x="300" y="804" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">separate services only under proven load.</text>
+  <text x="300" y="712" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="13" fill="rgba(217,119,87,0.2)">05</text>
+  <text x="330" y="712" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="17" fill="rgba(245,240,235,0.88)">Logical Layer &#x2260; Technology</text>
+  <line x1="300" y1="728" x2="500" y2="728" stroke="rgba(217,119,87,0.05)" stroke-width="0.5"/>
+  <text x="300" y="760" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">Schemas, not services. Separation is achieved through</text>
+  <text x="300" y="782" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">logical schemas within one database. Migrate to</text>
+  <text x="300" y="804" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">separate services only under proven load.</text>
 
   <!-- Row 3, Col 2 - Principle 6 -->
-  <rect x="1020" y="670" width="640" height="210" rx="18" fill="url(#cardGrad10)" stroke="rgba(255,255,255,0.06)" stroke-width="0.5" filter="url(#cardShadow10)"/>
-  <line x1="1038" y1="670.5" x2="1642" y2="670.5" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <rect x="1020" y="670" width="640" height="210" rx="18" fill="url(#cardGrad10)" stroke="rgba(217,119,87,0.08)" stroke-width="0.5" filter="url(#cardShadow10)"/>
+  <line x1="1038" y1="670.5" x2="1642" y2="670.5" stroke="rgba(245,240,235,0.04)" stroke-width="1"/>
 
-  <text x="1060" y="712" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="13" fill="rgba(255,255,255,0.2)">06</text>
-  <text x="1090" y="712" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="17" fill="rgba(255,255,255,0.75)">ETL Agent, not Memory Agent</text>
-  <line x1="1060" y1="728" x2="1300" y2="728" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/>
-  <text x="1060" y="760" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">Deterministic pipeline, not autonomous brain. Each</text>
-  <text x="1060" y="782" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">run is reproducible given the same date. No hidden</text>
-  <text x="1060" y="804" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.4)">state, no emergent behavior, no surprises.</text>
+  <text x="1060" y="712" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="13" fill="rgba(217,119,87,0.2)">06</text>
+  <text x="1090" y="712" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="17" fill="rgba(245,240,235,0.88)">ETL Agent, not Memory Agent</text>
+  <line x1="1060" y1="728" x2="1300" y2="728" stroke="rgba(217,119,87,0.05)" stroke-width="0.5"/>
+  <text x="1060" y="760" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">Deterministic pipeline, not autonomous brain. Each</text>
+  <text x="1060" y="782" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">run is reproducible given the same date. No hidden</text>
+  <text x="1060" y="804" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(245,240,235,0.3)">state, no emergent behavior, no surprises.</text>
 
   <!-- Decorative separator line -->
-  <line x1="860" y1="935" x2="1060" y2="935" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+  <line x1="860" y1="935" x2="1060" y2="935" stroke="rgba(217,119,87,0.05)" stroke-width="0.5"/>
 
   <!-- Final statement -->
-  <text x="960" y="970" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="18" fill="rgba(255,255,255,0.5)" letter-spacing="0.03em">Add technology only when a real problem appears.</text>
+  <text x="960" y="970" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="18" fill="rgba(245,240,235,0.7)" letter-spacing="0.03em">Add technology only when a real problem appears.</text>
 
   <!-- Slide number -->
-  <text x="960" y="1050" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(255,255,255,0.12)" letter-spacing="0.15em">10</text>
+  <text x="960" y="1050" text-anchor="middle" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-weight="200" font-size="14" fill="rgba(217,119,87,0.25)" letter-spacing="0.15em">10 / 10</text>
 </svg>

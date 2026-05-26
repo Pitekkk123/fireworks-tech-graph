@@ -1,107 +1,100 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#08090a"/>
-      <stop offset="40%" stop-color="#0c0d0f"/>
-      <stop offset="100%" stop-color="#08090a"/>
+      <stop offset="0%" stop-color="#1a1410"/>
+      <stop offset="50%" stop-color="#14110e"/>
+      <stop offset="100%" stop-color="#110f0c"/>
     </linearGradient>
-    <radialGradient id="light" cx="50%" cy="30%" r="55%">
-      <stop offset="0%" stop-color="rgba(255,240,240,0.02)"/>
-      <stop offset="100%" stop-color="rgba(255,240,240,0)"/>
+    <radialGradient id="glow" cx="50%" cy="25%" r="50%">
+      <stop offset="0%" stop-color="rgba(217,119,87,0.04)"/>
+      <stop offset="100%" stop-color="rgba(217,119,87,0)"/>
     </radialGradient>
-    <linearGradient id="glass-fill" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.05)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0.015)"/>
+    <linearGradient id="glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(245,240,235,0.045)"/>
+      <stop offset="100%" stop-color="rgba(245,240,235,0.012)"/>
     </linearGradient>
-    <filter id="shadow-card" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="6" stdDeviation="16" flood-color="rgba(0,0,0,0.35)"/>
+    <filter id="sh">
+      <feDropShadow dx="0" dy="8" stdDeviation="18" flood-color="rgba(10,8,6,0.45)"/>
     </filter>
   </defs>
 
   <rect width="1920" height="1080" fill="url(#bg)"/>
-  <rect width="1920" height="1080" fill="url(#light)"/>
+  <rect width="1920" height="1080" fill="url(#glow)"/>
 
-  <!-- Title area -->
-  <text x="960" y="100" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="400" letter-spacing="0.25em">THE MISTAKE</text>
-  <text x="960" y="170" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="52" font-weight="200" letter-spacing="-0.01em">One technology per layer</text>
-  <text x="960" y="215" text-anchor="middle" fill="rgba(255,255,255,0.3)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="18" font-weight="300">The instinct to map each logical concern to a separate system</text>
+  <!-- Title -->
+  <text x="960" y="95" text-anchor="middle" fill="#D97757" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="500" letter-spacing="0.3em">THE MISTAKE</text>
+  <text x="960" y="160" text-anchor="middle" fill="rgba(245,240,235,0.88)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="50" font-weight="200">One technology per layer</text>
+  <text x="960" y="205" text-anchor="middle" fill="rgba(245,240,235,0.3)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="17" font-weight="300">The instinct to map each logical concern to a separate system</text>
 
-  <!-- Five cards representing the overengineered approach -->
-  <!-- Card 1: SQL -->
-  <g filter="url(#shadow-card)">
-    <rect x="140" y="290" width="300" height="320" rx="16" fill="url(#glass-fill)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-    <rect x="141" y="291" width="298" height="1" fill="rgba(255,255,255,0.06)"/>
-    <text x="290" y="360" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="28" font-weight="200">SQL</text>
-    <text x="290" y="400" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="400">PostgreSQL</text>
-    <line x1="220" y1="430" x2="360" y2="430" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-    <text x="290" y="465" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300">Canonical facts</text>
-    <text x="290" y="485" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300">Snapshots</text>
-    <text x="290" y="505" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300">Scores</text>
+  <!-- Five cards -->
+  <g filter="url(#sh)">
+    <rect x="120" y="280" width="310" height="310" rx="18" fill="url(#glass)" stroke="rgba(217,119,87,0.08)" stroke-width="1"/>
+    <line x1="121" y1="281" x2="429" y2="281" stroke="rgba(245,240,235,0.04)" stroke-width="1"/>
   </g>
+  <text x="275" y="355" text-anchor="middle" fill="rgba(245,240,235,0.6)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="28" font-weight="200">SQL</text>
+  <text x="275" y="390" text-anchor="middle" fill="rgba(245,240,235,0.2)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">PostgreSQL</text>
+  <line x1="210" y1="415" x2="340" y2="415" stroke="rgba(217,119,87,0.06)" stroke-width="1"/>
+  <text x="275" y="445" text-anchor="middle" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300">Canonical facts</text>
+  <text x="275" y="465" text-anchor="middle" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300">Snapshots</text>
+  <text x="275" y="485" text-anchor="middle" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300">Scores</text>
 
-  <!-- Card 2: Redis -->
-  <g filter="url(#shadow-card)">
-    <rect x="470" y="290" width="300" height="320" rx="16" fill="url(#glass-fill)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-    <rect x="471" y="291" width="298" height="1" fill="rgba(255,255,255,0.06)"/>
-    <text x="620" y="360" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="28" font-weight="200">Redis</text>
-    <text x="620" y="400" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="400">Upstash</text>
-    <line x1="550" y1="430" x2="690" y2="430" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-    <text x="620" y="465" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300">Hot views</text>
-    <text x="620" y="485" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300">Cache</text>
-    <text x="620" y="505" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300">Job locks</text>
+  <g filter="url(#sh)">
+    <rect x="460" y="280" width="310" height="310" rx="18" fill="url(#glass)" stroke="rgba(217,119,87,0.08)" stroke-width="1"/>
+    <line x1="461" y1="281" x2="769" y2="281" stroke="rgba(245,240,235,0.04)" stroke-width="1"/>
   </g>
+  <text x="615" y="355" text-anchor="middle" fill="rgba(245,240,235,0.6)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="28" font-weight="200">Redis</text>
+  <text x="615" y="390" text-anchor="middle" fill="rgba(245,240,235,0.2)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">Upstash</text>
+  <line x1="550" y1="415" x2="680" y2="415" stroke="rgba(217,119,87,0.06)" stroke-width="1"/>
+  <text x="615" y="445" text-anchor="middle" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300">Hot views</text>
+  <text x="615" y="465" text-anchor="middle" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300">Cache</text>
+  <text x="615" y="485" text-anchor="middle" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300">Job locks</text>
 
-  <!-- Card 3: Blob -->
-  <g filter="url(#shadow-card)">
-    <rect x="800" y="290" width="300" height="320" rx="16" fill="url(#glass-fill)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-    <rect x="801" y="291" width="298" height="1" fill="rgba(255,255,255,0.06)"/>
-    <text x="950" y="360" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="28" font-weight="200">Blob</text>
-    <text x="950" y="400" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="400">Object Storage</text>
-    <line x1="880" y1="430" x2="1020" y2="430" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-    <text x="950" y="465" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300">Raw files</text>
-    <text x="950" y="485" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300">PDFs, HTML</text>
-    <text x="950" y="505" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300">CSV</text>
+  <g filter="url(#sh)">
+    <rect x="800" y="280" width="310" height="310" rx="18" fill="url(#glass)" stroke="rgba(217,119,87,0.08)" stroke-width="1"/>
+    <line x1="801" y1="281" x2="1109" y2="281" stroke="rgba(245,240,235,0.04)" stroke-width="1"/>
   </g>
+  <text x="955" y="355" text-anchor="middle" fill="rgba(245,240,235,0.6)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="28" font-weight="200">Blob</text>
+  <text x="955" y="390" text-anchor="middle" fill="rgba(245,240,235,0.2)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">Object Storage</text>
+  <line x1="890" y1="415" x2="1020" y2="415" stroke="rgba(217,119,87,0.06)" stroke-width="1"/>
+  <text x="955" y="445" text-anchor="middle" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300">Raw files</text>
+  <text x="955" y="465" text-anchor="middle" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300">PDFs, HTML</text>
+  <text x="955" y="485" text-anchor="middle" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300">CSV</text>
 
-  <!-- Card 4: Vector -->
-  <g filter="url(#shadow-card)">
-    <rect x="1130" y="290" width="300" height="320" rx="16" fill="url(#glass-fill)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-    <rect x="1131" y="291" width="298" height="1" fill="rgba(255,255,255,0.06)"/>
-    <text x="1280" y="360" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="28" font-weight="200">Vector</text>
-    <text x="1280" y="400" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="400">Pinecone / Qdrant</text>
-    <line x1="1210" y1="430" x2="1350" y2="430" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-    <text x="1280" y="465" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300">Embeddings</text>
-    <text x="1280" y="485" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300">Memory</text>
-    <text x="1280" y="505" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300">Retrieval</text>
+  <g filter="url(#sh)">
+    <rect x="1140" y="280" width="310" height="310" rx="18" fill="url(#glass)" stroke="rgba(217,119,87,0.08)" stroke-width="1"/>
+    <line x1="1141" y1="281" x2="1449" y2="281" stroke="rgba(245,240,235,0.04)" stroke-width="1"/>
   </g>
+  <text x="1295" y="355" text-anchor="middle" fill="rgba(245,240,235,0.6)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="28" font-weight="200">Vector</text>
+  <text x="1295" y="390" text-anchor="middle" fill="rgba(245,240,235,0.2)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">Pinecone / Qdrant</text>
+  <line x1="1230" y1="415" x2="1360" y2="415" stroke="rgba(217,119,87,0.06)" stroke-width="1"/>
+  <text x="1295" y="445" text-anchor="middle" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300">Embeddings</text>
+  <text x="1295" y="465" text-anchor="middle" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300">Memory</text>
+  <text x="1295" y="485" text-anchor="middle" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300">Retrieval</text>
 
-  <!-- Card 5: Archive -->
-  <g filter="url(#shadow-card)">
-    <rect x="1460" y="290" width="300" height="320" rx="16" fill="url(#glass-fill)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-    <rect x="1461" y="291" width="298" height="1" fill="rgba(255,255,255,0.06)"/>
-    <text x="1610" y="360" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="28" font-weight="200">Archive</text>
-    <text x="1610" y="400" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="400">Report Storage</text>
-    <line x1="1540" y1="430" x2="1680" y2="430" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
-    <text x="1610" y="465" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300">Daily briefs</text>
-    <text x="1610" y="485" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300">Markdown</text>
-    <text x="1610" y="505" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300">JSON exports</text>
+  <g filter="url(#sh)">
+    <rect x="1480" y="280" width="310" height="310" rx="18" fill="url(#glass)" stroke="rgba(217,119,87,0.08)" stroke-width="1"/>
+    <line x1="1481" y1="281" x2="1789" y2="281" stroke="rgba(245,240,235,0.04)" stroke-width="1"/>
   </g>
+  <text x="1635" y="355" text-anchor="middle" fill="rgba(245,240,235,0.6)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="28" font-weight="200">Archive</text>
+  <text x="1635" y="390" text-anchor="middle" fill="rgba(245,240,235,0.2)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">Report Storage</text>
+  <line x1="1570" y1="415" x2="1700" y2="415" stroke="rgba(217,119,87,0.06)" stroke-width="1"/>
+  <text x="1635" y="445" text-anchor="middle" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300">Daily briefs</text>
+  <text x="1635" y="465" text-anchor="middle" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300">Markdown</text>
+  <text x="1635" y="485" text-anchor="middle" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="300">JSON exports</text>
 
-  <!-- Strike-through line across all cards -->
-  <line x1="120" y1="450" x2="1800" y2="450" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <!-- Strike-through -->
+  <line x1="100" y1="435" x2="1810" y2="435" stroke="#D97757" stroke-width="1.5" opacity="0.3"/>
 
   <!-- Bottom insight -->
-  <text x="960" y="720" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="28" font-weight="200" letter-spacing="-0.01em">Five moving parts. One problem.</text>
-
-  <text x="960" y="780" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="15" font-weight="300">Synchronization nightmares. Debugging across systems. Cost without scale.</text>
-  <text x="960" y="810" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="15" font-weight="300">Premature complexity for a system that processes 11 sectors daily.</text>
+  <text x="960" y="700" text-anchor="middle" fill="rgba(245,240,235,0.6)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="28" font-weight="200">Five moving parts. One problem.</text>
+  <text x="960" y="755" text-anchor="middle" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300">Synchronization nightmares. Debugging across systems. Cost without scale.</text>
 
   <!-- Key statement -->
-  <g transform="translate(560, 870)">
-    <rect width="800" height="70" rx="14" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-    <text x="400" y="30" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="16" font-weight="300" font-style="italic">A logical layer does not require a physical technology.</text>
-    <text x="400" y="52" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="300">Schemas within one database serve the same purpose with zero coordination cost.</text>
+  <g transform="translate(510, 830)">
+    <rect width="900" height="72" rx="16" fill="rgba(217,119,87,0.04)" stroke="rgba(217,119,87,0.1)" stroke-width="1"/>
+    <text x="450" y="32" text-anchor="middle" fill="rgba(245,240,235,0.45)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" font-style="italic">A logical layer does not require a physical technology.</text>
+    <text x="450" y="54" text-anchor="middle" fill="rgba(245,240,235,0.2)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">Schemas within one database serve the same purpose with zero coordination cost.</text>
   </g>
 
-  <text x="960" y="1030" text-anchor="middle" fill="rgba(255,255,255,0.12)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="11" font-weight="400" letter-spacing="0.15em">02</text>
+  <text x="960" y="1040" text-anchor="middle" fill="rgba(217,119,87,0.25)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="400" letter-spacing="0.15em">02 / 10</text>
 </svg>

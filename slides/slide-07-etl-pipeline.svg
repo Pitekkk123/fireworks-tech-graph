@@ -1,23 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
   <defs>
     <linearGradient id="bg07" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#08090a"/>
-      <stop offset="100%" stop-color="#0c0d0f"/>
+      <stop offset="0%" stop-color="#1a1410"/>
+      <stop offset="50%" stop-color="#14110e"/>
+      <stop offset="100%" stop-color="#110f0c"/>
     </linearGradient>
     <radialGradient id="atmo07a" cx="50%" cy="35%" r="50%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.025)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="0%" stop-color="rgba(217,119,87,0.06)"/>
+      <stop offset="100%" stop-color="rgba(217,119,87,0)"/>
     </radialGradient>
     <radialGradient id="atmo07b" cx="30%" cy="75%" r="35%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.02)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="0%" stop-color="rgba(217,119,87,0.04)"/>
+      <stop offset="100%" stop-color="rgba(217,119,87,0)"/>
     </radialGradient>
     <linearGradient id="glass07" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.05)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0.015)"/>
+      <stop offset="0%" stop-color="rgba(245,240,235,0.05)"/>
+      <stop offset="100%" stop-color="rgba(245,240,235,0.015)"/>
     </linearGradient>
     <filter id="shadow07">
-      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="rgba(0,0,0,0.4)"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="22" flood-color="rgba(10,8,6,0.5)"/>
     </filter>
   </defs>
 
@@ -27,124 +28,124 @@
   <rect width="1920" height="1080" fill="url(#atmo07b)"/>
 
   <!-- Title -->
-  <text x="160" y="100" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="52" font-weight="200" fill="rgba(255,255,255,0.85)" letter-spacing="-0.03em">ETL Pipeline</text>
-  <text x="160" y="136" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="14" font-weight="300" fill="rgba(255,255,255,0.35)" letter-spacing="0.12em">DETERMINISTIC INGEST  /  7 STEPS  /  NO MAGIC</text>
+  <text x="160" y="100" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="52" font-weight="200" fill="rgba(245,240,235,0.90)" letter-spacing="-0.03em">ETL Pipeline</text>
+  <text x="160" y="136" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="14" font-weight="500" fill="#D97757" letter-spacing="0.25em">DETERMINISTIC INGEST  /  7 STEPS  /  NO MAGIC</text>
 
   <!-- Horizontal connecting line -->
-  <line x1="160" y1="360" x2="1760" y2="360" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="160" y1="360" x2="1760" y2="360" stroke="rgba(217,119,87,0.06)" stroke-width="1"/>
 
   <!-- Step 1: File Arrives -->
-  <text x="200" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(255,255,255,0.06)">01</text>
-  <text x="200" y="320" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">File Arrives</text>
-  <text x="200" y="345" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">External source</text>
-  <text x="200" y="362" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">drops a file</text>
-  <circle cx="200" cy="360" r="3" fill="rgba(255,255,255,0.15)"/>
+  <text x="200" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(217,119,87,0.2)">01</text>
+  <text x="200" y="320" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(245,240,235,0.7)">File Arrives</text>
+  <text x="200" y="345" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,235,0.3)">External source</text>
+  <text x="200" y="362" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,235,0.3)">drops a file</text>
+  <circle cx="200" cy="360" r="3" fill="rgba(217,119,87,0.25)"/>
 
   <!-- Step 2: Save Raw -->
-  <text x="420" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(255,255,255,0.06)">02</text>
-  <text x="420" y="320" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">Save Raw</text>
-  <text x="420" y="345" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Write to archive</text>
-  <text x="420" y="362" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">with SHA-256 hash</text>
-  <circle cx="420" cy="360" r="3" fill="rgba(255,255,255,0.15)"/>
+  <text x="420" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(217,119,87,0.2)">02</text>
+  <text x="420" y="320" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(245,240,235,0.7)">Save Raw</text>
+  <text x="420" y="345" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,235,0.3)">Write to archive</text>
+  <text x="420" y="362" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,235,0.3)">with SHA-256 hash</text>
+  <circle cx="420" cy="360" r="3" fill="rgba(217,119,87,0.25)"/>
 
   <!-- Step 3: Register Source -->
-  <text x="650" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(255,255,255,0.06)">03</text>
-  <text x="650" y="320" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">Register Source</text>
-  <text x="650" y="345" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Insert into</text>
-  <text x="650" y="362" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">source_documents</text>
-  <circle cx="650" cy="360" r="3" fill="rgba(255,255,255,0.15)"/>
+  <text x="650" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(217,119,87,0.2)">03</text>
+  <text x="650" y="320" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(245,240,235,0.7)">Register Source</text>
+  <text x="650" y="345" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,235,0.3)">Insert into</text>
+  <text x="650" y="362" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,235,0.3)">source_documents</text>
+  <circle cx="650" cy="360" r="3" fill="rgba(217,119,87,0.25)"/>
 
   <!-- Step 4: Parse & Validate -->
-  <text x="900" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(255,255,255,0.06)">04</text>
-  <text x="900" y="320" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">Parse &amp; Validate</text>
-  <text x="900" y="345" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Extract structured</text>
-  <text x="900" y="362" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">data, check schema</text>
-  <circle cx="900" cy="360" r="3" fill="rgba(255,255,255,0.15)"/>
+  <text x="900" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(217,119,87,0.2)">04</text>
+  <text x="900" y="320" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(245,240,235,0.7)">Parse &amp; Validate</text>
+  <text x="900" y="345" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,235,0.3)">Extract structured</text>
+  <text x="900" y="362" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,235,0.3)">data, check schema</text>
+  <circle cx="900" cy="360" r="3" fill="rgba(217,119,87,0.25)"/>
 
   <!-- Step 5: Write Facts -->
-  <text x="1150" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(255,255,255,0.06)">05</text>
-  <text x="1150" y="320" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">Write Facts</text>
-  <text x="1150" y="345" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Insert to target</text>
-  <text x="1150" y="362" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">fact tables</text>
-  <circle cx="1150" cy="360" r="3" fill="rgba(255,255,255,0.15)"/>
+  <text x="1150" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(217,119,87,0.2)">05</text>
+  <text x="1150" y="320" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(245,240,235,0.7)">Write Facts</text>
+  <text x="1150" y="345" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,235,0.3)">Insert to target</text>
+  <text x="1150" y="362" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,235,0.3)">fact tables</text>
+  <circle cx="1150" cy="360" r="3" fill="rgba(217,119,87,0.25)"/>
 
   <!-- Step 6: Report Snapshot -->
-  <text x="1390" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(255,255,255,0.06)">06</text>
-  <text x="1390" y="320" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">Report Snapshot</text>
-  <text x="1390" y="345" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Rebuild daily brief</text>
-  <text x="1390" y="362" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">JSON + markdown</text>
-  <circle cx="1390" cy="360" r="3" fill="rgba(255,255,255,0.15)"/>
+  <text x="1390" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(217,119,87,0.2)">06</text>
+  <text x="1390" y="320" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(245,240,235,0.7)">Report Snapshot</text>
+  <text x="1390" y="345" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,235,0.3)">Rebuild daily brief</text>
+  <text x="1390" y="362" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,235,0.3)">JSON + markdown</text>
+  <circle cx="1390" cy="360" r="3" fill="rgba(217,119,87,0.25)"/>
 
   <!-- Step 7: Mark Complete -->
-  <text x="1630" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(255,255,255,0.06)">07</text>
-  <text x="1630" y="320" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(255,255,255,0.7)">Mark Complete</text>
-  <text x="1630" y="345" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">Update job_runs</text>
-  <text x="1630" y="362" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.25)">queue pending checks</text>
-  <circle cx="1630" cy="360" r="3" fill="rgba(255,255,255,0.15)"/>
+  <text x="1630" y="260" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="64" font-weight="100" fill="rgba(217,119,87,0.2)">07</text>
+  <text x="1630" y="320" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="16" font-weight="300" fill="rgba(245,240,235,0.7)">Mark Complete</text>
+  <text x="1630" y="345" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,235,0.3)">Update job_runs</text>
+  <text x="1630" y="362" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,235,0.3)">queue pending checks</text>
+  <circle cx="1630" cy="360" r="3" fill="rgba(217,119,87,0.25)"/>
 
   <!-- Section label for examples -->
-  <text x="160" y="450" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)" letter-spacing="0.12em">CONCRETE EXAMPLES</text>
+  <text x="160" y="450" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="500" fill="#D97757" letter-spacing="0.2em">CONCRETE EXAMPLES</text>
 
   <!-- Example 1: TradingEdge flow -->
   <g filter="url(#shadow07)">
-    <rect x="160" y="470" width="780" height="500" rx="18" fill="url(#glass07)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <rect x="160" y="470" width="780" height="500" rx="18" fill="url(#glass07)" stroke="rgba(217,119,87,0.08)" stroke-width="1"/>
   </g>
-  <line x1="178" y1="470" x2="922" y2="470" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <line x1="178" y1="470" x2="922" y2="470" stroke="rgba(245,240,235,0.04)" stroke-width="1"/>
 
-  <text x="200" y="515" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="200" fill="rgba(255,255,255,0.7)">TradingEdge Options Flow</text>
-  <text x="200" y="540" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">HTML file with contract-level flow data</text>
+  <text x="200" y="515" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="200" fill="rgba(245,240,235,0.88)">TradingEdge Options Flow</text>
+  <text x="200" y="540" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,235,0.3)">HTML file with contract-level flow data</text>
 
-  <text x="200" y="590" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">1.</text>
-  <text x="225" y="590" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.5)">HTML file arrives from TradingEdge</text>
+  <text x="200" y="590" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.3)">1.</text>
+  <text x="225" y="590" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.7)">HTML file arrives from TradingEdge</text>
 
-  <text x="200" y="630" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">2.</text>
-  <text x="225" y="630" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.5)">Save to raw/2026-05-25/tradingedge-options.html</text>
+  <text x="200" y="630" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.3)">2.</text>
+  <text x="225" y="630" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.7)">Save to raw/2026-05-25/tradingedge-options.html</text>
 
-  <text x="200" y="670" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">3.</text>
-  <text x="225" y="670" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.5)">Register source_document with SHA-256 hash</text>
+  <text x="200" y="670" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.3)">3.</text>
+  <text x="225" y="670" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.7)">Register source_document with SHA-256 hash</text>
 
-  <text x="200" y="710" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">4.</text>
-  <text x="225" y="710" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.5)">Parse contracts: strike, volume, premium, OI</text>
+  <text x="200" y="710" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.3)">4.</text>
+  <text x="225" y="710" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.7)">Parse contracts: strike, volume, premium, OI</text>
 
-  <text x="200" y="750" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">5.</text>
-  <text x="225" y="750" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.5)">Write options_contract_facts + options_daily_reads</text>
+  <text x="200" y="750" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.3)">5.</text>
+  <text x="225" y="750" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.7)">Write options_contract_facts + options_daily_reads</text>
 
-  <text x="200" y="790" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">6.</text>
-  <text x="225" y="790" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.5)">Create pending_oi_checks for next session</text>
+  <text x="200" y="790" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.3)">6.</text>
+  <text x="225" y="790" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.7)">Create pending_oi_checks for next session</text>
 
-  <text x="200" y="830" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">7.</text>
-  <text x="225" y="830" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.5)">Refresh report_snapshots daily_brief section</text>
+  <text x="200" y="830" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.3)">7.</text>
+  <text x="225" y="830" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.7)">Refresh report_snapshots daily_brief section</text>
 
   <!-- Example 2: SEC Filing flow -->
   <g filter="url(#shadow07)">
-    <rect x="980" y="470" width="780" height="500" rx="18" fill="url(#glass07)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <rect x="980" y="470" width="780" height="500" rx="18" fill="url(#glass07)" stroke="rgba(217,119,87,0.08)" stroke-width="1"/>
   </g>
-  <line x1="998" y1="470" x2="1742" y2="470" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <line x1="998" y1="470" x2="1742" y2="470" stroke="rgba(245,240,235,0.04)" stroke-width="1"/>
 
-  <text x="1020" y="515" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="200" fill="rgba(255,255,255,0.7)">SEC Filing / Bottleneck</text>
-  <text x="1020" y="540" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(255,255,255,0.2)">10-K filing with material exposure data</text>
+  <text x="1020" y="515" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="18" font-weight="200" fill="rgba(245,240,235,0.88)">SEC Filing / Bottleneck</text>
+  <text x="1020" y="540" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300" fill="rgba(245,240,235,0.3)">10-K filing with material exposure data</text>
 
-  <text x="1020" y="590" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">1.</text>
-  <text x="1045" y="590" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.5)">SEC 10-K filing arrives for ticker MP</text>
+  <text x="1020" y="590" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.3)">1.</text>
+  <text x="1045" y="590" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.7)">SEC 10-K filing arrives for ticker MP</text>
 
-  <text x="1020" y="630" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">2.</text>
-  <text x="1045" y="630" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.5)">Save to raw/2026-05-25/sec-mp-10k.html</text>
+  <text x="1020" y="630" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.3)">2.</text>
+  <text x="1045" y="630" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.7)">Save to raw/2026-05-25/sec-mp-10k.html</text>
 
-  <text x="1020" y="670" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">3.</text>
-  <text x="1045" y="670" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.5)">Register source_document, identify CIK</text>
+  <text x="1020" y="670" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.3)">3.</text>
+  <text x="1045" y="670" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.7)">Register source_document, identify CIK</text>
 
-  <text x="1020" y="710" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">4.</text>
-  <text x="1045" y="710" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.5)">Extract material exposure claims</text>
+  <text x="1020" y="710" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.3)">4.</text>
+  <text x="1045" y="710" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.7)">Extract material exposure claims</text>
 
-  <text x="1020" y="750" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">5.</text>
-  <text x="1045" y="750" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.5)">Write bottleneck_evidence with confidence</text>
+  <text x="1020" y="750" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.3)">5.</text>
+  <text x="1045" y="750" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.7)">Write bottleneck_evidence with confidence</text>
 
-  <text x="1020" y="790" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">6.</text>
-  <text x="1045" y="790" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.5)">Recalculate bottleneck_company_scores</text>
+  <text x="1020" y="790" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.3)">6.</text>
+  <text x="1045" y="790" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.7)">Recalculate bottleneck_company_scores</text>
 
-  <text x="1020" y="830" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.35)">7.</text>
-  <text x="1045" y="830" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(255,255,255,0.5)">Update daily brief bottleneck section</text>
+  <text x="1020" y="830" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.3)">7.</text>
+  <text x="1045" y="830" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300" fill="rgba(245,240,235,0.7)">Update daily brief bottleneck section</text>
 
   <!-- Slide number -->
-  <text x="960" y="1055" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="14" font-weight="300" fill="rgba(255,255,255,0.12)" letter-spacing="0.15em" text-anchor="middle">07</text>
+  <text x="960" y="1055" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="14" font-weight="300" fill="rgba(217,119,87,0.25)" letter-spacing="0.15em" text-anchor="middle">07 / 10</text>
 </svg>

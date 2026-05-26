@@ -1,119 +1,113 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#08090a"/>
-      <stop offset="40%" stop-color="#0c0d0f"/>
-      <stop offset="100%" stop-color="#08090a"/>
+      <stop offset="0%" stop-color="#1a1410"/>
+      <stop offset="50%" stop-color="#14110e"/>
+      <stop offset="100%" stop-color="#110f0c"/>
     </linearGradient>
-    <radialGradient id="light-left" cx="25%" cy="50%" r="40%">
-      <stop offset="0%" stop-color="rgba(200,210,225,0.025)"/>
-      <stop offset="100%" stop-color="rgba(200,210,225,0)"/>
+    <radialGradient id="gl" cx="25%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="rgba(217,119,87,0.04)"/>
+      <stop offset="100%" stop-color="rgba(217,119,87,0)"/>
     </radialGradient>
-    <radialGradient id="light-right" cx="75%" cy="50%" r="40%">
-      <stop offset="0%" stop-color="rgba(200,215,200,0.02)"/>
-      <stop offset="100%" stop-color="rgba(200,215,200,0)"/>
+    <radialGradient id="gr" cx="75%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="rgba(232,168,138,0.03)"/>
+      <stop offset="100%" stop-color="rgba(232,168,138,0)"/>
     </radialGradient>
-    <linearGradient id="glass-fill" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.05)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0.015)"/>
+    <linearGradient id="glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(245,240,235,0.05)"/>
+      <stop offset="100%" stop-color="rgba(245,240,235,0.015)"/>
     </linearGradient>
-    <filter id="shadow-panel" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="rgba(0,0,0,0.4)"/>
+    <filter id="sh">
+      <feDropShadow dx="0" dy="10" stdDeviation="22" flood-color="rgba(10,8,6,0.5)"/>
     </filter>
   </defs>
 
   <rect width="1920" height="1080" fill="url(#bg)"/>
-  <rect width="1920" height="1080" fill="url(#light-left)"/>
-  <rect width="1920" height="1080" fill="url(#light-right)"/>
+  <rect width="1920" height="1080" fill="url(#gl)"/>
+  <rect width="1920" height="1080" fill="url(#gr)"/>
 
-  <!-- Title -->
-  <text x="960" y="90" text-anchor="middle" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="400" letter-spacing="0.25em">THE REDUCTION</text>
-  <text x="960" y="155" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="48" font-weight="200" letter-spacing="-0.01em">Five layers, two systems</text>
+  <text x="960" y="85" text-anchor="middle" fill="#D97757" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="500" letter-spacing="0.3em">THE REDUCTION</text>
+  <text x="960" y="148" text-anchor="middle" fill="rgba(245,240,235,0.88)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="48" font-weight="200">Five layers, two systems</text>
 
-  <!-- LEFT PANEL: 5 Logical Layers -->
-  <g filter="url(#shadow-panel)">
-    <rect x="140" y="220" width="720" height="680" rx="20" fill="url(#glass-fill)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-    <rect x="141" y="221" width="718" height="1" fill="rgba(255,255,255,0.05)"/>
+  <!-- LEFT PANEL -->
+  <g filter="url(#sh)">
+    <rect x="120" y="210" width="760" height="700" rx="22" fill="url(#glass)" stroke="rgba(217,119,87,0.08)" stroke-width="1"/>
+    <line x1="121" y1="211" x2="879" y2="211" stroke="rgba(245,240,235,0.04)" stroke-width="1"/>
+  </g>
+  <text x="500" y="262" text-anchor="middle" fill="#D97757" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="500" letter-spacing="0.2em">LOGICAL LAYERS</text>
+
+  <g transform="translate(180, 305)">
+    <text x="0" y="0" fill="rgba(217,119,87,0.2)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="48" font-weight="100">01</text>
+    <text x="90" y="-5" fill="rgba(245,240,235,0.7)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="22" font-weight="300">Raw</text>
+    <text x="90" y="20" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">Full source files, unprocessed payloads</text>
+    <line x1="0" y1="50" x2="620" y2="50" stroke="rgba(217,119,87,0.05)" stroke-width="1"/>
   </g>
 
-  <text x="500" y="270" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="400" letter-spacing="0.2em">LOGICAL LAYERS</text>
-
-  <!-- Layer items (minimal, typographic) -->
-  <g transform="translate(200, 310)">
-    <text x="0" y="0" fill="rgba(255,255,255,0.12)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="48" font-weight="100">01</text>
-    <text x="90" y="-5" fill="rgba(255,255,255,0.7)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="22" font-weight="300">Raw</text>
-    <text x="90" y="20" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="300">Full source files, unprocessed payloads</text>
-    <line x1="0" y1="50" x2="600" y2="50" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <g transform="translate(180, 415)">
+    <text x="0" y="0" fill="rgba(217,119,87,0.2)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="48" font-weight="100">02</text>
+    <text x="90" y="-5" fill="rgba(245,240,235,0.7)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="22" font-weight="300">Canonical Facts</text>
+    <text x="90" y="20" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">Snapshots, scores, labels, outcomes</text>
+    <line x1="0" y1="50" x2="620" y2="50" stroke="rgba(217,119,87,0.05)" stroke-width="1"/>
   </g>
 
-  <g transform="translate(200, 420)">
-    <text x="0" y="0" fill="rgba(255,255,255,0.12)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="48" font-weight="100">02</text>
-    <text x="90" y="-5" fill="rgba(255,255,255,0.7)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="22" font-weight="300">Canonical Facts</text>
-    <text x="90" y="20" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="300">Snapshots, scores, labels, outcomes</text>
-    <line x1="0" y1="50" x2="600" y2="50" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <g transform="translate(180, 525)">
+    <text x="0" y="0" fill="rgba(217,119,87,0.2)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="48" font-weight="100">03</text>
+    <text x="90" y="-5" fill="rgba(245,240,235,0.7)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="22" font-weight="300">Hot Views</text>
+    <text x="90" y="20" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">Pre-computed report payloads, materialized</text>
+    <line x1="0" y1="50" x2="620" y2="50" stroke="rgba(217,119,87,0.05)" stroke-width="1"/>
   </g>
 
-  <g transform="translate(200, 530)">
-    <text x="0" y="0" fill="rgba(255,255,255,0.12)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="48" font-weight="100">03</text>
-    <text x="90" y="-5" fill="rgba(255,255,255,0.7)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="22" font-weight="300">Hot Views</text>
-    <text x="90" y="20" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="300">Pre-computed report payloads, materialized</text>
-    <line x1="0" y1="50" x2="600" y2="50" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <g transform="translate(180, 635)">
+    <text x="0" y="0" fill="rgba(217,119,87,0.2)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="48" font-weight="100">04</text>
+    <text x="90" y="-5" fill="rgba(245,240,235,0.7)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="22" font-weight="300">Memory / Retrieval</text>
+    <text x="90" y="20" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">Document chunks, semantic search</text>
+    <line x1="0" y1="50" x2="620" y2="50" stroke="rgba(217,119,87,0.05)" stroke-width="1"/>
   </g>
 
-  <g transform="translate(200, 640)">
-    <text x="0" y="0" fill="rgba(255,255,255,0.12)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="48" font-weight="100">04</text>
-    <text x="90" y="-5" fill="rgba(255,255,255,0.7)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="22" font-weight="300">Memory / Retrieval</text>
-    <text x="90" y="20" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="300">Document chunks, semantic search</text>
-    <line x1="0" y1="50" x2="600" y2="50" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <g transform="translate(180, 745)">
+    <text x="0" y="0" fill="rgba(217,119,87,0.2)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="48" font-weight="100">05</text>
+    <text x="90" y="-5" fill="rgba(245,240,235,0.7)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="22" font-weight="300">Report / Explain</text>
+    <text x="90" y="20" fill="rgba(245,240,235,0.22)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">Daily briefs, ticker explanations</text>
   </g>
 
-  <g transform="translate(200, 750)">
-    <text x="0" y="0" fill="rgba(255,255,255,0.12)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="48" font-weight="100">05</text>
-    <text x="90" y="-5" fill="rgba(255,255,255,0.7)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="22" font-weight="300">Report / Explain</text>
-    <text x="90" y="20" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="300">Daily briefs, ticker explanations</text>
+  <!-- Arrow -->
+  <g transform="translate(910, 500)">
+    <line x1="0" y1="0" x2="80" y2="0" stroke="#D97757" stroke-width="1" opacity="0.35"/>
+    <polygon points="75,-4 88,0 75,4" fill="#D97757" opacity="0.35"/>
   </g>
+  <text x="950" y="535" text-anchor="middle" fill="rgba(217,119,87,0.25)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="400" letter-spacing="0.1em">MAPS TO</text>
 
-  <!-- CENTER: Arrow/connection -->
-  <g transform="translate(890, 500)">
-    <line x1="0" y1="0" x2="100" y2="0" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
-    <polygon points="95,-4 105,0 95,4" fill="rgba(255,255,255,0.15)"/>
+  <!-- RIGHT PANEL -->
+  <g filter="url(#sh)">
+    <rect x="1040" y="210" width="760" height="700" rx="22" fill="url(#glass)" stroke="rgba(217,119,87,0.08)" stroke-width="1"/>
+    <line x1="1041" y1="211" x2="1799" y2="211" stroke="rgba(245,240,235,0.04)" stroke-width="1"/>
   </g>
-  <text x="940" y="540" text-anchor="middle" fill="rgba(255,255,255,0.15)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="11" font-weight="400" letter-spacing="0.1em">MAPS TO</text>
-
-  <!-- RIGHT PANEL: 2 Physical Storage -->
-  <g filter="url(#shadow-panel)">
-    <rect x="1060" y="220" width="720" height="680" rx="20" fill="url(#glass-fill)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-    <rect x="1061" y="221" width="718" height="1" fill="rgba(255,255,255,0.05)"/>
-  </g>
-
-  <text x="1420" y="270" text-anchor="middle" fill="rgba(255,255,255,0.35)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="400" letter-spacing="0.2em">PHYSICAL STORAGE</text>
+  <text x="1420" y="262" text-anchor="middle" fill="#D97757" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="12" font-weight="500" letter-spacing="0.2em">PHYSICAL STORAGE</text>
 
   <!-- PostgreSQL -->
-  <g transform="translate(1120, 320)">
-    <rect width="600" height="250" rx="14" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-    <text x="40" y="45" fill="rgba(255,255,255,0.7)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="26" font-weight="300">PostgreSQL</text>
-    <text x="40" y="72" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300" letter-spacing="0.08em">SINGLE SOURCE OF TRUTH</text>
-    <line x1="40" y1="92" x2="560" y2="92" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-    <text x="40" y="120" fill="rgba(255,255,255,0.3)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="300">Facts, snapshots, scoring, labels, outcomes</text>
-    <text x="40" y="145" fill="rgba(255,255,255,0.3)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="300">Job state, materialized report views</text>
-    <text x="40" y="170" fill="rgba(255,255,255,0.3)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="300">Document chunks, optional embeddings</text>
-    <text x="40" y="195" fill="rgba(255,255,255,0.3)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="300">Source metadata with URI + hash</text>
-    <text x="40" y="230" fill="rgba(255,255,255,0.15)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="11" font-weight="300">Layers 02, 03, 04, 05 live here as schemas</text>
+  <g transform="translate(1100, 310)">
+    <rect width="640" height="260" rx="16" fill="rgba(217,119,87,0.03)" stroke="rgba(217,119,87,0.08)" stroke-width="1"/>
+    <text x="40" y="45" fill="rgba(245,240,235,0.75)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="26" font-weight="300">PostgreSQL</text>
+    <text x="40" y="72" fill="#D97757" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="400" letter-spacing="0.08em" opacity="0.6">SINGLE SOURCE OF TRUTH</text>
+    <line x1="40" y1="92" x2="600" y2="92" stroke="rgba(217,119,87,0.06)" stroke-width="1"/>
+    <text x="40" y="120" fill="rgba(245,240,235,0.3)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">Facts, snapshots, scoring, labels, outcomes</text>
+    <text x="40" y="145" fill="rgba(245,240,235,0.3)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">Job state, materialized report views</text>
+    <text x="40" y="170" fill="rgba(245,240,235,0.3)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">Document chunks, optional embeddings</text>
+    <text x="40" y="195" fill="rgba(245,240,235,0.3)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">Source metadata with URI + hash</text>
+    <text x="40" y="235" fill="rgba(245,240,235,0.15)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300">Layers 02, 03, 04, 05 live here as schemas</text>
   </g>
 
   <!-- Raw Archive -->
-  <g transform="translate(1120, 610)">
-    <rect width="600" height="200" rx="14" fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-    <text x="40" y="45" fill="rgba(255,255,255,0.7)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="26" font-weight="300">Raw Archive</text>
-    <text x="40" y="72" fill="rgba(255,255,255,0.2)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="12" font-weight="300" letter-spacing="0.08em">FULL SOURCE PRESERVATION</text>
-    <line x1="40" y1="92" x2="560" y2="92" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
-    <text x="40" y="120" fill="rgba(255,255,255,0.3)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="300">TradingEdge HTML, SEC filings, market CSV</text>
-    <text x="40" y="145" fill="rgba(255,255,255,0.3)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="13" font-weight="300">Provider JSON responses, daily report markdown</text>
-    <text x="40" y="180" fill="rgba(255,255,255,0.15)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="11" font-weight="300">Layer 01 lives here. Heavy files stay out of the database.</text>
+  <g transform="translate(1100, 610)">
+    <rect width="640" height="210" rx="16" fill="rgba(217,119,87,0.03)" stroke="rgba(217,119,87,0.08)" stroke-width="1"/>
+    <text x="40" y="45" fill="rgba(245,240,235,0.75)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="26" font-weight="300">Raw Archive</text>
+    <text x="40" y="72" fill="#D97757" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="400" letter-spacing="0.08em" opacity="0.6">FULL SOURCE PRESERVATION</text>
+    <line x1="40" y1="92" x2="600" y2="92" stroke="rgba(217,119,87,0.06)" stroke-width="1"/>
+    <text x="40" y="120" fill="rgba(245,240,235,0.3)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">TradingEdge HTML, SEC filings, market CSV</text>
+    <text x="40" y="145" fill="rgba(245,240,235,0.3)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="13" font-weight="300">Provider JSON, daily report markdown</text>
+    <text x="40" y="185" fill="rgba(245,240,235,0.15)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="300">Layer 01 lives here. Heavy files stay out of the database.</text>
   </g>
 
-  <!-- Bottom note -->
-  <text x="960" y="970" text-anchor="middle" fill="rgba(255,255,255,0.25)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="15" font-weight="300">The logical order remains. The physical system is simple.</text>
-
-  <text x="960" y="1030" text-anchor="middle" fill="rgba(255,255,255,0.12)" font-family="'SF Pro Display', 'Inter', -apple-system, sans-serif" font-size="11" font-weight="400" letter-spacing="0.15em">03</text>
+  <text x="960" y="970" text-anchor="middle" fill="rgba(245,240,235,0.25)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="15" font-weight="300">The logical order remains. The physical system is simple.</text>
+  <text x="960" y="1040" text-anchor="middle" fill="rgba(217,119,87,0.25)" font-family="'SF Pro Display','Inter',-apple-system,sans-serif" font-size="11" font-weight="400" letter-spacing="0.15em">03 / 10</text>
 </svg>
